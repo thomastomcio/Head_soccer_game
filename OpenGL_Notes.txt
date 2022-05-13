@@ -1,0 +1,4 @@
+OpenGL is API
+Requires libraries:
+    GLFW - creates OpenGL context (uses OpenGL API)
+    GLAD - open source library that manages
