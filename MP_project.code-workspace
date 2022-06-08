@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\cmakeQuickStart"
+		},
+		{
+			"path": "..\\OpenGL_train"
+		},
+		{
+			"path": "..\\LearnOpenGL"
+		},
+		{
+			"path": "..\\freetype"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"cmath": "cpp"
+		}
+	}
+}
