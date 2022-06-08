@@ -5,6 +5,12 @@ project(Headsoccer VERSION 0.1.0)
 
 set( SOURCE_FILES
      ./src/glad.c
+     ./src/shader.cpp
+     ./src/texture.cpp
+     ./src/game.cpp
+     ./src/resource_manager.cpp
+     ./src/sprite_renderer.cpp
+     ./src/stb_image.cpp
      ./src/main.cpp
 )
 
