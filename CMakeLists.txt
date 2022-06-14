@@ -8,6 +8,7 @@ set( SOURCE_FILES
      ./src/shader.cpp
      ./src/texture.cpp
      ./src/game.cpp
+     ./src/game_object.cpp
      ./src/resource_manager.cpp
      ./src/sprite_renderer.cpp
      ./src/stb_image.cpp
