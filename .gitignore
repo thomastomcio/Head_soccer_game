@@ -24,7 +24,6 @@
 /build
 
 # doxygen folder
-/doxygen
+doxygen/latex/*
 # except
-!/doxygen/latex/Headsoccer_doc.pdf
-	
+!doxygen/latex/Headsoccer_doc.pdf
