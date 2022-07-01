@@ -1,0 +1,245 @@
+\hypertarget{common_8h_source}{}\doxysection{common.\+h}
+\label{common_8h_source}\index{include/glm/simd/common.h@{include/glm/simd/common.h}}
+\mbox{\hyperlink{common_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{platform_8h}{platform.h}}"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#if GLM\_ARCH \& GLM\_ARCH\_SSE2\_BIT}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_f32vec4 glm\_vec4\_add(glm\_f32vec4 \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, glm\_f32vec4 \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}})}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     \textcolor{keywordflow}{return} \_mm\_add\_ps(\mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{13 \}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_f32vec4 glm\_vec1\_add(glm\_f32vec4 \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, glm\_f32vec4 \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}})}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     \textcolor{keywordflow}{return} \_mm\_add\_ss(\mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{18 \}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_f32vec4 glm\_vec4\_sub(glm\_f32vec4 \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, glm\_f32vec4 \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}})}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22     \textcolor{keywordflow}{return} \_mm\_sub\_ps(\mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{23 \}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_f32vec4 glm\_vec1\_sub(glm\_f32vec4 \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, glm\_f32vec4 \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}})}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27     \textcolor{keywordflow}{return} \_mm\_sub\_ss(\mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{28 \}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_f32vec4 glm\_vec4\_mul(glm\_f32vec4 \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, glm\_f32vec4 \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}})}
+\DoxyCodeLine{31 \{}
+\DoxyCodeLine{32     \textcolor{keywordflow}{return} \_mm\_mul\_ps(\mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{33 \}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_f32vec4 glm\_vec1\_mul(glm\_f32vec4 \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, glm\_f32vec4 \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}})}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37     \textcolor{keywordflow}{return} \_mm\_mul\_ss(\mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{38 \}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_f32vec4 glm\_vec4\_div(glm\_f32vec4 \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, glm\_f32vec4 \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}})}
+\DoxyCodeLine{41 \{}
+\DoxyCodeLine{42     \textcolor{keywordflow}{return} \_mm\_div\_ps(\mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{43 \}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_f32vec4 glm\_vec1\_div(glm\_f32vec4 \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, glm\_f32vec4 \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}})}
+\DoxyCodeLine{46 \{}
+\DoxyCodeLine{47     \textcolor{keywordflow}{return} \_mm\_div\_ss(\mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{48 \}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_f32vec4 glm\_vec4\_div\_lowp(glm\_f32vec4 \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, glm\_f32vec4 \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}})}
+\DoxyCodeLine{51 \{}
+\DoxyCodeLine{52     \textcolor{keywordflow}{return} glm\_vec4\_mul(\mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, \_mm\_rcp\_ps(\mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}}));}
+\DoxyCodeLine{53 \}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_f32vec4 glm\_vec4\_swizzle\_xyzw(glm\_f32vec4 \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}})}
+\DoxyCodeLine{56 \{}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#   if GLM\_ARCH \& GLM\_ARCH\_AVX2\_BIT}}
+\DoxyCodeLine{58         \textcolor{keywordflow}{return} \_mm\_permute\_ps(\mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, \_MM\_SHUFFLE(3, 2, 1, 0));}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#   else}}
+\DoxyCodeLine{60         \textcolor{keywordflow}{return} \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, \_MM\_SHUFFLE(3, 2, 1, 0));}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{62 \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_f32vec4 glm\_vec1\_fma(glm\_f32vec4 \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, glm\_f32vec4 \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, glm\_f32vec4 \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}})}
+\DoxyCodeLine{65 \{}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#   if (GLM\_ARCH \& GLM\_ARCH\_AVX2\_BIT) \&\& !(GLM\_COMPILER \& GLM\_COMPILER\_CLANG)}}
+\DoxyCodeLine{67         \textcolor{keywordflow}{return} \_mm\_fmadd\_ss(\mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}});}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#   else}}
+\DoxyCodeLine{69         \textcolor{keywordflow}{return} \_mm\_add\_ss(\_mm\_mul\_ss(\mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}}), \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}});}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{71 \}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_f32vec4 glm\_vec4\_fma(glm\_f32vec4 \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, glm\_f32vec4 \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, glm\_f32vec4 \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}})}
+\DoxyCodeLine{74 \{}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#   if (GLM\_ARCH \& GLM\_ARCH\_AVX2\_BIT) \&\& !(GLM\_COMPILER \& GLM\_COMPILER\_CLANG)}}
+\DoxyCodeLine{76         \textcolor{keywordflow}{return} \_mm\_fmadd\_ps(\mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}});}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#   else}}
+\DoxyCodeLine{78         \textcolor{keywordflow}{return} glm\_vec4\_add(glm\_vec4\_mul(\mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}}), \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}});}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{80 \}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_f32vec4 glm\_vec4\_abs(glm\_f32vec4 \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{83 \{}
+\DoxyCodeLine{84     \textcolor{keywordflow}{return} \_mm\_and\_ps(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, \_mm\_castsi128\_ps(\_mm\_set1\_epi32(0x7FFFFFFF)));}
+\DoxyCodeLine{85 \}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_ivec4 glm\_ivec4\_abs(glm\_ivec4 \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{88 \{}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#   if GLM\_ARCH \& GLM\_ARCH\_SSSE3\_BIT}}
+\DoxyCodeLine{90         \textcolor{keywordflow}{return} \_mm\_sign\_epi32(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#   else}}
+\DoxyCodeLine{92         glm\_ivec4 \textcolor{keyword}{const} sgn0 = \_mm\_srai\_epi32(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, 31);}
+\DoxyCodeLine{93         glm\_ivec4 \textcolor{keyword}{const} inv0 = \_mm\_xor\_si128(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, sgn0);}
+\DoxyCodeLine{94         glm\_ivec4 \textcolor{keyword}{const} sub0 = \_mm\_sub\_epi32(inv0, sgn0);}
+\DoxyCodeLine{95         \textcolor{keywordflow}{return} sub0;}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{97 \}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_vec4 glm\_vec4\_sign(glm\_vec4 \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{100 \{}
+\DoxyCodeLine{101     glm\_vec4 \textcolor{keyword}{const} zro0 = \_mm\_setzero\_ps();}
+\DoxyCodeLine{102     glm\_vec4 \textcolor{keyword}{const} cmp0 = \_mm\_cmplt\_ps(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, zro0);}
+\DoxyCodeLine{103     glm\_vec4 \textcolor{keyword}{const} cmp1 = \_mm\_cmpgt\_ps(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, zro0);}
+\DoxyCodeLine{104     glm\_vec4 \textcolor{keyword}{const} and0 = \_mm\_and\_ps(cmp0, \_mm\_set1\_ps(-\/1.0f));}
+\DoxyCodeLine{105     glm\_vec4 \textcolor{keyword}{const} and1 = \_mm\_and\_ps(cmp1, \_mm\_set1\_ps(1.0f));}
+\DoxyCodeLine{106     glm\_vec4 \textcolor{keyword}{const} or0 = \_mm\_or\_ps(and0, and1);;}
+\DoxyCodeLine{107     \textcolor{keywordflow}{return} or0;}
+\DoxyCodeLine{108 \}}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_vec4 glm\_vec4\_round(glm\_vec4 \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{111 \{}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#   if GLM\_ARCH \& GLM\_ARCH\_SSE41\_BIT}}
+\DoxyCodeLine{113         \textcolor{keywordflow}{return} \_mm\_round\_ps(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, \_MM\_FROUND\_TO\_NEAREST\_INT);}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#   else}}
+\DoxyCodeLine{115         glm\_vec4 \textcolor{keyword}{const} sgn0 = \_mm\_castsi128\_ps(\_mm\_set1\_epi32(\textcolor{keywordtype}{int}(0x80000000)));}
+\DoxyCodeLine{116         glm\_vec4 \textcolor{keyword}{const} and0 = \_mm\_and\_ps(sgn0, \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{117         glm\_vec4 \textcolor{keyword}{const} or0 = \_mm\_or\_ps(and0, \_mm\_set\_ps1(8388608.0f));}
+\DoxyCodeLine{118         glm\_vec4 \textcolor{keyword}{const} add0 = glm\_vec4\_add(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, or0);}
+\DoxyCodeLine{119         glm\_vec4 \textcolor{keyword}{const} sub0 = glm\_vec4\_sub(add0, or0);}
+\DoxyCodeLine{120         \textcolor{keywordflow}{return} sub0;}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{122 \}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_vec4 glm\_vec4\_floor(glm\_vec4 \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{125 \{}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#   if GLM\_ARCH \& GLM\_ARCH\_SSE41\_BIT}}
+\DoxyCodeLine{127         \textcolor{keywordflow}{return} \_mm\_floor\_ps(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#   else}}
+\DoxyCodeLine{129         glm\_vec4 \textcolor{keyword}{const} rnd0 = glm\_vec4\_round(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{130         glm\_vec4 \textcolor{keyword}{const} cmp0 = \_mm\_cmplt\_ps(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, rnd0);}
+\DoxyCodeLine{131         glm\_vec4 \textcolor{keyword}{const} and0 = \_mm\_and\_ps(cmp0, \_mm\_set1\_ps(1.0f));}
+\DoxyCodeLine{132         glm\_vec4 \textcolor{keyword}{const} sub0 = glm\_vec4\_sub(rnd0, and0);}
+\DoxyCodeLine{133         \textcolor{keywordflow}{return} sub0;}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{135 \}}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137 \textcolor{comment}{/* trunc TODO}}
+\DoxyCodeLine{138 \textcolor{comment}{GLM\_FUNC\_QUALIFIER glm\_vec4 glm\_vec4\_trunc(glm\_vec4 x)}}
+\DoxyCodeLine{139 \textcolor{comment}{\{}}
+\DoxyCodeLine{140 \textcolor{comment}{    return glm\_vec4();}}
+\DoxyCodeLine{141 \textcolor{comment}{\}}}
+\DoxyCodeLine{142 \textcolor{comment}{*/}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 \textcolor{comment}{//roundEven}}
+\DoxyCodeLine{145 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_vec4 glm\_vec4\_roundEven(glm\_vec4 \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{146 \{}
+\DoxyCodeLine{147     glm\_vec4 \textcolor{keyword}{const} sgn0 = \_mm\_castsi128\_ps(\_mm\_set1\_epi32(\textcolor{keywordtype}{int}(0x80000000)));}
+\DoxyCodeLine{148     glm\_vec4 \textcolor{keyword}{const} and0 = \_mm\_and\_ps(sgn0, \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{149     glm\_vec4 \textcolor{keyword}{const} or0 = \_mm\_or\_ps(and0, \_mm\_set\_ps1(8388608.0f));}
+\DoxyCodeLine{150     glm\_vec4 \textcolor{keyword}{const} add0 = glm\_vec4\_add(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, or0);}
+\DoxyCodeLine{151     glm\_vec4 \textcolor{keyword}{const} sub0 = glm\_vec4\_sub(add0, or0);}
+\DoxyCodeLine{152     \textcolor{keywordflow}{return} sub0;}
+\DoxyCodeLine{153 \}}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_vec4 glm\_vec4\_ceil(glm\_vec4 \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{156 \{}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#   if GLM\_ARCH \& GLM\_ARCH\_SSE41\_BIT}}
+\DoxyCodeLine{158         \textcolor{keywordflow}{return} \_mm\_ceil\_ps(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#   else}}
+\DoxyCodeLine{160         glm\_vec4 \textcolor{keyword}{const} rnd0 = glm\_vec4\_round(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{161         glm\_vec4 \textcolor{keyword}{const} cmp0 = \_mm\_cmpgt\_ps(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, rnd0);}
+\DoxyCodeLine{162         glm\_vec4 \textcolor{keyword}{const} and0 = \_mm\_and\_ps(cmp0, \_mm\_set1\_ps(1.0f));}
+\DoxyCodeLine{163         glm\_vec4 \textcolor{keyword}{const} add0 = glm\_vec4\_add(rnd0, and0);}
+\DoxyCodeLine{164         \textcolor{keywordflow}{return} add0;}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{166 \}}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_vec4 glm\_vec4\_fract(glm\_vec4 \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{169 \{}
+\DoxyCodeLine{170     glm\_vec4 \textcolor{keyword}{const} flr0 = glm\_vec4\_floor(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{171     glm\_vec4 \textcolor{keyword}{const} sub0 = glm\_vec4\_sub(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, flr0);}
+\DoxyCodeLine{172     \textcolor{keywordflow}{return} sub0;}
+\DoxyCodeLine{173 \}}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_vec4 glm\_vec4\_mod(glm\_vec4 \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, glm\_vec4 \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}})}
+\DoxyCodeLine{176 \{}
+\DoxyCodeLine{177     glm\_vec4 \textcolor{keyword}{const} div0 = glm\_vec4\_div(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}});}
+\DoxyCodeLine{178     glm\_vec4 \textcolor{keyword}{const} flr0 = glm\_vec4\_floor(div0);}
+\DoxyCodeLine{179     glm\_vec4 \textcolor{keyword}{const} mul0 = glm\_vec4\_mul(\mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, flr0);}
+\DoxyCodeLine{180     glm\_vec4 \textcolor{keyword}{const} sub0 = glm\_vec4\_sub(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, mul0);}
+\DoxyCodeLine{181     \textcolor{keywordflow}{return} sub0;}
+\DoxyCodeLine{182 \}}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_vec4 glm\_vec4\_clamp(glm\_vec4 \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, glm\_vec4 minVal, glm\_vec4 maxVal)}
+\DoxyCodeLine{185 \{}
+\DoxyCodeLine{186     glm\_vec4 \textcolor{keyword}{const} min0 = \_mm\_min\_ps(\mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, maxVal);}
+\DoxyCodeLine{187     glm\_vec4 \textcolor{keyword}{const} max0 = \_mm\_max\_ps(min0, minVal);}
+\DoxyCodeLine{188     \textcolor{keywordflow}{return} max0;}
+\DoxyCodeLine{189 \}}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_vec4 glm\_vec4\_mix(glm\_vec4 \mbox{\hyperlink{glad_8h_a435c176a02c061b43e19bdf7c86cceae}{v1}}, glm\_vec4 \mbox{\hyperlink{glad_8h_a0928f6d0f0f794ba000a21dfae422136}{v2}}, glm\_vec4 \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}})}
+\DoxyCodeLine{192 \{}
+\DoxyCodeLine{193     glm\_vec4 \textcolor{keyword}{const} sub0 = glm\_vec4\_sub(\_mm\_set1\_ps(1.0f), \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{194     glm\_vec4 \textcolor{keyword}{const} mul0 = glm\_vec4\_mul(\mbox{\hyperlink{glad_8h_a435c176a02c061b43e19bdf7c86cceae}{v1}}, sub0);}
+\DoxyCodeLine{195     glm\_vec4 \textcolor{keyword}{const} mad0 = glm\_vec4\_fma(\mbox{\hyperlink{glad_8h_a0928f6d0f0f794ba000a21dfae422136}{v2}}, \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, mul0);}
+\DoxyCodeLine{196     \textcolor{keywordflow}{return} mad0;}
+\DoxyCodeLine{197 \}}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_vec4 glm\_vec4\_step(glm\_vec4 edge, glm\_vec4 \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{200 \{}
+\DoxyCodeLine{201     glm\_vec4 \textcolor{keyword}{const} cmp = \_mm\_cmple\_ps(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, edge);}
+\DoxyCodeLine{202     \textcolor{keywordflow}{return} \_mm\_movemask\_ps(cmp) == 0 ? \_mm\_set1\_ps(1.0f) : \_mm\_setzero\_ps();}
+\DoxyCodeLine{203 \}}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_vec4 glm\_vec4\_smoothstep(glm\_vec4 edge0, glm\_vec4 edge1, glm\_vec4 \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{206 \{}
+\DoxyCodeLine{207     glm\_vec4 \textcolor{keyword}{const} sub0 = glm\_vec4\_sub(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, edge0);}
+\DoxyCodeLine{208     glm\_vec4 \textcolor{keyword}{const} sub1 = glm\_vec4\_sub(edge1, edge0);}
+\DoxyCodeLine{209     glm\_vec4 \textcolor{keyword}{const} div0 = glm\_vec4\_sub(sub0, sub1);}
+\DoxyCodeLine{210     glm\_vec4 \textcolor{keyword}{const} clp0 = glm\_vec4\_clamp(div0, \_mm\_setzero\_ps(), \_mm\_set1\_ps(1.0f));}
+\DoxyCodeLine{211     glm\_vec4 \textcolor{keyword}{const} mul0 = glm\_vec4\_mul(\_mm\_set1\_ps(2.0f), clp0);}
+\DoxyCodeLine{212     glm\_vec4 \textcolor{keyword}{const} sub2 = glm\_vec4\_sub(\_mm\_set1\_ps(3.0f), mul0);}
+\DoxyCodeLine{213     glm\_vec4 \textcolor{keyword}{const} mul1 = glm\_vec4\_mul(clp0, clp0);}
+\DoxyCodeLine{214     glm\_vec4 \textcolor{keyword}{const} mul2 = glm\_vec4\_mul(mul1, sub2);}
+\DoxyCodeLine{215     \textcolor{keywordflow}{return} mul2;}
+\DoxyCodeLine{216 \}}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{218 \textcolor{comment}{// Agner Fog method}}
+\DoxyCodeLine{219 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_vec4 glm\_vec4\_nan(glm\_vec4 \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{220 \{}
+\DoxyCodeLine{221     glm\_ivec4 \textcolor{keyword}{const} \mbox{\hyperlink{glad_8h_af48031a37b713afa3b0d0d7d29653d7c}{t1}} = \_mm\_castps\_si128(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});                        \textcolor{comment}{// reinterpret as 32-\/bit integer}}
+\DoxyCodeLine{222     glm\_ivec4 \textcolor{keyword}{const} t2 = \_mm\_sll\_epi32(\mbox{\hyperlink{glad_8h_af48031a37b713afa3b0d0d7d29653d7c}{t1}}, \_mm\_cvtsi32\_si128(1)); \textcolor{comment}{// shift out sign bit}}
+\DoxyCodeLine{223     glm\_ivec4 \textcolor{keyword}{const} t3 = \_mm\_set1\_epi32(\textcolor{keywordtype}{int}(0xFF000000));               \textcolor{comment}{// exponent mask}}
+\DoxyCodeLine{224     glm\_ivec4 \textcolor{keyword}{const} t4 = \_mm\_and\_si128(t2, t3);                     \textcolor{comment}{// exponent}}
+\DoxyCodeLine{225     glm\_ivec4 \textcolor{keyword}{const} t5 = \_mm\_andnot\_si128(t3, t2);                  \textcolor{comment}{// fraction}}
+\DoxyCodeLine{226     glm\_ivec4 \textcolor{keyword}{const} Equal = \_mm\_cmpeq\_epi32(t3, t4);}
+\DoxyCodeLine{227     glm\_ivec4 \textcolor{keyword}{const} Nequal = \_mm\_cmpeq\_epi32(t5, \_mm\_setzero\_si128());}
+\DoxyCodeLine{228     glm\_ivec4 \textcolor{keyword}{const} And = \_mm\_and\_si128(Equal, Nequal);}
+\DoxyCodeLine{229     \textcolor{keywordflow}{return} \_mm\_castsi128\_ps(And);                                   \textcolor{comment}{// exponent = all 1s and fraction != 0}}
+\DoxyCodeLine{230 \}}
+\DoxyCodeLine{231 }
+\DoxyCodeLine{232 \textcolor{comment}{// Agner Fog method}}
+\DoxyCodeLine{233 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_vec4 glm\_vec4\_inf(glm\_vec4 \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{234 \{}
+\DoxyCodeLine{235     glm\_ivec4 \textcolor{keyword}{const} \mbox{\hyperlink{glad_8h_af48031a37b713afa3b0d0d7d29653d7c}{t1}} = \_mm\_castps\_si128(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});                                        \textcolor{comment}{// reinterpret as 32-\/bit integer}}
+\DoxyCodeLine{236     glm\_ivec4 \textcolor{keyword}{const} t2 = \_mm\_sll\_epi32(\mbox{\hyperlink{glad_8h_af48031a37b713afa3b0d0d7d29653d7c}{t1}}, \_mm\_cvtsi32\_si128(1));                 \textcolor{comment}{// shift out sign bit}}
+\DoxyCodeLine{237     \textcolor{keywordflow}{return} \_mm\_castsi128\_ps(\_mm\_cmpeq\_epi32(t2, \_mm\_set1\_epi32(\textcolor{keywordtype}{int}(0xFF000000))));      \textcolor{comment}{// exponent is all 1s, fraction is 0}}
+\DoxyCodeLine{238 \}}
+\DoxyCodeLine{239 }
+\DoxyCodeLine{240 \textcolor{preprocessor}{\#endif}\textcolor{comment}{//GLM\_ARCH \& GLM\_ARCH\_SSE2\_BIT}}
+
+\end{DoxyCode}

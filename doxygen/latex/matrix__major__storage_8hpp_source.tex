@@ -1,0 +1,87 @@
+\hypertarget{matrix__major__storage_8hpp_source}{}\doxysection{matrix\+\_\+major\+\_\+storage.\+hpp}
+\label{matrix__major__storage_8hpp_source}\index{include/glm/gtx/matrix\_major\_storage.hpp@{include/glm/gtx/matrix\_major\_storage.hpp}}
+\mbox{\hyperlink{matrix__major__storage_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{comment}{// Dependency:}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}../glm.hpp"{}}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#ifndef GLM\_ENABLE\_EXPERIMENTAL}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#   error "{}GLM: GLM\_GTX\_matrix\_major\_storage is an experimental extension and may change in the future. Use \#define GLM\_ENABLE\_EXPERIMENTAL before including it, if you really want to use it."{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_GTX\_matrix\_major\_storage extension included"{}})}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{34     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{35     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<2, 2, T, Q> \mbox{\hyperlink{group__gtx__matrix__major__storage_ga5c8cc479202c42538a89410759aed46c}{rowMajor2}}(}
+\DoxyCodeLine{36         vec<2, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a435c176a02c061b43e19bdf7c86cceae}{v1}},}
+\DoxyCodeLine{37         vec<2, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0928f6d0f0f794ba000a21dfae422136}{v2}});}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{41     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{42     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<2, 2, T, Q> \mbox{\hyperlink{group__gtx__matrix__major__storage_ga5c8cc479202c42538a89410759aed46c}{rowMajor2}}(}
+\DoxyCodeLine{43         mat<2, 2, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}});}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{47     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{48     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<3, 3, T, Q> \mbox{\hyperlink{group__gtx__matrix__major__storage_gaeea7786b5bba7bfbb62d35d8d6a9edcb}{rowMajor3}}(}
+\DoxyCodeLine{49         vec<3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a435c176a02c061b43e19bdf7c86cceae}{v1}},}
+\DoxyCodeLine{50         vec<3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0928f6d0f0f794ba000a21dfae422136}{v2}},}
+\DoxyCodeLine{51         vec<3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_acc806b31cbf466ceba6555983d8b814d}{v3}});}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{55     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{56     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<3, 3, T, Q> \mbox{\hyperlink{group__gtx__matrix__major__storage_gaeea7786b5bba7bfbb62d35d8d6a9edcb}{rowMajor3}}(}
+\DoxyCodeLine{57         mat<3, 3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}});}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{61     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{62     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, Q> \mbox{\hyperlink{group__gtx__matrix__major__storage_ga0de882ad4479b823431c957236a9eebd}{rowMajor4}}(}
+\DoxyCodeLine{63         vec<4, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a435c176a02c061b43e19bdf7c86cceae}{v1}},}
+\DoxyCodeLine{64         vec<4, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0928f6d0f0f794ba000a21dfae422136}{v2}},}
+\DoxyCodeLine{65         vec<4, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_acc806b31cbf466ceba6555983d8b814d}{v3}},}
+\DoxyCodeLine{66         vec<4, T, Q> \textcolor{keyword}{const}\& v4);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{70     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{71     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, Q> \mbox{\hyperlink{group__gtx__matrix__major__storage_ga0de882ad4479b823431c957236a9eebd}{rowMajor4}}(}
+\DoxyCodeLine{72         mat<4, 4, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}});}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{76     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{77     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<2, 2, T, Q> \mbox{\hyperlink{group__gtx__matrix__major__storage_gaf09f1bf39f69dd215a7fc3c238ee3a7a}{colMajor2}}(}
+\DoxyCodeLine{78         vec<2, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a435c176a02c061b43e19bdf7c86cceae}{v1}},}
+\DoxyCodeLine{79         vec<2, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0928f6d0f0f794ba000a21dfae422136}{v2}});}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{83     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{84     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<2, 2, T, Q> \mbox{\hyperlink{group__gtx__matrix__major__storage_gaf09f1bf39f69dd215a7fc3c238ee3a7a}{colMajor2}}(}
+\DoxyCodeLine{85         mat<2, 2, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}});}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{89     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{90     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<3, 3, T, Q> \mbox{\hyperlink{group__gtx__matrix__major__storage_ga83723c29e70650ccaf245344d80bc8a2}{colMajor3}}(}
+\DoxyCodeLine{91         vec<3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a435c176a02c061b43e19bdf7c86cceae}{v1}},}
+\DoxyCodeLine{92         vec<3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0928f6d0f0f794ba000a21dfae422136}{v2}},}
+\DoxyCodeLine{93         vec<3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_acc806b31cbf466ceba6555983d8b814d}{v3}});}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{97     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{98     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<3, 3, T, Q> \mbox{\hyperlink{group__gtx__matrix__major__storage_ga83723c29e70650ccaf245344d80bc8a2}{colMajor3}}(}
+\DoxyCodeLine{99         mat<3, 3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}});}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{103     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{104     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, Q> \mbox{\hyperlink{group__gtx__matrix__major__storage_ga5fe43deeb8ee0b1dbaefede0c02b99c4}{colMajor4}}(}
+\DoxyCodeLine{105         vec<4, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a435c176a02c061b43e19bdf7c86cceae}{v1}},}
+\DoxyCodeLine{106         vec<4, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0928f6d0f0f794ba000a21dfae422136}{v2}},}
+\DoxyCodeLine{107         vec<4, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_acc806b31cbf466ceba6555983d8b814d}{v3}},}
+\DoxyCodeLine{108         vec<4, T, Q> \textcolor{keyword}{const}\& v4);}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{112     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{113     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, Q> \mbox{\hyperlink{group__gtx__matrix__major__storage_ga5fe43deeb8ee0b1dbaefede0c02b99c4}{colMajor4}}(}
+\DoxyCodeLine{114         mat<4, 4, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}});}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{117 \}\textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{matrix__major__storage_8inl}{matrix\_major\_storage.inl}}"{}}}
+
+\end{DoxyCode}

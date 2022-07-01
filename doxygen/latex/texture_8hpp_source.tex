@@ -1,0 +1,33 @@
+\hypertarget{texture_8hpp_source}{}\doxysection{texture.\+hpp}
+\label{texture_8hpp_source}\index{include/glm/gtx/texture.hpp@{include/glm/gtx/texture.hpp}}
+\mbox{\hyperlink{texture_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{comment}{// Dependency:}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}../glm.hpp"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}../gtc/integer.hpp"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}../gtx/component\_wise.hpp"{}}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#ifndef GLM\_ENABLE\_EXPERIMENTAL}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#   error "{}GLM: GLM\_GTX\_texture is an experimental extension and may change in the future. Use \#define GLM\_ENABLE\_EXPERIMENTAL before including it, if you really want to use it."{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_GTX\_texture extension included"{}})}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{29 \{}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{39     \textcolor{keyword}{template} <length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{40     T \mbox{\hyperlink{group__gtx__texture_gaa8c377f4e63486db4fa872d77880da73}{levels}}(vec<L, T, Q> \textcolor{keyword}{const}\& Extent);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{43 \}\textcolor{comment}{// namespace glm}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{texture_8inl}{texture.inl}}"{}}}
+\DoxyCodeLine{46 }
+
+\end{DoxyCode}

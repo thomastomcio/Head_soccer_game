@@ -1,0 +1,127 @@
+\hypertarget{shader__s_8h_source}{}\doxysection{shader\+\_\+s.\+h}
+\label{shader__s_8h_source}\index{include/shader\_s.h@{include/shader\_s.h}}
+\mbox{\hyperlink{shader__s_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SHADER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SHADER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <glad/glad.h>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_shader}{Shader}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d}{ID}};}
+\DoxyCodeLine{15     \textcolor{comment}{// constructor generates the shader on the fly}}
+\DoxyCodeLine{16     \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_shader_a3e135bbf914b087a939114d79c10d283}{Shader}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* vertexPath, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* fragmentPath)}
+\DoxyCodeLine{18     \{}
+\DoxyCodeLine{19         \textcolor{comment}{// 1. retrieve the vertex/fragment source code from filePath}}
+\DoxyCodeLine{20         std::string vertexCode;}
+\DoxyCodeLine{21         std::string fragmentCode;}
+\DoxyCodeLine{22         std::ifstream vShaderFile;}
+\DoxyCodeLine{23         std::ifstream fShaderFile;}
+\DoxyCodeLine{24         \textcolor{comment}{// ensure ifstream objects can throw exceptions:}}
+\DoxyCodeLine{25         vShaderFile.exceptions (std::ifstream::failbit | std::ifstream::badbit);}
+\DoxyCodeLine{26         fShaderFile.exceptions (std::ifstream::failbit | std::ifstream::badbit);}
+\DoxyCodeLine{27         \textcolor{keywordflow}{try} }
+\DoxyCodeLine{28         \{}
+\DoxyCodeLine{29             \textcolor{comment}{// open files}}
+\DoxyCodeLine{30             vShaderFile.open(vertexPath);}
+\DoxyCodeLine{31             fShaderFile.open(fragmentPath);}
+\DoxyCodeLine{32             std::stringstream vShaderStream, fShaderStream;}
+\DoxyCodeLine{33             \textcolor{comment}{// read file's buffer contents into streams}}
+\DoxyCodeLine{34             vShaderStream << vShaderFile.rdbuf();}
+\DoxyCodeLine{35             fShaderStream << fShaderFile.rdbuf();}
+\DoxyCodeLine{36             \textcolor{comment}{// close file handlers}}
+\DoxyCodeLine{37             vShaderFile.close();}
+\DoxyCodeLine{38             fShaderFile.close();}
+\DoxyCodeLine{39             \textcolor{comment}{// convert stream into string}}
+\DoxyCodeLine{40             vertexCode   = vShaderStream.str();}
+\DoxyCodeLine{41             fragmentCode = fShaderStream.str();}
+\DoxyCodeLine{42         \}}
+\DoxyCodeLine{43         \textcolor{keywordflow}{catch} (std::ifstream::failure\& e)}
+\DoxyCodeLine{44         \{}
+\DoxyCodeLine{45             std::cout << \textcolor{stringliteral}{"{}ERROR::SHADER::FILE\_NOT\_SUCCESFULLY\_READ: "{}} << e.what() << std::endl;}
+\DoxyCodeLine{46         \}}
+\DoxyCodeLine{47         \textcolor{keyword}{const} \textcolor{keywordtype}{char}* vShaderCode = vertexCode.c\_str();}
+\DoxyCodeLine{48         \textcolor{keyword}{const} \textcolor{keywordtype}{char} * fShaderCode = fragmentCode.c\_str();}
+\DoxyCodeLine{49         \textcolor{comment}{// 2. compile shaders}}
+\DoxyCodeLine{50         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} vertex, fragment;}
+\DoxyCodeLine{51         \textcolor{comment}{// vertex shader}}
+\DoxyCodeLine{52         vertex = glCreateShader(GL\_VERTEX\_SHADER);}
+\DoxyCodeLine{53         glShaderSource(vertex, 1, \&vShaderCode, NULL);}
+\DoxyCodeLine{54         glCompileShader(vertex);}
+\DoxyCodeLine{55         checkCompileErrors(vertex, \textcolor{stringliteral}{"{}VERTEX"{}});}
+\DoxyCodeLine{56         \textcolor{comment}{// fragment Shader}}
+\DoxyCodeLine{57         fragment = glCreateShader(GL\_FRAGMENT\_SHADER);}
+\DoxyCodeLine{58         glShaderSource(fragment, 1, \&fShaderCode, NULL);}
+\DoxyCodeLine{59         glCompileShader(fragment);}
+\DoxyCodeLine{60         checkCompileErrors(fragment, \textcolor{stringliteral}{"{}FRAGMENT"{}});}
+\DoxyCodeLine{61         \textcolor{comment}{// shader Program}}
+\DoxyCodeLine{62         \mbox{\hyperlink{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d}{ID}} = glCreateProgram();}
+\DoxyCodeLine{63         glAttachShader(\mbox{\hyperlink{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d}{ID}}, vertex);}
+\DoxyCodeLine{64         glAttachShader(\mbox{\hyperlink{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d}{ID}}, fragment);}
+\DoxyCodeLine{65         glLinkProgram(\mbox{\hyperlink{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d}{ID}});}
+\DoxyCodeLine{66         checkCompileErrors(\mbox{\hyperlink{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d}{ID}}, \textcolor{stringliteral}{"{}PROGRAM"{}});}
+\DoxyCodeLine{67         \textcolor{comment}{// delete the shaders as they're linked into our program now and no longer necessary}}
+\DoxyCodeLine{68         glDeleteShader(vertex);}
+\DoxyCodeLine{69         glDeleteShader(fragment);}
+\DoxyCodeLine{70     \}}
+\DoxyCodeLine{71     \textcolor{comment}{// activate the shader}}
+\DoxyCodeLine{72     \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{73     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shader_a870fa9f13d69e558815d6fd351a469dc}{use}}() }
+\DoxyCodeLine{74     \{ }
+\DoxyCodeLine{75         glUseProgram(\mbox{\hyperlink{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d}{ID}}); }
+\DoxyCodeLine{76     \}}
+\DoxyCodeLine{77     \textcolor{comment}{// utility uniform functions}}
+\DoxyCodeLine{78     \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{79     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shader_ab1a56d6c299bd7eaa18c2e142ef7bd9f}{setBool}}(\textcolor{keyword}{const} std::string \&name, \textcolor{keywordtype}{bool} value)\textcolor{keyword}{ const}}
+\DoxyCodeLine{80 \textcolor{keyword}{    }\{         }
+\DoxyCodeLine{81         glUniform1i(glGetUniformLocation(\mbox{\hyperlink{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d}{ID}}, name.c\_str()), (\textcolor{keywordtype}{int})value); }
+\DoxyCodeLine{82     \}}
+\DoxyCodeLine{83     \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{84     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shader_ad362e2b654cd95a3574cd505411e41fd}{setInt}}(\textcolor{keyword}{const} std::string \&name, \textcolor{keywordtype}{int} value)\textcolor{keyword}{ const}}
+\DoxyCodeLine{85 \textcolor{keyword}{    }\{ }
+\DoxyCodeLine{86         glUniform1i(glGetUniformLocation(\mbox{\hyperlink{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d}{ID}}, name.c\_str()), value); }
+\DoxyCodeLine{87     \}}
+\DoxyCodeLine{88     \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{89     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shader_afe7367621f74c2d26431d8ac15252bf3}{setFloat}}(\textcolor{keyword}{const} std::string \&name, \textcolor{keywordtype}{float} value)\textcolor{keyword}{ const}}
+\DoxyCodeLine{90 \textcolor{keyword}{    }\{ }
+\DoxyCodeLine{91         glUniform1f(glGetUniformLocation(\mbox{\hyperlink{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d}{ID}}, name.c\_str()), value); }
+\DoxyCodeLine{92     \}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 \textcolor{keyword}{private}:}
+\DoxyCodeLine{95     \textcolor{comment}{// utility function for checking shader compilation/linking errors.}}
+\DoxyCodeLine{96     \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{97     \textcolor{keywordtype}{void} checkCompileErrors(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} shader, std::string type)}
+\DoxyCodeLine{98     \{}
+\DoxyCodeLine{99         \textcolor{keywordtype}{int} success;}
+\DoxyCodeLine{100         \textcolor{keywordtype}{char} infoLog[1024];}
+\DoxyCodeLine{101         \textcolor{keywordflow}{if} (type != \textcolor{stringliteral}{"{}PROGRAM"{}})}
+\DoxyCodeLine{102         \{}
+\DoxyCodeLine{103             glGetShaderiv(shader, GL\_COMPILE\_STATUS, \&success);}
+\DoxyCodeLine{104             \textcolor{keywordflow}{if} (!success)}
+\DoxyCodeLine{105             \{}
+\DoxyCodeLine{106                 glGetShaderInfoLog(shader, 1024, NULL, infoLog);}
+\DoxyCodeLine{107                 std::cout << \textcolor{stringliteral}{"{}ERROR::SHADER\_COMPILATION\_ERROR of type: "{}} << type << \textcolor{stringliteral}{"{}\(\backslash\)n"{}} << infoLog << \textcolor{stringliteral}{"{}\(\backslash\)n -\/-\/ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ -\/-\/ "{}} << std::endl;}
+\DoxyCodeLine{108             \}}
+\DoxyCodeLine{109         \}}
+\DoxyCodeLine{110         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{111         \{}
+\DoxyCodeLine{112             glGetProgramiv(shader, GL\_LINK\_STATUS, \&success);}
+\DoxyCodeLine{113             \textcolor{keywordflow}{if} (!success)}
+\DoxyCodeLine{114             \{}
+\DoxyCodeLine{115                 glGetProgramInfoLog(shader, 1024, NULL, infoLog);}
+\DoxyCodeLine{116                 std::cout << \textcolor{stringliteral}{"{}ERROR::PROGRAM\_LINKING\_ERROR of type: "{}} << type << \textcolor{stringliteral}{"{}\(\backslash\)n"{}} << infoLog << \textcolor{stringliteral}{"{}\(\backslash\)n -\/-\/ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ -\/-\/ "{}} << std::endl;}
+\DoxyCodeLine{117             \}}
+\DoxyCodeLine{118         \}}
+\DoxyCodeLine{119     \}}
+\DoxyCodeLine{120 \};}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

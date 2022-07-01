@@ -1,0 +1,74 @@
+\hypertarget{type__float_8hpp_source}{}\doxysection{type\+\_\+float.\+hpp}
+\label{type__float_8hpp_source}\index{include/glm/detail/type\_float.hpp@{include/glm/detail/type\_float.hpp}}
+\mbox{\hyperlink{type__float_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{setup_8hpp}{setup.hpp}}"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#if GLM\_COMPILER == GLM\_COMPILER\_VC12}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#   pragma warning(push)}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#   pragma warning(disable: 4512) }\textcolor{comment}{// assignment operator could not be generated}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}\{}
+\DoxyCodeLine{11 \textcolor{keyword}{namespace }detail}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{14     \textcolor{keyword}{union }\mbox{\hyperlink{unionglm_1_1detail_1_1float__t}{float\_t}}}
+\DoxyCodeLine{15     \{\};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{comment}{// https://randomascii.wordpress.com/2012/02/25/comparing-\/floating-\/point-\/numbers-\/2012-\/edition/}}
+\DoxyCodeLine{18     \textcolor{keyword}{template} <>}
+\DoxyCodeLine{19     \textcolor{keyword}{union }\mbox{\hyperlink{unionglm_1_1detail_1_1float__t}{float\_t}}<float>}
+\DoxyCodeLine{20     \{}
+\DoxyCodeLine{21         \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01float_01_4_a5254efb80f9e4bf49e857a05fe85519b}{int\_type}};}
+\DoxyCodeLine{22         \textcolor{keyword}{typedef} \textcolor{keywordtype}{float} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01float_01_4_a32b4cbd03fff8afbe6ac969f83828124}{float\_type}};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24         \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01float_01_4_adcf6a894750b487c3de11cdeea4b2abf}{float\_t}}(\mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01float_01_4_a32b4cbd03fff8afbe6ac969f83828124}{float\_type}} Num = 0.0f) : \mbox{\hyperlink{glad_8h_a691492ec0bd6383f91200e49f6ae40ed}{f}}(Num) \{\}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26         \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t}{float\_t}}\& \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01float_01_4_a31abc890477076ee14b3a3e7a42b97f2}{operator=}}(\mbox{\hyperlink{unionglm_1_1detail_1_1float__t}{float\_t}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{27         \{}
+\DoxyCodeLine{28             \mbox{\hyperlink{glad_8h_a691492ec0bd6383f91200e49f6ae40ed}{f}} = \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}.f;}
+\DoxyCodeLine{29             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{30         \}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32         \textcolor{comment}{// Portable extraction of components.}}
+\DoxyCodeLine{33         \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01float_01_4_ae27eb43c2a742f5d487fe32326d492ff}{negative}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} i < 0; \}}
+\DoxyCodeLine{34         \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01float_01_4_a5254efb80f9e4bf49e857a05fe85519b}{int\_type}} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01float_01_4_ab381712273bcb016aab269de1eaf0ac3}{mantissa}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} i \& ((1 << 23) -\/ 1); \}}
+\DoxyCodeLine{35         \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01float_01_4_a5254efb80f9e4bf49e857a05fe85519b}{int\_type}} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01float_01_4_a288ef08965054c0f346cc829fed99312}{exponent}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} (i >> 23) \& ((1 << 8) -\/ 1); \}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37         \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01float_01_4_a5254efb80f9e4bf49e857a05fe85519b}{int\_type}} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01float_01_4_a615ee27108efb2d481f7104d25072f18}{i}};}
+\DoxyCodeLine{38         \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01float_01_4_a32b4cbd03fff8afbe6ac969f83828124}{float\_type}} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01float_01_4_a6be4ba1178e0a7ea2a93af6acf453c23}{f}};}
+\DoxyCodeLine{39     \};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keyword}{template} <>}
+\DoxyCodeLine{42     \textcolor{keyword}{union }\mbox{\hyperlink{unionglm_1_1detail_1_1float__t}{float\_t}}<double>}
+\DoxyCodeLine{43     \{}
+\DoxyCodeLine{44         \textcolor{keyword}{typedef} \mbox{\hyperlink{namespaceglm_1_1detail_a427e1ba144685539c0efb4c89e97a277}{detail::int64}} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01double_01_4_aaf264bff72bb2fbf21358a67eb728e56}{int\_type}};}
+\DoxyCodeLine{45         \textcolor{keyword}{typedef} \textcolor{keywordtype}{double} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01double_01_4_a7faafe6cebfb75e9be7e57a1e7522ea6}{float\_type}};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47         \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01double_01_4_a655163ce80e5f2c5834c70872cfb3bba}{float\_t}}(\mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01double_01_4_a7faafe6cebfb75e9be7e57a1e7522ea6}{float\_type}} Num = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01double_01_4_a7faafe6cebfb75e9be7e57a1e7522ea6}{float\_type}}\textcolor{keyword}{>}(0)) : \mbox{\hyperlink{glad_8h_a691492ec0bd6383f91200e49f6ae40ed}{f}}(Num) \{\}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t}{float\_t}}\& \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01double_01_4_a2cc251ab0d63421108684547aa919e42}{operator=}}(\mbox{\hyperlink{unionglm_1_1detail_1_1float__t}{float\_t}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{50         \{}
+\DoxyCodeLine{51             \mbox{\hyperlink{glad_8h_a691492ec0bd6383f91200e49f6ae40ed}{f}} = \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}.f;}
+\DoxyCodeLine{52             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{53         \}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55         \textcolor{comment}{// Portable extraction of components.}}
+\DoxyCodeLine{56         \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01double_01_4_adca912cf2854dcb982c1c00ca6f9675f}{negative}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} i < 0; \}}
+\DoxyCodeLine{57         \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01double_01_4_aaf264bff72bb2fbf21358a67eb728e56}{int\_type}} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01double_01_4_a1ea4faf682ec0b4686e5ffd599335081}{mantissa}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} i \& ((\mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01double_01_4_aaf264bff72bb2fbf21358a67eb728e56}{int\_type}}(1) << 52) -\/ 1); \}}
+\DoxyCodeLine{58         \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01double_01_4_aaf264bff72bb2fbf21358a67eb728e56}{int\_type}} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01double_01_4_a3da07fff7db18d11799714e5b200b1b2}{exponent}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} (i >> 52) \& ((\mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01double_01_4_aaf264bff72bb2fbf21358a67eb728e56}{int\_type}}(1) << 11) -\/ 1); \}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60         \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01double_01_4_aaf264bff72bb2fbf21358a67eb728e56}{int\_type}} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01double_01_4_aec35d537668e609387a73b936161f289}{i}};}
+\DoxyCodeLine{61         \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01double_01_4_a7faafe6cebfb75e9be7e57a1e7522ea6}{float\_type}} \mbox{\hyperlink{unionglm_1_1detail_1_1float__t_3_01double_01_4_a0d7f06dd3ac202aa7a5023abe8a5b035}{f}};}
+\DoxyCodeLine{62     \};}
+\DoxyCodeLine{63 \}\textcolor{comment}{//namespace detail}}
+\DoxyCodeLine{64 \}\textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#if GLM\_COMPILER == GLM\_COMPILER\_VC12}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#   pragma warning(pop)}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

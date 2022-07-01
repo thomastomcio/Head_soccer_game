@@ -1,0 +1,688 @@
+\hypertarget{__swizzle__func_8hpp_source}{}\doxysection{\+\_\+swizzle\+\_\+func.\+hpp}
+\label{__swizzle__func_8hpp_source}\index{include/glm/detail/\_swizzle\_func.hpp@{include/glm/detail/\_swizzle\_func.hpp}}
+\mbox{\hyperlink{__swizzle__func_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, CONST, A, B)   \(\backslash\)}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{    vec<2, T, Q> A \#\# B() CONST                         \(\backslash\)}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{    \{                                                   \(\backslash\)}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{        return vec<2, T, Q>(this-\/>A, this-\/>B);          \(\backslash\)}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{    \}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, CONST, A, B, C)        \(\backslash\)}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{    vec<3, T, Q> A \#\# B \#\# C() CONST                            \(\backslash\)}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{    \{                                                           \(\backslash\)}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{        return vec<3, T, Q>(this-\/>A, this-\/>B, this-\/>C);         \(\backslash\)}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{    \}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, CONST, A, B, C, D)                 \(\backslash\)}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{    vec<4, T, Q> A \#\# B \#\# C \#\# D() CONST                                   \(\backslash\)}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{    \{                                                                       \(\backslash\)}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{        return vec<4, T, Q>(this-\/>A, this-\/>B, this-\/>C, this-\/>D);            \(\backslash\)}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{    \}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY\_DEF(T, P, L, CONST, A, B)    \(\backslash\)}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{    template<typename T>                                        \(\backslash\)}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{    vec<L, T, Q> vec<L, T, Q>::A \#\# B() CONST                   \(\backslash\)}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{    \{                                                           \(\backslash\)}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{        return vec<2, T, Q>(this-\/>A, this-\/>B);                  \(\backslash\)}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{    \}}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY\_DEF(T, P, L, CONST, A, B, C)     \(\backslash\)}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{    template<typename T>                                            \(\backslash\)}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{    vec<3, T, Q> vec<L, T, Q>::A \#\# B \#\# C() CONST                  \(\backslash\)}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{    \{                                                               \(\backslash\)}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{        return vec<3, T, Q>(this-\/>A, this-\/>B, this-\/>C);             \(\backslash\)}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{    \}}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY\_DEF(T, P, L, CONST, A, B, C, D)      \(\backslash\)}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{    template<typename T>                                                \(\backslash\)}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{    vec<4, T, Q> vec<L, T, Q>::A \#\# B \#\# C \#\# D() CONST                 \(\backslash\)}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{    \{                                                                   \(\backslash\)}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{        return vec<4, T, Q>(this-\/>A, this-\/>B, this-\/>C, this-\/>D);        \(\backslash\)}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{    \}}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#define GLM\_MUTABLE}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC2\_SWIZZLE(T, P, A, B) \(\backslash\)}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, 2, GLM\_MUTABLE, A, B) \(\backslash\)}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, 2, GLM\_MUTABLE, B, A)}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC2(T, P) \(\backslash\)}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC2\_SWIZZLE(T, P, x, y) \(\backslash\)}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC2\_SWIZZLE(T, P, r, g) \(\backslash\)}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC2\_SWIZZLE(T, P, s, t)}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC3\_SWIZZLE(T, P, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, A, B) \(\backslash\)}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, A, C) \(\backslash\)}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, B, A) \(\backslash\)}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, B, C) \(\backslash\)}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, C, A) \(\backslash\)}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, C, B)}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_REF3\_FROM\_VEC3\_SWIZZLE(T, P, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, GLM\_MUTABLE, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, GLM\_MUTABLE, A, C, B) \(\backslash\)}}
+\DoxyCodeLine{64 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, GLM\_MUTABLE, B, A, C) \(\backslash\)}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, GLM\_MUTABLE, B, C, A) \(\backslash\)}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, GLM\_MUTABLE, C, A, B) \(\backslash\)}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, GLM\_MUTABLE, C, B, A)}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC3\_COMP(T, P, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{70 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_REF3\_FROM\_VEC3\_SWIZZLE(T, P, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC3\_SWIZZLE(T, P, A, B, C)}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC3(T, P) \(\backslash\)}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC3\_COMP(T, P, x, y, z) \(\backslash\)}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC3\_COMP(T, P, r, g, b) \(\backslash\)}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC3\_COMP(T, P, s, t, p)}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC4\_SWIZZLE(T, P, A, B, C, D) \(\backslash\)}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, A, B) \(\backslash\)}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, A, C) \(\backslash\)}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, A, D) \(\backslash\)}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, B, A) \(\backslash\)}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, B, C) \(\backslash\)}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, B, D) \(\backslash\)}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, C, A) \(\backslash\)}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, C, B) \(\backslash\)}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, C, D) \(\backslash\)}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, D, A) \(\backslash\)}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, D, B) \(\backslash\)}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, D, C)}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_REF3\_FROM\_VEC4\_SWIZZLE(T, P, A, B, C, D) \(\backslash\)}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , A, B, C) \(\backslash\)}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , A, B, D) \(\backslash\)}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , A, C, B) \(\backslash\)}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , A, C, D) \(\backslash\)}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , A, D, B) \(\backslash\)}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , A, D, C) \(\backslash\)}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , B, A, C) \(\backslash\)}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , B, A, D) \(\backslash\)}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , B, C, A) \(\backslash\)}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , B, C, D) \(\backslash\)}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , B, D, A) \(\backslash\)}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , B, D, C) \(\backslash\)}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , C, A, B) \(\backslash\)}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , C, A, D) \(\backslash\)}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , C, B, A) \(\backslash\)}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , C, B, D) \(\backslash\)}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , C, D, A) \(\backslash\)}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , C, D, B) \(\backslash\)}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , D, A, B) \(\backslash\)}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , D, A, C) \(\backslash\)}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , D, B, A) \(\backslash\)}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , D, B, C) \(\backslash\)}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , D, C, A) \(\backslash\)}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , D, C, B)}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_REF4\_FROM\_VEC4\_SWIZZLE(T, P, A, B, C, D) \(\backslash\)}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , A, C, B, D) \(\backslash\)}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , A, C, D, B) \(\backslash\)}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , A, D, B, C) \(\backslash\)}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , A, D, C, B) \(\backslash\)}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , A, B, D, C) \(\backslash\)}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , A, B, C, D) \(\backslash\)}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , B, C, A, D) \(\backslash\)}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , B, C, D, A) \(\backslash\)}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , B, D, A, C) \(\backslash\)}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , B, D, C, A) \(\backslash\)}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , B, A, D, C) \(\backslash\)}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , B, A, C, D) \(\backslash\)}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , C, B, A, D) \(\backslash\)}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , C, B, D, A) \(\backslash\)}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , C, D, A, B) \(\backslash\)}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , C, D, B, A) \(\backslash\)}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , C, A, D, B) \(\backslash\)}}
+\DoxyCodeLine{136 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , C, A, B, D) \(\backslash\)}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , D, C, B, A) \(\backslash\)}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , D, C, A, B) \(\backslash\)}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , D, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , D, A, C, B) \(\backslash\)}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , D, B, A, C) \(\backslash\)}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , D, B, C, A)}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC4\_COMP(T, P, A, B, C, D) \(\backslash\)}}
+\DoxyCodeLine{145 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC4\_SWIZZLE(T, P, A, B, C, D) \(\backslash\)}}
+\DoxyCodeLine{146 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_REF3\_FROM\_VEC4\_SWIZZLE(T, P, A, B, C, D) \(\backslash\)}}
+\DoxyCodeLine{147 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_REF4\_FROM\_VEC4\_SWIZZLE(T, P, A, B, C, D)}}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC4(T, P) \(\backslash\)}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC4\_COMP(T, P, x, y, z, w) \(\backslash\)}}
+\DoxyCodeLine{151 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC4\_COMP(T, P, r, g, b, a) \(\backslash\)}}
+\DoxyCodeLine{152 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC4\_COMP(T, P, s, t, p, q)}}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC2\_FROM\_VEC2\_SWIZZLE(T, P, A, B) \(\backslash\)}}
+\DoxyCodeLine{155 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, A, A) \(\backslash\)}}
+\DoxyCodeLine{156 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, A, B) \(\backslash\)}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, B, A) \(\backslash\)}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, B, B)}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC3\_FROM\_VEC2\_SWIZZLE(T, P, A, B) \(\backslash\)}}
+\DoxyCodeLine{161 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, A, A) \(\backslash\)}}
+\DoxyCodeLine{162 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, A, B) \(\backslash\)}}
+\DoxyCodeLine{163 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, B, A) \(\backslash\)}}
+\DoxyCodeLine{164 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, B, B) \(\backslash\)}}
+\DoxyCodeLine{165 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, A, A) \(\backslash\)}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, A, B) \(\backslash\)}}
+\DoxyCodeLine{167 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, B, A) \(\backslash\)}}
+\DoxyCodeLine{168 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, B, B)}}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC4\_FROM\_VEC2\_SWIZZLE(T, P, A, B) \(\backslash\)}}
+\DoxyCodeLine{171 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, A, A) \(\backslash\)}}
+\DoxyCodeLine{172 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, A, B) \(\backslash\)}}
+\DoxyCodeLine{173 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, B, A) \(\backslash\)}}
+\DoxyCodeLine{174 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, B, B) \(\backslash\)}}
+\DoxyCodeLine{175 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, A, A) \(\backslash\)}}
+\DoxyCodeLine{176 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, A, B) \(\backslash\)}}
+\DoxyCodeLine{177 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, B, A) \(\backslash\)}}
+\DoxyCodeLine{178 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, B, B) \(\backslash\)}}
+\DoxyCodeLine{179 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, A, A) \(\backslash\)}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, A, B) \(\backslash\)}}
+\DoxyCodeLine{181 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, B, A) \(\backslash\)}}
+\DoxyCodeLine{182 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, B, B) \(\backslash\)}}
+\DoxyCodeLine{183 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, A, A) \(\backslash\)}}
+\DoxyCodeLine{184 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, A, B) \(\backslash\)}}
+\DoxyCodeLine{185 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, B, A) \(\backslash\)}}
+\DoxyCodeLine{186 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, B, B)}}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC2\_COMP(T, P, A, B) \(\backslash\)}}
+\DoxyCodeLine{189 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_FROM\_VEC2\_SWIZZLE(T, P, A, B) \(\backslash\)}}
+\DoxyCodeLine{190 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_FROM\_VEC2\_SWIZZLE(T, P, A, B) \(\backslash\)}}
+\DoxyCodeLine{191 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_FROM\_VEC2\_SWIZZLE(T, P, A, B)}}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC2(T, P)         \(\backslash\)}}
+\DoxyCodeLine{194 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC2\_COMP(T, P, x, y)  \(\backslash\)}}
+\DoxyCodeLine{195 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC2\_COMP(T, P, r, g)  \(\backslash\)}}
+\DoxyCodeLine{196 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC2\_COMP(T, P, s, t)}}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC2\_FROM\_VEC3\_SWIZZLE(T, P, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{199 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, A, A) \(\backslash\)}}
+\DoxyCodeLine{200 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, A, B) \(\backslash\)}}
+\DoxyCodeLine{201 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, A, C) \(\backslash\)}}
+\DoxyCodeLine{202 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, B, A) \(\backslash\)}}
+\DoxyCodeLine{203 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, B, B) \(\backslash\)}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, B, C) \(\backslash\)}}
+\DoxyCodeLine{205 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, C, A) \(\backslash\)}}
+\DoxyCodeLine{206 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, C, B) \(\backslash\)}}
+\DoxyCodeLine{207 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, C, C)}}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{209 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC3\_FROM\_VEC3\_SWIZZLE(T, P, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{210 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, A, A) \(\backslash\)}}
+\DoxyCodeLine{211 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, A, B) \(\backslash\)}}
+\DoxyCodeLine{212 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, A, C) \(\backslash\)}}
+\DoxyCodeLine{213 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, B, A) \(\backslash\)}}
+\DoxyCodeLine{214 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, B, B) \(\backslash\)}}
+\DoxyCodeLine{215 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{216 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, C, A) \(\backslash\)}}
+\DoxyCodeLine{217 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, C, B) \(\backslash\)}}
+\DoxyCodeLine{218 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, C, C) \(\backslash\)}}
+\DoxyCodeLine{219 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, A, A) \(\backslash\)}}
+\DoxyCodeLine{220 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, A, B) \(\backslash\)}}
+\DoxyCodeLine{221 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, A, C) \(\backslash\)}}
+\DoxyCodeLine{222 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, B, A) \(\backslash\)}}
+\DoxyCodeLine{223 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, B, B) \(\backslash\)}}
+\DoxyCodeLine{224 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, B, C) \(\backslash\)}}
+\DoxyCodeLine{225 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, C, A) \(\backslash\)}}
+\DoxyCodeLine{226 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, C, B) \(\backslash\)}}
+\DoxyCodeLine{227 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, C, C) \(\backslash\)}}
+\DoxyCodeLine{228 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, A, A) \(\backslash\)}}
+\DoxyCodeLine{229 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, A, B) \(\backslash\)}}
+\DoxyCodeLine{230 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, A, C) \(\backslash\)}}
+\DoxyCodeLine{231 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, B, A) \(\backslash\)}}
+\DoxyCodeLine{232 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, B, B) \(\backslash\)}}
+\DoxyCodeLine{233 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, B, C) \(\backslash\)}}
+\DoxyCodeLine{234 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, C, A) \(\backslash\)}}
+\DoxyCodeLine{235 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, C, B) \(\backslash\)}}
+\DoxyCodeLine{236 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, C, C)}}
+\DoxyCodeLine{237 }
+\DoxyCodeLine{238 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC4\_FROM\_VEC3\_SWIZZLE(T, P, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{239 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, A, A) \(\backslash\)}}
+\DoxyCodeLine{240 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, A, B) \(\backslash\)}}
+\DoxyCodeLine{241 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, A, C) \(\backslash\)}}
+\DoxyCodeLine{242 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, B, A) \(\backslash\)}}
+\DoxyCodeLine{243 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, B, B) \(\backslash\)}}
+\DoxyCodeLine{244 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{245 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, C, A) \(\backslash\)}}
+\DoxyCodeLine{246 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, C, B) \(\backslash\)}}
+\DoxyCodeLine{247 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, C, C) \(\backslash\)}}
+\DoxyCodeLine{248 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, A, A) \(\backslash\)}}
+\DoxyCodeLine{249 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, A, B) \(\backslash\)}}
+\DoxyCodeLine{250 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, A, C) \(\backslash\)}}
+\DoxyCodeLine{251 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, B, A) \(\backslash\)}}
+\DoxyCodeLine{252 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, B, B) \(\backslash\)}}
+\DoxyCodeLine{253 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, B, C) \(\backslash\)}}
+\DoxyCodeLine{254 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, C, A) \(\backslash\)}}
+\DoxyCodeLine{255 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, C, B) \(\backslash\)}}
+\DoxyCodeLine{256 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, C, C) \(\backslash\)}}
+\DoxyCodeLine{257 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, A, A) \(\backslash\)}}
+\DoxyCodeLine{258 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, A, B) \(\backslash\)}}
+\DoxyCodeLine{259 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, A, C) \(\backslash\)}}
+\DoxyCodeLine{260 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, B, A) \(\backslash\)}}
+\DoxyCodeLine{261 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, B, B) \(\backslash\)}}
+\DoxyCodeLine{262 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, B, C) \(\backslash\)}}
+\DoxyCodeLine{263 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, C, A) \(\backslash\)}}
+\DoxyCodeLine{264 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, C, B) \(\backslash\)}}
+\DoxyCodeLine{265 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, C, C) \(\backslash\)}}
+\DoxyCodeLine{266 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, A, A) \(\backslash\)}}
+\DoxyCodeLine{267 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, A, B) \(\backslash\)}}
+\DoxyCodeLine{268 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, A, C) \(\backslash\)}}
+\DoxyCodeLine{269 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, B, A) \(\backslash\)}}
+\DoxyCodeLine{270 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, B, B) \(\backslash\)}}
+\DoxyCodeLine{271 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{272 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, C, A) \(\backslash\)}}
+\DoxyCodeLine{273 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, C, B) \(\backslash\)}}
+\DoxyCodeLine{274 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, C, C) \(\backslash\)}}
+\DoxyCodeLine{275 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, A, A) \(\backslash\)}}
+\DoxyCodeLine{276 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, A, B) \(\backslash\)}}
+\DoxyCodeLine{277 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, A, C) \(\backslash\)}}
+\DoxyCodeLine{278 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, B, A) \(\backslash\)}}
+\DoxyCodeLine{279 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, B, B) \(\backslash\)}}
+\DoxyCodeLine{280 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, B, C) \(\backslash\)}}
+\DoxyCodeLine{281 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, C, A) \(\backslash\)}}
+\DoxyCodeLine{282 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, C, B) \(\backslash\)}}
+\DoxyCodeLine{283 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, C, C) \(\backslash\)}}
+\DoxyCodeLine{284 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, A, A) \(\backslash\)}}
+\DoxyCodeLine{285 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, A, B) \(\backslash\)}}
+\DoxyCodeLine{286 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, A, C) \(\backslash\)}}
+\DoxyCodeLine{287 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, B, A) \(\backslash\)}}
+\DoxyCodeLine{288 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, B, B) \(\backslash\)}}
+\DoxyCodeLine{289 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, B, C) \(\backslash\)}}
+\DoxyCodeLine{290 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, C, A) \(\backslash\)}}
+\DoxyCodeLine{291 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, C, B) \(\backslash\)}}
+\DoxyCodeLine{292 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, C, C) \(\backslash\)}}
+\DoxyCodeLine{293 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, A, A) \(\backslash\)}}
+\DoxyCodeLine{294 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, A, B) \(\backslash\)}}
+\DoxyCodeLine{295 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, A, C) \(\backslash\)}}
+\DoxyCodeLine{296 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, B, A) \(\backslash\)}}
+\DoxyCodeLine{297 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, B, B) \(\backslash\)}}
+\DoxyCodeLine{298 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{299 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, C, A) \(\backslash\)}}
+\DoxyCodeLine{300 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, C, B) \(\backslash\)}}
+\DoxyCodeLine{301 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, C, C) \(\backslash\)}}
+\DoxyCodeLine{302 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, A, A) \(\backslash\)}}
+\DoxyCodeLine{303 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, A, B) \(\backslash\)}}
+\DoxyCodeLine{304 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, A, C) \(\backslash\)}}
+\DoxyCodeLine{305 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, B, A) \(\backslash\)}}
+\DoxyCodeLine{306 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, B, B) \(\backslash\)}}
+\DoxyCodeLine{307 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, B, C) \(\backslash\)}}
+\DoxyCodeLine{308 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, C, A) \(\backslash\)}}
+\DoxyCodeLine{309 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, C, B) \(\backslash\)}}
+\DoxyCodeLine{310 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, C, C) \(\backslash\)}}
+\DoxyCodeLine{311 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, A, A) \(\backslash\)}}
+\DoxyCodeLine{312 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, A, B) \(\backslash\)}}
+\DoxyCodeLine{313 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, A, C) \(\backslash\)}}
+\DoxyCodeLine{314 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, B, A) \(\backslash\)}}
+\DoxyCodeLine{315 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, B, B) \(\backslash\)}}
+\DoxyCodeLine{316 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, B, C) \(\backslash\)}}
+\DoxyCodeLine{317 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, C, A) \(\backslash\)}}
+\DoxyCodeLine{318 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, C, B) \(\backslash\)}}
+\DoxyCodeLine{319 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, C, C)}}
+\DoxyCodeLine{320 }
+\DoxyCodeLine{321 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC3\_COMP(T, P, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{322 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_FROM\_VEC3\_SWIZZLE(T, P, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{323 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_FROM\_VEC3\_SWIZZLE(T, P, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{324 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_FROM\_VEC3\_SWIZZLE(T, P, A, B, C)}}
+\DoxyCodeLine{325 }
+\DoxyCodeLine{326 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC3(T, P) \(\backslash\)}}
+\DoxyCodeLine{327 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC3\_COMP(T, P, x, y, z) \(\backslash\)}}
+\DoxyCodeLine{328 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC3\_COMP(T, P, r, g, b) \(\backslash\)}}
+\DoxyCodeLine{329 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC3\_COMP(T, P, s, t, p)}}
+\DoxyCodeLine{330 }
+\DoxyCodeLine{331 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC2\_FROM\_VEC4\_SWIZZLE(T, P, A, B, C, D) \(\backslash\)}}
+\DoxyCodeLine{332 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, A, A) \(\backslash\)}}
+\DoxyCodeLine{333 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, A, B) \(\backslash\)}}
+\DoxyCodeLine{334 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, A, C) \(\backslash\)}}
+\DoxyCodeLine{335 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, A, D) \(\backslash\)}}
+\DoxyCodeLine{336 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, B, A) \(\backslash\)}}
+\DoxyCodeLine{337 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, B, B) \(\backslash\)}}
+\DoxyCodeLine{338 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, B, C) \(\backslash\)}}
+\DoxyCodeLine{339 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, B, D) \(\backslash\)}}
+\DoxyCodeLine{340 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, C, A) \(\backslash\)}}
+\DoxyCodeLine{341 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, C, B) \(\backslash\)}}
+\DoxyCodeLine{342 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, C, C) \(\backslash\)}}
+\DoxyCodeLine{343 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, C, D) \(\backslash\)}}
+\DoxyCodeLine{344 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, D, A) \(\backslash\)}}
+\DoxyCodeLine{345 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, D, B) \(\backslash\)}}
+\DoxyCodeLine{346 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, D, C) \(\backslash\)}}
+\DoxyCodeLine{347 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, const, D, D)}}
+\DoxyCodeLine{348 }
+\DoxyCodeLine{349 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC3\_FROM\_VEC4\_SWIZZLE(T, P, A, B, C, D) \(\backslash\)}}
+\DoxyCodeLine{350 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, A, A) \(\backslash\)}}
+\DoxyCodeLine{351 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, A, B) \(\backslash\)}}
+\DoxyCodeLine{352 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, A, C) \(\backslash\)}}
+\DoxyCodeLine{353 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, A, D) \(\backslash\)}}
+\DoxyCodeLine{354 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, B, A) \(\backslash\)}}
+\DoxyCodeLine{355 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, B, B) \(\backslash\)}}
+\DoxyCodeLine{356 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{357 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, B, D) \(\backslash\)}}
+\DoxyCodeLine{358 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, C, A) \(\backslash\)}}
+\DoxyCodeLine{359 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, C, B) \(\backslash\)}}
+\DoxyCodeLine{360 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, C, C) \(\backslash\)}}
+\DoxyCodeLine{361 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, C, D) \(\backslash\)}}
+\DoxyCodeLine{362 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, D, A) \(\backslash\)}}
+\DoxyCodeLine{363 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, D, B) \(\backslash\)}}
+\DoxyCodeLine{364 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, D, C) \(\backslash\)}}
+\DoxyCodeLine{365 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, A, D, D) \(\backslash\)}}
+\DoxyCodeLine{366 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, A, A) \(\backslash\)}}
+\DoxyCodeLine{367 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, A, B) \(\backslash\)}}
+\DoxyCodeLine{368 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, A, C) \(\backslash\)}}
+\DoxyCodeLine{369 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, A, D) \(\backslash\)}}
+\DoxyCodeLine{370 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, B, A) \(\backslash\)}}
+\DoxyCodeLine{371 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, B, B) \(\backslash\)}}
+\DoxyCodeLine{372 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, B, C) \(\backslash\)}}
+\DoxyCodeLine{373 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, B, D) \(\backslash\)}}
+\DoxyCodeLine{374 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, C, A) \(\backslash\)}}
+\DoxyCodeLine{375 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, C, B) \(\backslash\)}}
+\DoxyCodeLine{376 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, C, C) \(\backslash\)}}
+\DoxyCodeLine{377 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, C, D) \(\backslash\)}}
+\DoxyCodeLine{378 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, D, A) \(\backslash\)}}
+\DoxyCodeLine{379 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, D, B) \(\backslash\)}}
+\DoxyCodeLine{380 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, D, C) \(\backslash\)}}
+\DoxyCodeLine{381 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, B, D, D) \(\backslash\)}}
+\DoxyCodeLine{382 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, A, A) \(\backslash\)}}
+\DoxyCodeLine{383 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, A, B) \(\backslash\)}}
+\DoxyCodeLine{384 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, A, C) \(\backslash\)}}
+\DoxyCodeLine{385 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, A, D) \(\backslash\)}}
+\DoxyCodeLine{386 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, B, A) \(\backslash\)}}
+\DoxyCodeLine{387 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, B, B) \(\backslash\)}}
+\DoxyCodeLine{388 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, B, C) \(\backslash\)}}
+\DoxyCodeLine{389 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, B, D) \(\backslash\)}}
+\DoxyCodeLine{390 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, C, A) \(\backslash\)}}
+\DoxyCodeLine{391 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, C, B) \(\backslash\)}}
+\DoxyCodeLine{392 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, C, C) \(\backslash\)}}
+\DoxyCodeLine{393 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, C, D) \(\backslash\)}}
+\DoxyCodeLine{394 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, D, A) \(\backslash\)}}
+\DoxyCodeLine{395 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, D, B) \(\backslash\)}}
+\DoxyCodeLine{396 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, D, C) \(\backslash\)}}
+\DoxyCodeLine{397 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, C, D, D) \(\backslash\)}}
+\DoxyCodeLine{398 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, D, A, A) \(\backslash\)}}
+\DoxyCodeLine{399 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, D, A, B) \(\backslash\)}}
+\DoxyCodeLine{400 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, D, A, C) \(\backslash\)}}
+\DoxyCodeLine{401 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, D, A, D) \(\backslash\)}}
+\DoxyCodeLine{402 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, D, B, A) \(\backslash\)}}
+\DoxyCodeLine{403 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, D, B, B) \(\backslash\)}}
+\DoxyCodeLine{404 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, D, B, C) \(\backslash\)}}
+\DoxyCodeLine{405 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, D, B, D) \(\backslash\)}}
+\DoxyCodeLine{406 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, D, C, A) \(\backslash\)}}
+\DoxyCodeLine{407 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, D, C, B) \(\backslash\)}}
+\DoxyCodeLine{408 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, D, C, C) \(\backslash\)}}
+\DoxyCodeLine{409 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, D, C, D) \(\backslash\)}}
+\DoxyCodeLine{410 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, D, D, A) \(\backslash\)}}
+\DoxyCodeLine{411 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, D, D, B) \(\backslash\)}}
+\DoxyCodeLine{412 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, D, D, C) \(\backslash\)}}
+\DoxyCodeLine{413 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, const, D, D, D)}}
+\DoxyCodeLine{414 }
+\DoxyCodeLine{415 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC4\_FROM\_VEC4\_SWIZZLE(T, P, A, B, C, D) \(\backslash\)}}
+\DoxyCodeLine{416 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, A, A) \(\backslash\)}}
+\DoxyCodeLine{417 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, A, B) \(\backslash\)}}
+\DoxyCodeLine{418 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, A, C) \(\backslash\)}}
+\DoxyCodeLine{419 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, A, D) \(\backslash\)}}
+\DoxyCodeLine{420 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, B, A) \(\backslash\)}}
+\DoxyCodeLine{421 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, B, B) \(\backslash\)}}
+\DoxyCodeLine{422 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{423 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, B, D) \(\backslash\)}}
+\DoxyCodeLine{424 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, C, A) \(\backslash\)}}
+\DoxyCodeLine{425 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, C, B) \(\backslash\)}}
+\DoxyCodeLine{426 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, C, C) \(\backslash\)}}
+\DoxyCodeLine{427 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, C, D) \(\backslash\)}}
+\DoxyCodeLine{428 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, D, A) \(\backslash\)}}
+\DoxyCodeLine{429 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, D, B) \(\backslash\)}}
+\DoxyCodeLine{430 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, D, C) \(\backslash\)}}
+\DoxyCodeLine{431 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, A, D, D) \(\backslash\)}}
+\DoxyCodeLine{432 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, A, A) \(\backslash\)}}
+\DoxyCodeLine{433 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, A, B) \(\backslash\)}}
+\DoxyCodeLine{434 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, A, C) \(\backslash\)}}
+\DoxyCodeLine{435 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, A, D) \(\backslash\)}}
+\DoxyCodeLine{436 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, B, A) \(\backslash\)}}
+\DoxyCodeLine{437 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, B, B) \(\backslash\)}}
+\DoxyCodeLine{438 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, B, C) \(\backslash\)}}
+\DoxyCodeLine{439 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, B, D) \(\backslash\)}}
+\DoxyCodeLine{440 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, C, A) \(\backslash\)}}
+\DoxyCodeLine{441 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, C, B) \(\backslash\)}}
+\DoxyCodeLine{442 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, C, C) \(\backslash\)}}
+\DoxyCodeLine{443 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, C, D) \(\backslash\)}}
+\DoxyCodeLine{444 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, D, A) \(\backslash\)}}
+\DoxyCodeLine{445 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, D, B) \(\backslash\)}}
+\DoxyCodeLine{446 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, D, C) \(\backslash\)}}
+\DoxyCodeLine{447 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, B, D, D) \(\backslash\)}}
+\DoxyCodeLine{448 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, A, A) \(\backslash\)}}
+\DoxyCodeLine{449 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, A, B) \(\backslash\)}}
+\DoxyCodeLine{450 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, A, C) \(\backslash\)}}
+\DoxyCodeLine{451 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, A, D) \(\backslash\)}}
+\DoxyCodeLine{452 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, B, A) \(\backslash\)}}
+\DoxyCodeLine{453 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, B, B) \(\backslash\)}}
+\DoxyCodeLine{454 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, B, C) \(\backslash\)}}
+\DoxyCodeLine{455 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, B, D) \(\backslash\)}}
+\DoxyCodeLine{456 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, C, A) \(\backslash\)}}
+\DoxyCodeLine{457 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, C, B) \(\backslash\)}}
+\DoxyCodeLine{458 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, C, C) \(\backslash\)}}
+\DoxyCodeLine{459 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, C, D) \(\backslash\)}}
+\DoxyCodeLine{460 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, D, A) \(\backslash\)}}
+\DoxyCodeLine{461 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, D, B) \(\backslash\)}}
+\DoxyCodeLine{462 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, D, C) \(\backslash\)}}
+\DoxyCodeLine{463 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, C, D, D) \(\backslash\)}}
+\DoxyCodeLine{464 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, D, A, A) \(\backslash\)}}
+\DoxyCodeLine{465 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, D, A, B) \(\backslash\)}}
+\DoxyCodeLine{466 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, D, A, C) \(\backslash\)}}
+\DoxyCodeLine{467 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, D, A, D) \(\backslash\)}}
+\DoxyCodeLine{468 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, D, B, A) \(\backslash\)}}
+\DoxyCodeLine{469 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, D, B, B) \(\backslash\)}}
+\DoxyCodeLine{470 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, D, B, C) \(\backslash\)}}
+\DoxyCodeLine{471 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, D, B, D) \(\backslash\)}}
+\DoxyCodeLine{472 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, D, C, A) \(\backslash\)}}
+\DoxyCodeLine{473 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, D, C, B) \(\backslash\)}}
+\DoxyCodeLine{474 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, D, C, C) \(\backslash\)}}
+\DoxyCodeLine{475 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, D, C, D) \(\backslash\)}}
+\DoxyCodeLine{476 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, D, D, A) \(\backslash\)}}
+\DoxyCodeLine{477 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, D, D, B) \(\backslash\)}}
+\DoxyCodeLine{478 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, D, D, C) \(\backslash\)}}
+\DoxyCodeLine{479 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, A, D, D, D) \(\backslash\)}}
+\DoxyCodeLine{480 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, A, A) \(\backslash\)}}
+\DoxyCodeLine{481 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, A, B) \(\backslash\)}}
+\DoxyCodeLine{482 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, A, C) \(\backslash\)}}
+\DoxyCodeLine{483 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, A, D) \(\backslash\)}}
+\DoxyCodeLine{484 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, B, A) \(\backslash\)}}
+\DoxyCodeLine{485 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, B, B) \(\backslash\)}}
+\DoxyCodeLine{486 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{487 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, B, D) \(\backslash\)}}
+\DoxyCodeLine{488 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, C, A) \(\backslash\)}}
+\DoxyCodeLine{489 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, C, B) \(\backslash\)}}
+\DoxyCodeLine{490 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, C, C) \(\backslash\)}}
+\DoxyCodeLine{491 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, C, D) \(\backslash\)}}
+\DoxyCodeLine{492 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, D, A) \(\backslash\)}}
+\DoxyCodeLine{493 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, D, B) \(\backslash\)}}
+\DoxyCodeLine{494 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, D, C) \(\backslash\)}}
+\DoxyCodeLine{495 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, A, D, D) \(\backslash\)}}
+\DoxyCodeLine{496 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, A, A) \(\backslash\)}}
+\DoxyCodeLine{497 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, A, B) \(\backslash\)}}
+\DoxyCodeLine{498 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, A, C) \(\backslash\)}}
+\DoxyCodeLine{499 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, A, D) \(\backslash\)}}
+\DoxyCodeLine{500 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, B, A) \(\backslash\)}}
+\DoxyCodeLine{501 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, B, B) \(\backslash\)}}
+\DoxyCodeLine{502 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, B, C) \(\backslash\)}}
+\DoxyCodeLine{503 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, B, D) \(\backslash\)}}
+\DoxyCodeLine{504 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, C, A) \(\backslash\)}}
+\DoxyCodeLine{505 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, C, B) \(\backslash\)}}
+\DoxyCodeLine{506 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, C, C) \(\backslash\)}}
+\DoxyCodeLine{507 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, C, D) \(\backslash\)}}
+\DoxyCodeLine{508 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, D, A) \(\backslash\)}}
+\DoxyCodeLine{509 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, D, B) \(\backslash\)}}
+\DoxyCodeLine{510 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, D, C) \(\backslash\)}}
+\DoxyCodeLine{511 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, B, D, D) \(\backslash\)}}
+\DoxyCodeLine{512 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, A, A) \(\backslash\)}}
+\DoxyCodeLine{513 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, A, B) \(\backslash\)}}
+\DoxyCodeLine{514 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, A, C) \(\backslash\)}}
+\DoxyCodeLine{515 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, A, D) \(\backslash\)}}
+\DoxyCodeLine{516 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, B, A) \(\backslash\)}}
+\DoxyCodeLine{517 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, B, B) \(\backslash\)}}
+\DoxyCodeLine{518 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, B, C) \(\backslash\)}}
+\DoxyCodeLine{519 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, B, D) \(\backslash\)}}
+\DoxyCodeLine{520 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, C, A) \(\backslash\)}}
+\DoxyCodeLine{521 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, C, B) \(\backslash\)}}
+\DoxyCodeLine{522 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, C, C) \(\backslash\)}}
+\DoxyCodeLine{523 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, C, D) \(\backslash\)}}
+\DoxyCodeLine{524 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, D, A) \(\backslash\)}}
+\DoxyCodeLine{525 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, D, B) \(\backslash\)}}
+\DoxyCodeLine{526 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, D, C) \(\backslash\)}}
+\DoxyCodeLine{527 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, C, D, D) \(\backslash\)}}
+\DoxyCodeLine{528 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, D, A, A) \(\backslash\)}}
+\DoxyCodeLine{529 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, D, A, B) \(\backslash\)}}
+\DoxyCodeLine{530 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, D, A, C) \(\backslash\)}}
+\DoxyCodeLine{531 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, D, A, D) \(\backslash\)}}
+\DoxyCodeLine{532 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, D, B, A) \(\backslash\)}}
+\DoxyCodeLine{533 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, D, B, B) \(\backslash\)}}
+\DoxyCodeLine{534 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, D, B, C) \(\backslash\)}}
+\DoxyCodeLine{535 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, D, B, D) \(\backslash\)}}
+\DoxyCodeLine{536 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, D, C, A) \(\backslash\)}}
+\DoxyCodeLine{537 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, D, C, B) \(\backslash\)}}
+\DoxyCodeLine{538 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, D, C, C) \(\backslash\)}}
+\DoxyCodeLine{539 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, D, C, D) \(\backslash\)}}
+\DoxyCodeLine{540 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, D, D, A) \(\backslash\)}}
+\DoxyCodeLine{541 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, D, D, B) \(\backslash\)}}
+\DoxyCodeLine{542 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, D, D, C) \(\backslash\)}}
+\DoxyCodeLine{543 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, B, D, D, D) \(\backslash\)}}
+\DoxyCodeLine{544 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, A, A) \(\backslash\)}}
+\DoxyCodeLine{545 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, A, B) \(\backslash\)}}
+\DoxyCodeLine{546 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, A, C) \(\backslash\)}}
+\DoxyCodeLine{547 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, A, D) \(\backslash\)}}
+\DoxyCodeLine{548 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, B, A) \(\backslash\)}}
+\DoxyCodeLine{549 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, B, B) \(\backslash\)}}
+\DoxyCodeLine{550 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{551 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, B, D) \(\backslash\)}}
+\DoxyCodeLine{552 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, C, A) \(\backslash\)}}
+\DoxyCodeLine{553 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, C, B) \(\backslash\)}}
+\DoxyCodeLine{554 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, C, C) \(\backslash\)}}
+\DoxyCodeLine{555 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, C, D) \(\backslash\)}}
+\DoxyCodeLine{556 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, D, A) \(\backslash\)}}
+\DoxyCodeLine{557 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, D, B) \(\backslash\)}}
+\DoxyCodeLine{558 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, D, C) \(\backslash\)}}
+\DoxyCodeLine{559 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, A, D, D) \(\backslash\)}}
+\DoxyCodeLine{560 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, A, A) \(\backslash\)}}
+\DoxyCodeLine{561 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, A, B) \(\backslash\)}}
+\DoxyCodeLine{562 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, A, C) \(\backslash\)}}
+\DoxyCodeLine{563 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, A, D) \(\backslash\)}}
+\DoxyCodeLine{564 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, B, A) \(\backslash\)}}
+\DoxyCodeLine{565 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, B, B) \(\backslash\)}}
+\DoxyCodeLine{566 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, B, C) \(\backslash\)}}
+\DoxyCodeLine{567 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, B, D) \(\backslash\)}}
+\DoxyCodeLine{568 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, C, A) \(\backslash\)}}
+\DoxyCodeLine{569 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, C, B) \(\backslash\)}}
+\DoxyCodeLine{570 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, C, C) \(\backslash\)}}
+\DoxyCodeLine{571 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, C, D) \(\backslash\)}}
+\DoxyCodeLine{572 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, D, A) \(\backslash\)}}
+\DoxyCodeLine{573 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, D, B) \(\backslash\)}}
+\DoxyCodeLine{574 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, D, C) \(\backslash\)}}
+\DoxyCodeLine{575 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, B, D, D) \(\backslash\)}}
+\DoxyCodeLine{576 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, A, A) \(\backslash\)}}
+\DoxyCodeLine{577 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, A, B) \(\backslash\)}}
+\DoxyCodeLine{578 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, A, C) \(\backslash\)}}
+\DoxyCodeLine{579 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, A, D) \(\backslash\)}}
+\DoxyCodeLine{580 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, B, A) \(\backslash\)}}
+\DoxyCodeLine{581 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, B, B) \(\backslash\)}}
+\DoxyCodeLine{582 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, B, C) \(\backslash\)}}
+\DoxyCodeLine{583 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, B, D) \(\backslash\)}}
+\DoxyCodeLine{584 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, C, A) \(\backslash\)}}
+\DoxyCodeLine{585 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, C, B) \(\backslash\)}}
+\DoxyCodeLine{586 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, C, C) \(\backslash\)}}
+\DoxyCodeLine{587 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, C, D) \(\backslash\)}}
+\DoxyCodeLine{588 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, D, A) \(\backslash\)}}
+\DoxyCodeLine{589 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, D, B) \(\backslash\)}}
+\DoxyCodeLine{590 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, D, C) \(\backslash\)}}
+\DoxyCodeLine{591 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, C, D, D) \(\backslash\)}}
+\DoxyCodeLine{592 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, D, A, A) \(\backslash\)}}
+\DoxyCodeLine{593 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, D, A, B) \(\backslash\)}}
+\DoxyCodeLine{594 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, D, A, C) \(\backslash\)}}
+\DoxyCodeLine{595 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, D, A, D) \(\backslash\)}}
+\DoxyCodeLine{596 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, D, B, A) \(\backslash\)}}
+\DoxyCodeLine{597 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, D, B, B) \(\backslash\)}}
+\DoxyCodeLine{598 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, D, B, C) \(\backslash\)}}
+\DoxyCodeLine{599 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, D, B, D) \(\backslash\)}}
+\DoxyCodeLine{600 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, D, C, A) \(\backslash\)}}
+\DoxyCodeLine{601 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, D, C, B) \(\backslash\)}}
+\DoxyCodeLine{602 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, D, C, C) \(\backslash\)}}
+\DoxyCodeLine{603 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, D, C, D) \(\backslash\)}}
+\DoxyCodeLine{604 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, D, D, A) \(\backslash\)}}
+\DoxyCodeLine{605 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, D, D, B) \(\backslash\)}}
+\DoxyCodeLine{606 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, D, D, C) \(\backslash\)}}
+\DoxyCodeLine{607 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, C, D, D, D) \(\backslash\)}}
+\DoxyCodeLine{608 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, A, A, A) \(\backslash\)}}
+\DoxyCodeLine{609 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, A, A, B) \(\backslash\)}}
+\DoxyCodeLine{610 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, A, A, C) \(\backslash\)}}
+\DoxyCodeLine{611 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, A, A, D) \(\backslash\)}}
+\DoxyCodeLine{612 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, A, B, A) \(\backslash\)}}
+\DoxyCodeLine{613 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, A, B, B) \(\backslash\)}}
+\DoxyCodeLine{614 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, A, B, C) \(\backslash\)}}
+\DoxyCodeLine{615 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, A, B, D) \(\backslash\)}}
+\DoxyCodeLine{616 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, A, C, A) \(\backslash\)}}
+\DoxyCodeLine{617 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, A, C, B) \(\backslash\)}}
+\DoxyCodeLine{618 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, A, C, C) \(\backslash\)}}
+\DoxyCodeLine{619 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, A, C, D) \(\backslash\)}}
+\DoxyCodeLine{620 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, A, D, A) \(\backslash\)}}
+\DoxyCodeLine{621 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, A, D, B) \(\backslash\)}}
+\DoxyCodeLine{622 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, A, D, C) \(\backslash\)}}
+\DoxyCodeLine{623 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, A, D, D) \(\backslash\)}}
+\DoxyCodeLine{624 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, B, A, A) \(\backslash\)}}
+\DoxyCodeLine{625 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, B, A, B) \(\backslash\)}}
+\DoxyCodeLine{626 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, B, A, C) \(\backslash\)}}
+\DoxyCodeLine{627 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, B, A, D) \(\backslash\)}}
+\DoxyCodeLine{628 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, B, B, A) \(\backslash\)}}
+\DoxyCodeLine{629 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, B, B, B) \(\backslash\)}}
+\DoxyCodeLine{630 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, B, B, C) \(\backslash\)}}
+\DoxyCodeLine{631 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, B, B, D) \(\backslash\)}}
+\DoxyCodeLine{632 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, B, C, A) \(\backslash\)}}
+\DoxyCodeLine{633 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, B, C, B) \(\backslash\)}}
+\DoxyCodeLine{634 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, B, C, C) \(\backslash\)}}
+\DoxyCodeLine{635 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, B, C, D) \(\backslash\)}}
+\DoxyCodeLine{636 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, B, D, A) \(\backslash\)}}
+\DoxyCodeLine{637 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, B, D, B) \(\backslash\)}}
+\DoxyCodeLine{638 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, B, D, C) \(\backslash\)}}
+\DoxyCodeLine{639 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, B, D, D) \(\backslash\)}}
+\DoxyCodeLine{640 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, C, A, A) \(\backslash\)}}
+\DoxyCodeLine{641 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, C, A, B) \(\backslash\)}}
+\DoxyCodeLine{642 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, C, A, C) \(\backslash\)}}
+\DoxyCodeLine{643 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, C, A, D) \(\backslash\)}}
+\DoxyCodeLine{644 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, C, B, A) \(\backslash\)}}
+\DoxyCodeLine{645 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, C, B, B) \(\backslash\)}}
+\DoxyCodeLine{646 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, C, B, C) \(\backslash\)}}
+\DoxyCodeLine{647 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, C, B, D) \(\backslash\)}}
+\DoxyCodeLine{648 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, C, C, A) \(\backslash\)}}
+\DoxyCodeLine{649 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, C, C, B) \(\backslash\)}}
+\DoxyCodeLine{650 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, C, C, C) \(\backslash\)}}
+\DoxyCodeLine{651 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, C, C, D) \(\backslash\)}}
+\DoxyCodeLine{652 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, C, D, A) \(\backslash\)}}
+\DoxyCodeLine{653 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, C, D, B) \(\backslash\)}}
+\DoxyCodeLine{654 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, C, D, C) \(\backslash\)}}
+\DoxyCodeLine{655 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, C, D, D) \(\backslash\)}}
+\DoxyCodeLine{656 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, D, A, A) \(\backslash\)}}
+\DoxyCodeLine{657 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, D, A, B) \(\backslash\)}}
+\DoxyCodeLine{658 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, D, A, C) \(\backslash\)}}
+\DoxyCodeLine{659 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, D, A, D) \(\backslash\)}}
+\DoxyCodeLine{660 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, D, B, A) \(\backslash\)}}
+\DoxyCodeLine{661 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, D, B, B) \(\backslash\)}}
+\DoxyCodeLine{662 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, D, B, C) \(\backslash\)}}
+\DoxyCodeLine{663 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, D, B, D) \(\backslash\)}}
+\DoxyCodeLine{664 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, D, C, A) \(\backslash\)}}
+\DoxyCodeLine{665 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, D, C, B) \(\backslash\)}}
+\DoxyCodeLine{666 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, D, C, C) \(\backslash\)}}
+\DoxyCodeLine{667 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, D, C, D) \(\backslash\)}}
+\DoxyCodeLine{668 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, D, D, A) \(\backslash\)}}
+\DoxyCodeLine{669 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, D, D, B) \(\backslash\)}}
+\DoxyCodeLine{670 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, D, D, C) \(\backslash\)}}
+\DoxyCodeLine{671 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, const, D, D, D, D)}}
+\DoxyCodeLine{672 }
+\DoxyCodeLine{673 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC4\_COMP(T, P, A, B, C, D) \(\backslash\)}}
+\DoxyCodeLine{674 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC2\_FROM\_VEC4\_SWIZZLE(T, P, A, B, C, D) \(\backslash\)}}
+\DoxyCodeLine{675 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC3\_FROM\_VEC4\_SWIZZLE(T, P, A, B, C, D) \(\backslash\)}}
+\DoxyCodeLine{676 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC4\_FROM\_VEC4\_SWIZZLE(T, P, A, B, C, D)}}
+\DoxyCodeLine{677 }
+\DoxyCodeLine{678 \textcolor{preprocessor}{\#define GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC4(T, P) \(\backslash\)}}
+\DoxyCodeLine{679 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC4\_COMP(T, P, x, y, z, w) \(\backslash\)}}
+\DoxyCodeLine{680 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC4\_COMP(T, P, r, g, b, a) \(\backslash\)}}
+\DoxyCodeLine{681 \textcolor{preprocessor}{    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC4\_COMP(T, P, s, t, p, q)}}
+\DoxyCodeLine{682 }
+
+\end{DoxyCode}

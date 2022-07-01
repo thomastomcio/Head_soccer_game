@@ -1,0 +1,121 @@
+\hypertarget{class_game_object}{}\doxysection{Game\+Object Class Reference}
+\label{class_game_object}\index{GameObject@{GameObject}}
+
+
+{\ttfamily \#include $<$game\+\_\+object.\+h$>$}
+
+Inheritance diagram for Game\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_object}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{Game\+Object}} ()
+\item 
+\mbox{\hyperlink{class_game_object_a10b5bac2382453ce7e7effa70e2f110d}{Game\+Object}} (glm\+::vec2 pos, glm\+::vec2 size, \mbox{\hyperlink{class_texture2_d}{Texture2D}} sprite, glm\+::vec3 color=glm\+::vec3(1.\+0f), glm\+::vec2 velocity=glm\+::vec2(0.\+0f, 0.\+0f))
+\item 
+virtual void \mbox{\hyperlink{class_game_object_addb595c3a1a514c6f2272cf8d5bf633a}{Draw}} (\mbox{\hyperlink{class_sprite_renderer}{Sprite\+Renderer}} \&renderer)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::vec2 \mbox{\hyperlink{class_game_object_a978df429d1e874c2915f4ed19570d3f8}{Position}}
+\item 
+glm\+::vec2 \mbox{\hyperlink{class_game_object_aa38b7a7a47923308a8371ab4ca7c85cd}{Size}}
+\item 
+glm\+::vec2 \mbox{\hyperlink{class_game_object_a448624c57e5ac935909a1dfd0900aa8d}{Velocity}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_game_object_a0e22c6244cfddffba0093a9c55c77037}{Color}}
+\item 
+float \mbox{\hyperlink{class_game_object_a08e388888ffd6d485fbec16f94f801a6}{Rotation}}
+\item 
+bool \mbox{\hyperlink{class_game_object_a152228f4cf05c201e79069abe0a3e6d5}{Is\+Solid}}
+\item 
+bool \mbox{\hyperlink{class_game_object_a95c0fd6ed481a098c444173f4bdf432a}{Destroyed}}
+\item 
+\mbox{\hyperlink{class_texture2_d}{Texture2D}} \mbox{\hyperlink{class_game_object_a0b13b0332425cfa619594205993e7ce4}{Sprite}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}\label{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}} 
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_game_object_a10b5bac2382453ce7e7effa70e2f110d}\label{class_game_object_a10b5bac2382453ce7e7effa70e2f110d}} 
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{pos,  }\item[{glm\+::vec2}]{size,  }\item[{\mbox{\hyperlink{class_texture2_d}{Texture2D}}}]{sprite,  }\item[{glm\+::vec3}]{color = {\ttfamily glm\+:\+:vec3(1.0f)},  }\item[{glm\+::vec2}]{velocity = {\ttfamily glm\+:\+:vec2(0.0f,~0.0f)} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_object_addb595c3a1a514c6f2272cf8d5bf633a}\label{class_game_object_addb595c3a1a514c6f2272cf8d5bf633a}} 
+\index{GameObject@{GameObject}!Draw@{Draw}}
+\index{Draw@{Draw}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Game\+Object\+::\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sprite_renderer}{Sprite\+Renderer}} \&}]{renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_object_a0e22c6244cfddffba0093a9c55c77037}\label{class_game_object_a0e22c6244cfddffba0093a9c55c77037}} 
+\index{GameObject@{GameObject}!Color@{Color}}
+\index{Color@{Color}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{Color}{Color}}
+{\footnotesize\ttfamily glm\+::vec3 Game\+Object\+::\+Color}
+
+\mbox{\Hypertarget{class_game_object_a95c0fd6ed481a098c444173f4bdf432a}\label{class_game_object_a95c0fd6ed481a098c444173f4bdf432a}} 
+\index{GameObject@{GameObject}!Destroyed@{Destroyed}}
+\index{Destroyed@{Destroyed}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{Destroyed}{Destroyed}}
+{\footnotesize\ttfamily bool Game\+Object\+::\+Destroyed}
+
+\mbox{\Hypertarget{class_game_object_a152228f4cf05c201e79069abe0a3e6d5}\label{class_game_object_a152228f4cf05c201e79069abe0a3e6d5}} 
+\index{GameObject@{GameObject}!IsSolid@{IsSolid}}
+\index{IsSolid@{IsSolid}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{IsSolid}{IsSolid}}
+{\footnotesize\ttfamily bool Game\+Object\+::\+Is\+Solid}
+
+\mbox{\Hypertarget{class_game_object_a978df429d1e874c2915f4ed19570d3f8}\label{class_game_object_a978df429d1e874c2915f4ed19570d3f8}} 
+\index{GameObject@{GameObject}!Position@{Position}}
+\index{Position@{Position}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily glm\+::vec2 Game\+Object\+::\+Position}
+
+\mbox{\Hypertarget{class_game_object_a08e388888ffd6d485fbec16f94f801a6}\label{class_game_object_a08e388888ffd6d485fbec16f94f801a6}} 
+\index{GameObject@{GameObject}!Rotation@{Rotation}}
+\index{Rotation@{Rotation}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{Rotation}{Rotation}}
+{\footnotesize\ttfamily float Game\+Object\+::\+Rotation}
+
+\mbox{\Hypertarget{class_game_object_aa38b7a7a47923308a8371ab4ca7c85cd}\label{class_game_object_aa38b7a7a47923308a8371ab4ca7c85cd}} 
+\index{GameObject@{GameObject}!Size@{Size}}
+\index{Size@{Size}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{Size}{Size}}
+{\footnotesize\ttfamily glm\+::vec2 Game\+Object\+::\+Size}
+
+\mbox{\Hypertarget{class_game_object_a0b13b0332425cfa619594205993e7ce4}\label{class_game_object_a0b13b0332425cfa619594205993e7ce4}} 
+\index{GameObject@{GameObject}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{Sprite}{Sprite}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_texture2_d}{Texture2D}} Game\+Object\+::\+Sprite}
+
+\mbox{\Hypertarget{class_game_object_a448624c57e5ac935909a1dfd0900aa8d}\label{class_game_object_a448624c57e5ac935909a1dfd0900aa8d}} 
+\index{GameObject@{GameObject}!Velocity@{Velocity}}
+\index{Velocity@{Velocity}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{Velocity}{Velocity}}
+{\footnotesize\ttfamily glm\+::vec2 Game\+Object\+::\+Velocity}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{game__object_8h}{game\+\_\+object.\+h}}\item 
+src/\mbox{\hyperlink{game__object_8cpp}{game\+\_\+object.\+cpp}}\end{DoxyCompactItemize}

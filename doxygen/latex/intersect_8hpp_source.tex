@@ -1,0 +1,69 @@
+\hypertarget{intersect_8hpp_source}{}\doxysection{intersect.\+hpp}
+\label{intersect_8hpp_source}\index{include/glm/gtx/intersect.hpp@{include/glm/gtx/intersect.hpp}}
+\mbox{\hyperlink{intersect_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{comment}{// Dependency:}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <cfloat>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <limits>}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}../glm.hpp"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}../geometric.hpp"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}../gtx/closest\_point.hpp"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}../gtx/vector\_query.hpp"{}}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#ifndef GLM\_ENABLE\_EXPERIMENTAL}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#   error "{}GLM: GLM\_GTX\_closest\_point is an experimental extension and may change in the future. Use \#define GLM\_ENABLE\_EXPERIMENTAL before including it, if you really want to use it."{}}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_GTX\_closest\_point extension included"{}})}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{33 \{}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{40     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{41     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__gtx__intersect_gad3697a9700ea379739a667ea02573488}{intersectRayPlane}}(}
+\DoxyCodeLine{42         genType \textcolor{keyword}{const}\& orig, genType \textcolor{keyword}{const}\& dir,}
+\DoxyCodeLine{43         genType \textcolor{keyword}{const}\& planeOrig, genType \textcolor{keyword}{const}\& planeNormal,}
+\DoxyCodeLine{44         \textcolor{keyword}{typename} genType::value\_type \& intersectionDistance);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{49     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{50     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__gtx__intersect_ga65bf2c594482f04881c36bc761f9e946}{intersectRayTriangle}}(}
+\DoxyCodeLine{51         vec<3, T, Q> \textcolor{keyword}{const}\& orig, vec<3, T, Q> \textcolor{keyword}{const}\& dir,}
+\DoxyCodeLine{52         vec<3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a7062a23d1d434121d4a88f530703d06a}{v0}}, vec<3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a435c176a02c061b43e19bdf7c86cceae}{v1}}, vec<3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0928f6d0f0f794ba000a21dfae422136}{v2}},}
+\DoxyCodeLine{53         vec<2, T, Q>\& baryPosition, T\& \mbox{\hyperlink{glad_8h_a744fbed01658cb96bb8ba7e85a86d1dc}{distance}});}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{57     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{58     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__gtx__intersect_ga9d29b9b3acb504d43986502f42740df4}{intersectLineTriangle}}(}
+\DoxyCodeLine{59         genType \textcolor{keyword}{const}\& orig, genType \textcolor{keyword}{const}\& dir,}
+\DoxyCodeLine{60         genType \textcolor{keyword}{const}\& vert0, genType \textcolor{keyword}{const}\& vert1, genType \textcolor{keyword}{const}\& vert2,}
+\DoxyCodeLine{61         genType \& position);}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{66     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{67     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__gtx__intersect_gac88f8cd84c4bcb5b947d56acbbcfa56e}{intersectRaySphere}}(}
+\DoxyCodeLine{68         genType \textcolor{keyword}{const}\& rayStarting, genType \textcolor{keyword}{const}\& rayNormalizedDirection,}
+\DoxyCodeLine{69         genType \textcolor{keyword}{const}\& sphereCenter, \textcolor{keyword}{typename} genType::value\_type \textcolor{keyword}{const} sphereRadiusSquered,}
+\DoxyCodeLine{70         \textcolor{keyword}{typename} genType::value\_type \& intersectionDistance);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{74     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{75     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__gtx__intersect_gac88f8cd84c4bcb5b947d56acbbcfa56e}{intersectRaySphere}}(}
+\DoxyCodeLine{76         genType \textcolor{keyword}{const}\& rayStarting, genType \textcolor{keyword}{const}\& rayNormalizedDirection,}
+\DoxyCodeLine{77         genType \textcolor{keyword}{const}\& sphereCenter, \textcolor{keyword}{const} \textcolor{keyword}{typename} genType::value\_type sphereRadius,}
+\DoxyCodeLine{78         genType \& intersectionPosition, genType \& intersectionNormal);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{82     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{83     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__gtx__intersect_ga9c68139f3d8a4f3d7fe45f9dbc0de5b7}{intersectLineSphere}}(}
+\DoxyCodeLine{84         genType \textcolor{keyword}{const}\& point0, genType \textcolor{keyword}{const}\& point1,}
+\DoxyCodeLine{85         genType \textcolor{keyword}{const}\& sphereCenter, \textcolor{keyword}{typename} genType::value\_type sphereRadius,}
+\DoxyCodeLine{86         genType \& intersectionPosition1, genType \& intersectionNormal1,}
+\DoxyCodeLine{87         genType \& intersectionPosition2 = genType(), genType \& intersectionNormal2 = genType());}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{90 \}\textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{intersect_8inl}{intersect.inl}}"{}}}
+
+\end{DoxyCode}

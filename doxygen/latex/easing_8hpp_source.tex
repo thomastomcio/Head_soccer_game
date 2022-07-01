@@ -1,0 +1,130 @@
+\hypertarget{easing_8hpp_source}{}\doxysection{easing.\+hpp}
+\label{easing_8hpp_source}\index{include/glm/gtx/easing.hpp@{include/glm/gtx/easing.hpp}}
+\mbox{\hyperlink{easing_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{comment}{// Dependency:}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}../glm.hpp"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}../gtc/constants.hpp"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}../detail/qualifier.hpp"{}}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#ifndef GLM\_ENABLE\_EXPERIMENTAL}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#   error "{}GLM: GLM\_GTX\_easing is an experimental extension and may change in the future. Use \#define GLM\_ENABLE\_EXPERIMENTAL before including it, if you really want to use it."{}}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_GTX\_easing extension included"{}})}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}\{}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{38     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{39     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga290c3e47cb0a49f2e8abe90b1872b649}{linearInterpolation}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{43     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{44     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_gaf42089d35855695132d217cd902304a0}{quadraticEaseIn}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{48     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{49     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga283717bc2d937547ad34ec0472234ee3}{quadraticEaseOut}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{55     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{56     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga03e8fc2d7945a4e63ee33b2159c14cea}{quadraticEaseInOut}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{59     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{60     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_gaff52f746102b94864d105563ba8895ae}{cubicEaseIn}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{64     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{65     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga40d746385d8bcc5973f5bc6a2340ca91}{cubicEaseOut}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{71     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{72     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga55134072b42d75452189321d4a2ad91c}{cubicEaseInOut}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{76     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{77     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga808b41f14514f47dad5dcc69eb924afd}{quarticEaseIn}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{81     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{82     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga4dfb33fa7664aa888eb647999d329b98}{quarticEaseOut}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{88     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{89     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga6d000f852de12b197e154f234b20c505}{quarticEaseInOut}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{93     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{94     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga097579d8e087dcf48037588140a21640}{quinticEaseIn}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{98     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{99     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga7dbd4d5c8da3f5353121f615e7b591d7}{quinticEaseOut}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{105     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{106     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga2a82d5c46df7e2d21cc0108eb7b83934}{quinticEaseInOut}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{110     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{111     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_gafb338ac6f6b2bcafee50e3dca5201dbf}{sineEaseIn}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{115     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{116     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_gab3e454f883afc1606ef91363881bf5a3}{sineEaseOut}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{120     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{121     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_gaa46e3d5fbf7a15caa28eff9ef192d7c7}{sineEaseInOut}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{125     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{126     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga34508d4b204a321ec26d6086aa047997}{circularEaseIn}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{130     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{131     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga26fefde9ced9b72745fe21f1a3fe8da7}{circularEaseOut}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{137     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{138     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga0c1027637a5b02d4bb3612aa12599d69}{circularEaseInOut}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{142     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{143     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga7f24ee9219ab4c84dc8de24be84c1e3c}{exponentialEaseIn}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{147     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{148     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga517f2bcfd15bc2c25c466ae50808efc3}{exponentialEaseOut}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{154     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{155     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga232fb6dc093c5ce94bee105ff2947501}{exponentialEaseInOut}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{159     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{160     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga230918eccee4e113d10ec5b8cdc58695}{elasticEaseIn}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{164     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{165     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_gace9c9d1bdf88bf2ab1e7cdefa54c7365}{elasticEaseOut}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{171     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{172     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga2db4ac8959559b11b4029e54812908d6}{elasticEaseInOut}}(genType \textcolor{keyword}{const} \& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{175     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{176     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga93cddcdb6347a44d5927cc2bf2570816}{backEaseIn}}(genType \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{179     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{180     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_gabf25069fa906413c858fd46903d520b9}{backEaseOut}}(genType \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{183     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{184     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_gace6d24722a2f6722b56398206eb810bb}{backEaseInOut}}(genType \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{189     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{190     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga93cddcdb6347a44d5927cc2bf2570816}{backEaseIn}}(genType \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, genType \textcolor{keyword}{const}\& o);}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{195     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{196     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_gabf25069fa906413c858fd46903d520b9}{backEaseOut}}(genType \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, genType \textcolor{keyword}{const}\& o);}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{201     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{202     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_gace6d24722a2f6722b56398206eb810bb}{backEaseInOut}}(genType \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, genType \textcolor{keyword}{const}\& o);}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{205     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{206     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_gaac30767f2e430b0c3fc859a4d59c7b5b}{bounceEaseIn}}(genType \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{209     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{210     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_ga94007005ff0dcfa0749ebfa2aec540b2}{bounceEaseOut}}(genType \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{213     \textcolor{keyword}{template} <\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{214     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__easing_gadf9f38eff1e5f4c2fa5b629a25ae413e}{bounceEaseInOut}}(genType \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}});}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{217 \}\textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{easing_8inl}{easing.inl}}"{}}}
+
+\end{DoxyCode}

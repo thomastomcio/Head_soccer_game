@@ -1,0 +1,49 @@
+\hypertarget{resource__manager_8h_source}{}\doxysection{resource\+\_\+manager.\+h}
+\label{resource__manager_8h_source}\index{include/resource\_manager.h@{include/resource\_manager.h}}
+\mbox{\hyperlink{resource__manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef RESOURCE\_MANAGER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define RESOURCE\_MANAGER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <glad/glad.h>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{texture_8h}{texture.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{shader_8h}{shader.h}}"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{comment}{// A static singleton ResourceManager class that hosts several}}
+\DoxyCodeLine{14 \textcolor{comment}{// functions to load Textures and Shaders. Each loaded texture}}
+\DoxyCodeLine{15 \textcolor{comment}{// and/or shader is also stored for future reference by string}}
+\DoxyCodeLine{16 \textcolor{comment}{// handles. All functions and resources are static and no }}
+\DoxyCodeLine{17 \textcolor{comment}{// public constructor is defined.}}
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_resource_manager}{ResourceManager}}}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     \textcolor{comment}{// resource storage}}
+\DoxyCodeLine{22     \textcolor{keyword}{static} std::map<std::string, Shader>    \mbox{\hyperlink{class_resource_manager_a8c1bc8fe6e0f92ab3c7e2dca94b0e491}{Shaders}};}
+\DoxyCodeLine{23     \textcolor{keyword}{static} std::map<std::string, Texture2D> \mbox{\hyperlink{class_resource_manager_a1e5099e4a3efa14c2cbf837a14c2ea11}{Textures}};}
+\DoxyCodeLine{24     \textcolor{comment}{// loads (and generates) a shader program from file loading vertex, fragment (and geometry) shader's source code. If gShaderFile is not nullptr, it also loads a geometry shader}}
+\DoxyCodeLine{25     \textcolor{keyword}{static} \mbox{\hyperlink{class_shader}{Shader}}    \mbox{\hyperlink{class_resource_manager_a93d389ab8964fc5b144dd100e97e88a6}{LoadShader}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *vShaderFile, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *fShaderFile, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *gShaderFile, std::string name);}
+\DoxyCodeLine{26     \textcolor{comment}{// retrieves a stored sader}}
+\DoxyCodeLine{27     \textcolor{keyword}{static} \mbox{\hyperlink{class_shader}{Shader}}    \mbox{\hyperlink{class_resource_manager_a0b9cc7ab026e234c138efae97810b3e2}{GetShader}}(std::string name);}
+\DoxyCodeLine{28     \textcolor{comment}{// loads (and generates) a texture from file}}
+\DoxyCodeLine{29     \textcolor{keyword}{static} \mbox{\hyperlink{class_texture2_d}{Texture2D}} \mbox{\hyperlink{class_resource_manager_ae7180ae48b1744199c77688ebb502c10}{LoadTexture}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *file, \textcolor{keywordtype}{bool} alpha, std::string name);}
+\DoxyCodeLine{30     \textcolor{comment}{// retrieves a stored texture}}
+\DoxyCodeLine{31     \textcolor{keyword}{static} \mbox{\hyperlink{class_texture2_d}{Texture2D}} \mbox{\hyperlink{class_resource_manager_a343b8599f59fa180cd86c9ae0709538e}{GetTexture}}(std::string name);}
+\DoxyCodeLine{32     \textcolor{comment}{// properly de-\/allocates all loaded resources}}
+\DoxyCodeLine{33     \textcolor{keyword}{static} \textcolor{keywordtype}{void}      \mbox{\hyperlink{class_resource_manager_aecd08b92634fad3316442c267a04e8c4}{Clear}}();}
+\DoxyCodeLine{34 \textcolor{keyword}{private}:}
+\DoxyCodeLine{35     \textcolor{comment}{// private constructor, that is we do not want any actual resource manager objects. Its members and functions should be publicly available (static).}}
+\DoxyCodeLine{36     \mbox{\hyperlink{class_resource_manager}{ResourceManager}}() \{ \}}
+\DoxyCodeLine{37     \textcolor{comment}{// loads and generates a shader from file}}
+\DoxyCodeLine{38     \textcolor{keyword}{static} \mbox{\hyperlink{class_shader}{Shader}}    loadShaderFromFile(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *vShaderFile, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *fShaderFile, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *gShaderFile = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{39     \textcolor{comment}{// loads a single texture from file}}
+\DoxyCodeLine{40     \textcolor{keyword}{static} \mbox{\hyperlink{class_texture2_d}{Texture2D}} loadTextureFromFile(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *file, \textcolor{keywordtype}{bool} alpha);}
+\DoxyCodeLine{41 \};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

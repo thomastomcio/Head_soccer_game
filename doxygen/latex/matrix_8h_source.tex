@@ -1,0 +1,1033 @@
+\hypertarget{matrix_8h_source}{}\doxysection{matrix.\+h}
+\label{matrix_8h_source}\index{include/glm/simd/matrix.h@{include/glm/simd/matrix.h}}
+\mbox{\hyperlink{matrix_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{geometric_8h}{geometric.h}}"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#if GLM\_ARCH \& GLM\_ARCH\_SSE2\_BIT}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \textcolor{keywordtype}{void} glm\_mat4\_matrixCompMult(glm\_vec4 \textcolor{keyword}{const} in1[4], glm\_vec4 \textcolor{keyword}{const} in2[4], glm\_vec4 out[4])}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     out[0] = \_mm\_mul\_ps(in1[0], in2[0]);}
+\DoxyCodeLine{13     out[1] = \_mm\_mul\_ps(in1[1], in2[1]);}
+\DoxyCodeLine{14     out[2] = \_mm\_mul\_ps(in1[2], in2[2]);}
+\DoxyCodeLine{15     out[3] = \_mm\_mul\_ps(in1[3], in2[3]);}
+\DoxyCodeLine{16 \}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \textcolor{keywordtype}{void} glm\_mat4\_add(glm\_vec4 \textcolor{keyword}{const} in1[4], glm\_vec4 \textcolor{keyword}{const} in2[4], glm\_vec4 out[4])}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     out[0] = \_mm\_add\_ps(in1[0], in2[0]);}
+\DoxyCodeLine{21     out[1] = \_mm\_add\_ps(in1[1], in2[1]);}
+\DoxyCodeLine{22     out[2] = \_mm\_add\_ps(in1[2], in2[2]);}
+\DoxyCodeLine{23     out[3] = \_mm\_add\_ps(in1[3], in2[3]);}
+\DoxyCodeLine{24 \}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \textcolor{keywordtype}{void} glm\_mat4\_sub(glm\_vec4 \textcolor{keyword}{const} in1[4], glm\_vec4 \textcolor{keyword}{const} in2[4], glm\_vec4 out[4])}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28     out[0] = \_mm\_sub\_ps(in1[0], in2[0]);}
+\DoxyCodeLine{29     out[1] = \_mm\_sub\_ps(in1[1], in2[1]);}
+\DoxyCodeLine{30     out[2] = \_mm\_sub\_ps(in1[2], in2[2]);}
+\DoxyCodeLine{31     out[3] = \_mm\_sub\_ps(in1[3], in2[3]);}
+\DoxyCodeLine{32 \}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_vec4 glm\_mat4\_mul\_vec4(glm\_vec4 \textcolor{keyword}{const} \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[4], glm\_vec4 \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})}
+\DoxyCodeLine{35 \{}
+\DoxyCodeLine{36     \_\_m128 \mbox{\hyperlink{glad_8h_a7062a23d1d434121d4a88f530703d06a}{v0}} = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{37     \_\_m128 \mbox{\hyperlink{glad_8h_a435c176a02c061b43e19bdf7c86cceae}{v1}} = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{38     \_\_m128 \mbox{\hyperlink{glad_8h_a0928f6d0f0f794ba000a21dfae422136}{v2}} = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{39     \_\_m128 \mbox{\hyperlink{glad_8h_acc806b31cbf466ceba6555983d8b814d}{v3}} = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \_\_m128 m0 = \_mm\_mul\_ps(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[0], \mbox{\hyperlink{glad_8h_a7062a23d1d434121d4a88f530703d06a}{v0}});}
+\DoxyCodeLine{42     \_\_m128 m1 = \_mm\_mul\_ps(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[1], \mbox{\hyperlink{glad_8h_a435c176a02c061b43e19bdf7c86cceae}{v1}});}
+\DoxyCodeLine{43     \_\_m128 m2 = \_mm\_mul\_ps(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[2], \mbox{\hyperlink{glad_8h_a0928f6d0f0f794ba000a21dfae422136}{v2}});}
+\DoxyCodeLine{44     \_\_m128 m3 = \_mm\_mul\_ps(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[3], \mbox{\hyperlink{glad_8h_acc806b31cbf466ceba6555983d8b814d}{v3}});}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \_\_m128 a0 = \_mm\_add\_ps(m0, m1);}
+\DoxyCodeLine{47     \_\_m128 a1 = \_mm\_add\_ps(m2, m3);}
+\DoxyCodeLine{48     \_\_m128 a2 = \_mm\_add\_ps(a0, a1);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{keywordflow}{return} a2;}
+\DoxyCodeLine{51 \}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \_\_m128 glm\_vec4\_mul\_mat4(glm\_vec4 \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, glm\_vec4 \textcolor{keyword}{const} \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[4])}
+\DoxyCodeLine{54 \{}
+\DoxyCodeLine{55     \_\_m128 i0 = \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[0];}
+\DoxyCodeLine{56     \_\_m128 i1 = \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[1];}
+\DoxyCodeLine{57     \_\_m128 i2 = \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[2];}
+\DoxyCodeLine{58     \_\_m128 i3 = \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[3];}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \_\_m128 m0 = \_mm\_mul\_ps(\mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, i0);}
+\DoxyCodeLine{61     \_\_m128 m1 = \_mm\_mul\_ps(\mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, i1);}
+\DoxyCodeLine{62     \_\_m128 m2 = \_mm\_mul\_ps(\mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, i2);}
+\DoxyCodeLine{63     \_\_m128 m3 = \_mm\_mul\_ps(\mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, i3);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     \_\_m128 u0 = \_mm\_unpacklo\_ps(m0, m1);}
+\DoxyCodeLine{66     \_\_m128 \mbox{\hyperlink{glad_8h_ab296853c9d55bfdc62cda6c50d1b4781}{u1}} = \_mm\_unpackhi\_ps(m0, m1);}
+\DoxyCodeLine{67     \_\_m128 a0 = \_mm\_add\_ps(u0, \mbox{\hyperlink{glad_8h_ab296853c9d55bfdc62cda6c50d1b4781}{u1}});}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     \_\_m128 \mbox{\hyperlink{glad_8h_a1c6bf6fa786a04b729b30e56d68474ef}{u2}} = \_mm\_unpacklo\_ps(m2, m3);}
+\DoxyCodeLine{70     \_\_m128 u3 = \_mm\_unpackhi\_ps(m2, m3);}
+\DoxyCodeLine{71     \_\_m128 a1 = \_mm\_add\_ps(\mbox{\hyperlink{glad_8h_a1c6bf6fa786a04b729b30e56d68474ef}{u2}}, u3);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     \_\_m128 f0 = \_mm\_movelh\_ps(a0, a1);}
+\DoxyCodeLine{74     \_\_m128 f1 = \_mm\_movehl\_ps(a1, a0);}
+\DoxyCodeLine{75     \_\_m128 f2 = \_mm\_add\_ps(f0, f1);}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77     \textcolor{keywordflow}{return} f2;}
+\DoxyCodeLine{78 \}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \textcolor{keywordtype}{void} glm\_mat4\_mul(glm\_vec4 \textcolor{keyword}{const} in1[4], glm\_vec4 \textcolor{keyword}{const} in2[4], glm\_vec4 out[4])}
+\DoxyCodeLine{81 \{}
+\DoxyCodeLine{82     \{}
+\DoxyCodeLine{83         \_\_m128 e0 = \_mm\_shuffle\_ps(in2[0], in2[0], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{84         \_\_m128 e1 = \_mm\_shuffle\_ps(in2[0], in2[0], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{85         \_\_m128 e2 = \_mm\_shuffle\_ps(in2[0], in2[0], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{86         \_\_m128 e3 = \_mm\_shuffle\_ps(in2[0], in2[0], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88         \_\_m128 m0 = \_mm\_mul\_ps(in1[0], e0);}
+\DoxyCodeLine{89         \_\_m128 m1 = \_mm\_mul\_ps(in1[1], e1);}
+\DoxyCodeLine{90         \_\_m128 m2 = \_mm\_mul\_ps(in1[2], e2);}
+\DoxyCodeLine{91         \_\_m128 m3 = \_mm\_mul\_ps(in1[3], e3);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93         \_\_m128 a0 = \_mm\_add\_ps(m0, m1);}
+\DoxyCodeLine{94         \_\_m128 a1 = \_mm\_add\_ps(m2, m3);}
+\DoxyCodeLine{95         \_\_m128 a2 = \_mm\_add\_ps(a0, a1);}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97         out[0] = a2;}
+\DoxyCodeLine{98     \}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100     \{}
+\DoxyCodeLine{101         \_\_m128 e0 = \_mm\_shuffle\_ps(in2[1], in2[1], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{102         \_\_m128 e1 = \_mm\_shuffle\_ps(in2[1], in2[1], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{103         \_\_m128 e2 = \_mm\_shuffle\_ps(in2[1], in2[1], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{104         \_\_m128 e3 = \_mm\_shuffle\_ps(in2[1], in2[1], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106         \_\_m128 m0 = \_mm\_mul\_ps(in1[0], e0);}
+\DoxyCodeLine{107         \_\_m128 m1 = \_mm\_mul\_ps(in1[1], e1);}
+\DoxyCodeLine{108         \_\_m128 m2 = \_mm\_mul\_ps(in1[2], e2);}
+\DoxyCodeLine{109         \_\_m128 m3 = \_mm\_mul\_ps(in1[3], e3);}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111         \_\_m128 a0 = \_mm\_add\_ps(m0, m1);}
+\DoxyCodeLine{112         \_\_m128 a1 = \_mm\_add\_ps(m2, m3);}
+\DoxyCodeLine{113         \_\_m128 a2 = \_mm\_add\_ps(a0, a1);}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115         out[1] = a2;}
+\DoxyCodeLine{116     \}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118     \{}
+\DoxyCodeLine{119         \_\_m128 e0 = \_mm\_shuffle\_ps(in2[2], in2[2], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{120         \_\_m128 e1 = \_mm\_shuffle\_ps(in2[2], in2[2], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{121         \_\_m128 e2 = \_mm\_shuffle\_ps(in2[2], in2[2], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{122         \_\_m128 e3 = \_mm\_shuffle\_ps(in2[2], in2[2], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124         \_\_m128 m0 = \_mm\_mul\_ps(in1[0], e0);}
+\DoxyCodeLine{125         \_\_m128 m1 = \_mm\_mul\_ps(in1[1], e1);}
+\DoxyCodeLine{126         \_\_m128 m2 = \_mm\_mul\_ps(in1[2], e2);}
+\DoxyCodeLine{127         \_\_m128 m3 = \_mm\_mul\_ps(in1[3], e3);}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129         \_\_m128 a0 = \_mm\_add\_ps(m0, m1);}
+\DoxyCodeLine{130         \_\_m128 a1 = \_mm\_add\_ps(m2, m3);}
+\DoxyCodeLine{131         \_\_m128 a2 = \_mm\_add\_ps(a0, a1);}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133         out[2] = a2;}
+\DoxyCodeLine{134     \}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136     \{}
+\DoxyCodeLine{137         \textcolor{comment}{//(\_\_m128\&)\_mm\_shuffle\_epi32(\_\_m128i\&)in2[0], \_MM\_SHUFFLE(3, 3, 3, 3))}}
+\DoxyCodeLine{138         \_\_m128 e0 = \_mm\_shuffle\_ps(in2[3], in2[3], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{139         \_\_m128 e1 = \_mm\_shuffle\_ps(in2[3], in2[3], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{140         \_\_m128 e2 = \_mm\_shuffle\_ps(in2[3], in2[3], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{141         \_\_m128 e3 = \_mm\_shuffle\_ps(in2[3], in2[3], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143         \_\_m128 m0 = \_mm\_mul\_ps(in1[0], e0);}
+\DoxyCodeLine{144         \_\_m128 m1 = \_mm\_mul\_ps(in1[1], e1);}
+\DoxyCodeLine{145         \_\_m128 m2 = \_mm\_mul\_ps(in1[2], e2);}
+\DoxyCodeLine{146         \_\_m128 m3 = \_mm\_mul\_ps(in1[3], e3);}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148         \_\_m128 a0 = \_mm\_add\_ps(m0, m1);}
+\DoxyCodeLine{149         \_\_m128 a1 = \_mm\_add\_ps(m2, m3);}
+\DoxyCodeLine{150         \_\_m128 a2 = \_mm\_add\_ps(a0, a1);}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152         out[3] = a2;}
+\DoxyCodeLine{153     \}}
+\DoxyCodeLine{154 \}}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \textcolor{keywordtype}{void} glm\_mat4\_transpose(glm\_vec4 \textcolor{keyword}{const} \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[4], glm\_vec4 out[4])}
+\DoxyCodeLine{157 \{}
+\DoxyCodeLine{158     \_\_m128 tmp0 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[0], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], 0x44);}
+\DoxyCodeLine{159     \_\_m128 tmp2 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[0], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], 0xEE);}
+\DoxyCodeLine{160     \_\_m128 tmp1 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], 0x44);}
+\DoxyCodeLine{161     \_\_m128 tmp3 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], 0xEE);}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163     out[0] = \_mm\_shuffle\_ps(tmp0, tmp1, 0x88);}
+\DoxyCodeLine{164     out[1] = \_mm\_shuffle\_ps(tmp0, tmp1, 0xDD);}
+\DoxyCodeLine{165     out[2] = \_mm\_shuffle\_ps(tmp2, tmp3, 0x88);}
+\DoxyCodeLine{166     out[3] = \_mm\_shuffle\_ps(tmp2, tmp3, 0xDD);}
+\DoxyCodeLine{167 \}}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_vec4 glm\_mat4\_determinant\_highp(glm\_vec4 \textcolor{keyword}{const} \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[4])}
+\DoxyCodeLine{170 \{}
+\DoxyCodeLine{171     \_\_m128 Fac0;}
+\DoxyCodeLine{172     \{}
+\DoxyCodeLine{173         \textcolor{comment}{//  valType SubFactor00 = m[2][2] * m[3][3] -\/ m[3][2] * m[2][3];}}
+\DoxyCodeLine{174         \textcolor{comment}{//  valType SubFactor00 = m[2][2] * m[3][3] -\/ m[3][2] * m[2][3];}}
+\DoxyCodeLine{175         \textcolor{comment}{//  valType SubFactor06 = m[1][2] * m[3][3] -\/ m[3][2] * m[1][3];}}
+\DoxyCodeLine{176         \textcolor{comment}{//  valType SubFactor13 = m[1][2] * m[2][3] -\/ m[2][2] * m[1][3];}}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178         \_\_m128 Swp0a = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{179         \_\_m128 Swp0b = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181         \_\_m128 Swp00 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{182         \_\_m128 Swp01 = \_mm\_shuffle\_ps(Swp0a, Swp0a, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{183         \_\_m128 Swp02 = \_mm\_shuffle\_ps(Swp0b, Swp0b, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{184         \_\_m128 Swp03 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186         \_\_m128 Mul00 = \_mm\_mul\_ps(Swp00, Swp01);}
+\DoxyCodeLine{187         \_\_m128 Mul01 = \_mm\_mul\_ps(Swp02, Swp03);}
+\DoxyCodeLine{188         Fac0 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{189     \}}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191     \_\_m128 Fac1;}
+\DoxyCodeLine{192     \{}
+\DoxyCodeLine{193         \textcolor{comment}{//  valType SubFactor01 = m[2][1] * m[3][3] -\/ m[3][1] * m[2][3];}}
+\DoxyCodeLine{194         \textcolor{comment}{//  valType SubFactor01 = m[2][1] * m[3][3] -\/ m[3][1] * m[2][3];}}
+\DoxyCodeLine{195         \textcolor{comment}{//  valType SubFactor07 = m[1][1] * m[3][3] -\/ m[3][1] * m[1][3];}}
+\DoxyCodeLine{196         \textcolor{comment}{//  valType SubFactor14 = m[1][1] * m[2][3] -\/ m[2][1] * m[1][3];}}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{198         \_\_m128 Swp0a = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{199         \_\_m128 Swp0b = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201         \_\_m128 Swp00 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{202         \_\_m128 Swp01 = \_mm\_shuffle\_ps(Swp0a, Swp0a, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{203         \_\_m128 Swp02 = \_mm\_shuffle\_ps(Swp0b, Swp0b, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{204         \_\_m128 Swp03 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{206         \_\_m128 Mul00 = \_mm\_mul\_ps(Swp00, Swp01);}
+\DoxyCodeLine{207         \_\_m128 Mul01 = \_mm\_mul\_ps(Swp02, Swp03);}
+\DoxyCodeLine{208         Fac1 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{209     \}}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211 }
+\DoxyCodeLine{212     \_\_m128 Fac2;}
+\DoxyCodeLine{213     \{}
+\DoxyCodeLine{214         \textcolor{comment}{//  valType SubFactor02 = m[2][1] * m[3][2] -\/ m[3][1] * m[2][2];}}
+\DoxyCodeLine{215         \textcolor{comment}{//  valType SubFactor02 = m[2][1] * m[3][2] -\/ m[3][1] * m[2][2];}}
+\DoxyCodeLine{216         \textcolor{comment}{//  valType SubFactor08 = m[1][1] * m[3][2] -\/ m[3][1] * m[1][2];}}
+\DoxyCodeLine{217         \textcolor{comment}{//  valType SubFactor15 = m[1][1] * m[2][2] -\/ m[2][1] * m[1][2];}}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219         \_\_m128 Swp0a = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{220         \_\_m128 Swp0b = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222         \_\_m128 Swp00 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{223         \_\_m128 Swp01 = \_mm\_shuffle\_ps(Swp0a, Swp0a, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{224         \_\_m128 Swp02 = \_mm\_shuffle\_ps(Swp0b, Swp0b, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{225         \_\_m128 Swp03 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227         \_\_m128 Mul00 = \_mm\_mul\_ps(Swp00, Swp01);}
+\DoxyCodeLine{228         \_\_m128 Mul01 = \_mm\_mul\_ps(Swp02, Swp03);}
+\DoxyCodeLine{229         Fac2 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{230     \}}
+\DoxyCodeLine{231 }
+\DoxyCodeLine{232     \_\_m128 Fac3;}
+\DoxyCodeLine{233     \{}
+\DoxyCodeLine{234         \textcolor{comment}{//  valType SubFactor03 = m[2][0] * m[3][3] -\/ m[3][0] * m[2][3];}}
+\DoxyCodeLine{235         \textcolor{comment}{//  valType SubFactor03 = m[2][0] * m[3][3] -\/ m[3][0] * m[2][3];}}
+\DoxyCodeLine{236         \textcolor{comment}{//  valType SubFactor09 = m[1][0] * m[3][3] -\/ m[3][0] * m[1][3];}}
+\DoxyCodeLine{237         \textcolor{comment}{//  valType SubFactor16 = m[1][0] * m[2][3] -\/ m[2][0] * m[1][3];}}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239         \_\_m128 Swp0a = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{240         \_\_m128 Swp0b = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242         \_\_m128 Swp00 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{243         \_\_m128 Swp01 = \_mm\_shuffle\_ps(Swp0a, Swp0a, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{244         \_\_m128 Swp02 = \_mm\_shuffle\_ps(Swp0b, Swp0b, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{245         \_\_m128 Swp03 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247         \_\_m128 Mul00 = \_mm\_mul\_ps(Swp00, Swp01);}
+\DoxyCodeLine{248         \_\_m128 Mul01 = \_mm\_mul\_ps(Swp02, Swp03);}
+\DoxyCodeLine{249         Fac3 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{250     \}}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252     \_\_m128 Fac4;}
+\DoxyCodeLine{253     \{}
+\DoxyCodeLine{254         \textcolor{comment}{//  valType SubFactor04 = m[2][0] * m[3][2] -\/ m[3][0] * m[2][2];}}
+\DoxyCodeLine{255         \textcolor{comment}{//  valType SubFactor04 = m[2][0] * m[3][2] -\/ m[3][0] * m[2][2];}}
+\DoxyCodeLine{256         \textcolor{comment}{//  valType SubFactor10 = m[1][0] * m[3][2] -\/ m[3][0] * m[1][2];}}
+\DoxyCodeLine{257         \textcolor{comment}{//  valType SubFactor17 = m[1][0] * m[2][2] -\/ m[2][0] * m[1][2];}}
+\DoxyCodeLine{258 }
+\DoxyCodeLine{259         \_\_m128 Swp0a = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{260         \_\_m128 Swp0b = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{261 }
+\DoxyCodeLine{262         \_\_m128 Swp00 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{263         \_\_m128 Swp01 = \_mm\_shuffle\_ps(Swp0a, Swp0a, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{264         \_\_m128 Swp02 = \_mm\_shuffle\_ps(Swp0b, Swp0b, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{265         \_\_m128 Swp03 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{267         \_\_m128 Mul00 = \_mm\_mul\_ps(Swp00, Swp01);}
+\DoxyCodeLine{268         \_\_m128 Mul01 = \_mm\_mul\_ps(Swp02, Swp03);}
+\DoxyCodeLine{269         Fac4 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{270     \}}
+\DoxyCodeLine{271 }
+\DoxyCodeLine{272     \_\_m128 Fac5;}
+\DoxyCodeLine{273     \{}
+\DoxyCodeLine{274         \textcolor{comment}{//  valType SubFactor05 = m[2][0] * m[3][1] -\/ m[3][0] * m[2][1];}}
+\DoxyCodeLine{275         \textcolor{comment}{//  valType SubFactor05 = m[2][0] * m[3][1] -\/ m[3][0] * m[2][1];}}
+\DoxyCodeLine{276         \textcolor{comment}{//  valType SubFactor12 = m[1][0] * m[3][1] -\/ m[3][0] * m[1][1];}}
+\DoxyCodeLine{277         \textcolor{comment}{//  valType SubFactor18 = m[1][0] * m[2][1] -\/ m[2][0] * m[1][1];}}
+\DoxyCodeLine{278 }
+\DoxyCodeLine{279         \_\_m128 Swp0a = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{280         \_\_m128 Swp0b = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{281 }
+\DoxyCodeLine{282         \_\_m128 Swp00 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{283         \_\_m128 Swp01 = \_mm\_shuffle\_ps(Swp0a, Swp0a, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{284         \_\_m128 Swp02 = \_mm\_shuffle\_ps(Swp0b, Swp0b, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{285         \_\_m128 Swp03 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{286 }
+\DoxyCodeLine{287         \_\_m128 Mul00 = \_mm\_mul\_ps(Swp00, Swp01);}
+\DoxyCodeLine{288         \_\_m128 Mul01 = \_mm\_mul\_ps(Swp02, Swp03);}
+\DoxyCodeLine{289         Fac5 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{290     \}}
+\DoxyCodeLine{291 }
+\DoxyCodeLine{292     \_\_m128 SignA = \_mm\_set\_ps( 1.0f,-\/1.0f, 1.0f,-\/1.0f);}
+\DoxyCodeLine{293     \_\_m128 SignB = \_mm\_set\_ps(-\/1.0f, 1.0f,-\/1.0f, 1.0f);}
+\DoxyCodeLine{294 }
+\DoxyCodeLine{295     \textcolor{comment}{// m[1][0]}}
+\DoxyCodeLine{296     \textcolor{comment}{// m[0][0]}}
+\DoxyCodeLine{297     \textcolor{comment}{// m[0][0]}}
+\DoxyCodeLine{298     \textcolor{comment}{// m[0][0]}}
+\DoxyCodeLine{299     \_\_m128 Temp0 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[0], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{300     \_\_m128 Vec0 = \_mm\_shuffle\_ps(Temp0, Temp0, \_MM\_SHUFFLE(2, 2, 2, 0));}
+\DoxyCodeLine{301 }
+\DoxyCodeLine{302     \textcolor{comment}{// m[1][1]}}
+\DoxyCodeLine{303     \textcolor{comment}{// m[0][1]}}
+\DoxyCodeLine{304     \textcolor{comment}{// m[0][1]}}
+\DoxyCodeLine{305     \textcolor{comment}{// m[0][1]}}
+\DoxyCodeLine{306     \_\_m128 Temp1 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[0], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{307     \_\_m128 Vec1 = \_mm\_shuffle\_ps(Temp1, Temp1, \_MM\_SHUFFLE(2, 2, 2, 0));}
+\DoxyCodeLine{308 }
+\DoxyCodeLine{309     \textcolor{comment}{// m[1][2]}}
+\DoxyCodeLine{310     \textcolor{comment}{// m[0][2]}}
+\DoxyCodeLine{311     \textcolor{comment}{// m[0][2]}}
+\DoxyCodeLine{312     \textcolor{comment}{// m[0][2]}}
+\DoxyCodeLine{313     \_\_m128 Temp2 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[0], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{314     \_\_m128 Vec2 = \_mm\_shuffle\_ps(Temp2, Temp2, \_MM\_SHUFFLE(2, 2, 2, 0));}
+\DoxyCodeLine{315 }
+\DoxyCodeLine{316     \textcolor{comment}{// m[1][3]}}
+\DoxyCodeLine{317     \textcolor{comment}{// m[0][3]}}
+\DoxyCodeLine{318     \textcolor{comment}{// m[0][3]}}
+\DoxyCodeLine{319     \textcolor{comment}{// m[0][3]}}
+\DoxyCodeLine{320     \_\_m128 Temp3 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[0], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{321     \_\_m128 Vec3 = \_mm\_shuffle\_ps(Temp3, Temp3, \_MM\_SHUFFLE(2, 2, 2, 0));}
+\DoxyCodeLine{322 }
+\DoxyCodeLine{323     \textcolor{comment}{// col0}}
+\DoxyCodeLine{324     \textcolor{comment}{// + (Vec1[0] * Fac0[0] -\/ Vec2[0] * Fac1[0] + Vec3[0] * Fac2[0]),}}
+\DoxyCodeLine{325     \textcolor{comment}{// -\/ (Vec1[1] * Fac0[1] -\/ Vec2[1] * Fac1[1] + Vec3[1] * Fac2[1]),}}
+\DoxyCodeLine{326     \textcolor{comment}{// + (Vec1[2] * Fac0[2] -\/ Vec2[2] * Fac1[2] + Vec3[2] * Fac2[2]),}}
+\DoxyCodeLine{327     \textcolor{comment}{// -\/ (Vec1[3] * Fac0[3] -\/ Vec2[3] * Fac1[3] + Vec3[3] * Fac2[3]),}}
+\DoxyCodeLine{328     \_\_m128 Mul00 = \_mm\_mul\_ps(Vec1, Fac0);}
+\DoxyCodeLine{329     \_\_m128 Mul01 = \_mm\_mul\_ps(Vec2, Fac1);}
+\DoxyCodeLine{330     \_\_m128 Mul02 = \_mm\_mul\_ps(Vec3, Fac2);}
+\DoxyCodeLine{331     \_\_m128 Sub00 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{332     \_\_m128 Add00 = \_mm\_add\_ps(Sub00, Mul02);}
+\DoxyCodeLine{333     \_\_m128 Inv0 = \_mm\_mul\_ps(SignB, Add00);}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{335     \textcolor{comment}{// col1}}
+\DoxyCodeLine{336     \textcolor{comment}{// -\/ (Vec0[0] * Fac0[0] -\/ Vec2[0] * Fac3[0] + Vec3[0] * Fac4[0]),}}
+\DoxyCodeLine{337     \textcolor{comment}{// + (Vec0[0] * Fac0[1] -\/ Vec2[1] * Fac3[1] + Vec3[1] * Fac4[1]),}}
+\DoxyCodeLine{338     \textcolor{comment}{// -\/ (Vec0[0] * Fac0[2] -\/ Vec2[2] * Fac3[2] + Vec3[2] * Fac4[2]),}}
+\DoxyCodeLine{339     \textcolor{comment}{// + (Vec0[0] * Fac0[3] -\/ Vec2[3] * Fac3[3] + Vec3[3] * Fac4[3]),}}
+\DoxyCodeLine{340     \_\_m128 Mul03 = \_mm\_mul\_ps(Vec0, Fac0);}
+\DoxyCodeLine{341     \_\_m128 Mul04 = \_mm\_mul\_ps(Vec2, Fac3);}
+\DoxyCodeLine{342     \_\_m128 Mul05 = \_mm\_mul\_ps(Vec3, Fac4);}
+\DoxyCodeLine{343     \_\_m128 Sub01 = \_mm\_sub\_ps(Mul03, Mul04);}
+\DoxyCodeLine{344     \_\_m128 Add01 = \_mm\_add\_ps(Sub01, Mul05);}
+\DoxyCodeLine{345     \_\_m128 Inv1 = \_mm\_mul\_ps(SignA, Add01);}
+\DoxyCodeLine{346 }
+\DoxyCodeLine{347     \textcolor{comment}{// col2}}
+\DoxyCodeLine{348     \textcolor{comment}{// + (Vec0[0] * Fac1[0] -\/ Vec1[0] * Fac3[0] + Vec3[0] * Fac5[0]),}}
+\DoxyCodeLine{349     \textcolor{comment}{// -\/ (Vec0[0] * Fac1[1] -\/ Vec1[1] * Fac3[1] + Vec3[1] * Fac5[1]),}}
+\DoxyCodeLine{350     \textcolor{comment}{// + (Vec0[0] * Fac1[2] -\/ Vec1[2] * Fac3[2] + Vec3[2] * Fac5[2]),}}
+\DoxyCodeLine{351     \textcolor{comment}{// -\/ (Vec0[0] * Fac1[3] -\/ Vec1[3] * Fac3[3] + Vec3[3] * Fac5[3]),}}
+\DoxyCodeLine{352     \_\_m128 Mul06 = \_mm\_mul\_ps(Vec0, Fac1);}
+\DoxyCodeLine{353     \_\_m128 Mul07 = \_mm\_mul\_ps(Vec1, Fac3);}
+\DoxyCodeLine{354     \_\_m128 Mul08 = \_mm\_mul\_ps(Vec3, Fac5);}
+\DoxyCodeLine{355     \_\_m128 Sub02 = \_mm\_sub\_ps(Mul06, Mul07);}
+\DoxyCodeLine{356     \_\_m128 Add02 = \_mm\_add\_ps(Sub02, Mul08);}
+\DoxyCodeLine{357     \_\_m128 Inv2 = \_mm\_mul\_ps(SignB, Add02);}
+\DoxyCodeLine{358 }
+\DoxyCodeLine{359     \textcolor{comment}{// col3}}
+\DoxyCodeLine{360     \textcolor{comment}{// -\/ (Vec1[0] * Fac2[0] -\/ Vec1[0] * Fac4[0] + Vec2[0] * Fac5[0]),}}
+\DoxyCodeLine{361     \textcolor{comment}{// + (Vec1[0] * Fac2[1] -\/ Vec1[1] * Fac4[1] + Vec2[1] * Fac5[1]),}}
+\DoxyCodeLine{362     \textcolor{comment}{// -\/ (Vec1[0] * Fac2[2] -\/ Vec1[2] * Fac4[2] + Vec2[2] * Fac5[2]),}}
+\DoxyCodeLine{363     \textcolor{comment}{// + (Vec1[0] * Fac2[3] -\/ Vec1[3] * Fac4[3] + Vec2[3] * Fac5[3]));}}
+\DoxyCodeLine{364     \_\_m128 Mul09 = \_mm\_mul\_ps(Vec0, Fac2);}
+\DoxyCodeLine{365     \_\_m128 Mul10 = \_mm\_mul\_ps(Vec1, Fac4);}
+\DoxyCodeLine{366     \_\_m128 Mul11 = \_mm\_mul\_ps(Vec2, Fac5);}
+\DoxyCodeLine{367     \_\_m128 Sub03 = \_mm\_sub\_ps(Mul09, Mul10);}
+\DoxyCodeLine{368     \_\_m128 Add03 = \_mm\_add\_ps(Sub03, Mul11);}
+\DoxyCodeLine{369     \_\_m128 Inv3 = \_mm\_mul\_ps(SignA, Add03);}
+\DoxyCodeLine{370 }
+\DoxyCodeLine{371     \_\_m128 Row0 = \_mm\_shuffle\_ps(Inv0, Inv1, \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{372     \_\_m128 Row1 = \_mm\_shuffle\_ps(Inv2, Inv3, \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{373     \_\_m128 Row2 = \_mm\_shuffle\_ps(Row0, Row1, \_MM\_SHUFFLE(2, 0, 2, 0));}
+\DoxyCodeLine{374 }
+\DoxyCodeLine{375     \textcolor{comment}{//  valType Determinant = m[0][0] * Inverse[0][0]}}
+\DoxyCodeLine{376     \textcolor{comment}{//                      + m[0][1] * Inverse[1][0]}}
+\DoxyCodeLine{377     \textcolor{comment}{//                      + m[0][2] * Inverse[2][0]}}
+\DoxyCodeLine{378     \textcolor{comment}{//                      + m[0][3] * Inverse[3][0];}}
+\DoxyCodeLine{379     \_\_m128 Det0 = glm\_vec4\_dot(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[0], Row2);}
+\DoxyCodeLine{380     \textcolor{keywordflow}{return} Det0;}
+\DoxyCodeLine{381 \}}
+\DoxyCodeLine{382 }
+\DoxyCodeLine{383 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_vec4 glm\_mat4\_determinant\_lowp(glm\_vec4 \textcolor{keyword}{const} \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[4])}
+\DoxyCodeLine{384 \{}
+\DoxyCodeLine{385     \textcolor{comment}{// \_mm\_castsi128\_ps(\_mm\_shuffle\_epi32(\_mm\_castps\_si128(}}
+\DoxyCodeLine{386 }
+\DoxyCodeLine{387     \textcolor{comment}{//T SubFactor00 = m[2][2] * m[3][3] -\/ m[3][2] * m[2][3];}}
+\DoxyCodeLine{388     \textcolor{comment}{//T SubFactor01 = m[2][1] * m[3][3] -\/ m[3][1] * m[2][3];}}
+\DoxyCodeLine{389     \textcolor{comment}{//T SubFactor02 = m[2][1] * m[3][2] -\/ m[3][1] * m[2][2];}}
+\DoxyCodeLine{390     \textcolor{comment}{//T SubFactor03 = m[2][0] * m[3][3] -\/ m[3][0] * m[2][3];}}
+\DoxyCodeLine{391     \textcolor{comment}{//T SubFactor04 = m[2][0] * m[3][2] -\/ m[3][0] * m[2][2];}}
+\DoxyCodeLine{392     \textcolor{comment}{//T SubFactor05 = m[2][0] * m[3][1] -\/ m[3][0] * m[2][1];}}
+\DoxyCodeLine{393 }
+\DoxyCodeLine{394     \textcolor{comment}{// First 2 columns}}
+\DoxyCodeLine{395     \_\_m128 Swp2A = \_mm\_castsi128\_ps(\_mm\_shuffle\_epi32(\_mm\_castps\_si128(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[2]), \_MM\_SHUFFLE(0, 1, 1, 2)));}
+\DoxyCodeLine{396     \_\_m128 Swp3A = \_mm\_castsi128\_ps(\_mm\_shuffle\_epi32(\_mm\_castps\_si128(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[3]), \_MM\_SHUFFLE(3, 2, 3, 3)));}
+\DoxyCodeLine{397     \_\_m128 MulA = \_mm\_mul\_ps(Swp2A, Swp3A);}
+\DoxyCodeLine{398 }
+\DoxyCodeLine{399     \textcolor{comment}{// Second 2 columns}}
+\DoxyCodeLine{400     \_\_m128 Swp2B = \_mm\_castsi128\_ps(\_mm\_shuffle\_epi32(\_mm\_castps\_si128(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[2]), \_MM\_SHUFFLE(3, 2, 3, 3)));}
+\DoxyCodeLine{401     \_\_m128 Swp3B = \_mm\_castsi128\_ps(\_mm\_shuffle\_epi32(\_mm\_castps\_si128(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[3]), \_MM\_SHUFFLE(0, 1, 1, 2)));}
+\DoxyCodeLine{402     \_\_m128 MulB = \_mm\_mul\_ps(Swp2B, Swp3B);}
+\DoxyCodeLine{403 }
+\DoxyCodeLine{404     \textcolor{comment}{// Columns subtraction}}
+\DoxyCodeLine{405     \_\_m128 SubE = \_mm\_sub\_ps(MulA, MulB);}
+\DoxyCodeLine{406 }
+\DoxyCodeLine{407     \textcolor{comment}{// Last 2 rows}}
+\DoxyCodeLine{408     \_\_m128 Swp2C = \_mm\_castsi128\_ps(\_mm\_shuffle\_epi32(\_mm\_castps\_si128(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[2]), \_MM\_SHUFFLE(0, 0, 1, 2)));}
+\DoxyCodeLine{409     \_\_m128 Swp3C = \_mm\_castsi128\_ps(\_mm\_shuffle\_epi32(\_mm\_castps\_si128(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[3]), \_MM\_SHUFFLE(1, 2, 0, 0)));}
+\DoxyCodeLine{410     \_\_m128 MulC = \_mm\_mul\_ps(Swp2C, Swp3C);}
+\DoxyCodeLine{411     \_\_m128 SubF = \_mm\_sub\_ps(\_mm\_movehl\_ps(MulC, MulC), MulC);}
+\DoxyCodeLine{412 }
+\DoxyCodeLine{413     \textcolor{comment}{//vec<4, T, Q> DetCof(}}
+\DoxyCodeLine{414     \textcolor{comment}{//  + (m[1][1] * SubFactor00 -\/ m[1][2] * SubFactor01 + m[1][3] * SubFactor02),}}
+\DoxyCodeLine{415     \textcolor{comment}{//  -\/ (m[1][0] * SubFactor00 -\/ m[1][2] * SubFactor03 + m[1][3] * SubFactor04),}}
+\DoxyCodeLine{416     \textcolor{comment}{//  + (m[1][0] * SubFactor01 -\/ m[1][1] * SubFactor03 + m[1][3] * SubFactor05),}}
+\DoxyCodeLine{417     \textcolor{comment}{//  -\/ (m[1][0] * SubFactor02 -\/ m[1][1] * SubFactor04 + m[1][2] * SubFactor05));}}
+\DoxyCodeLine{418 }
+\DoxyCodeLine{419     \_\_m128 SubFacA = \_mm\_castsi128\_ps(\_mm\_shuffle\_epi32(\_mm\_castps\_si128(SubE), \_MM\_SHUFFLE(2, 1, 0, 0)));}
+\DoxyCodeLine{420     \_\_m128 SwpFacA = \_mm\_castsi128\_ps(\_mm\_shuffle\_epi32(\_mm\_castps\_si128(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[1]), \_MM\_SHUFFLE(0, 0, 0, 1)));}
+\DoxyCodeLine{421     \_\_m128 MulFacA = \_mm\_mul\_ps(SwpFacA, SubFacA);}
+\DoxyCodeLine{422 }
+\DoxyCodeLine{423     \_\_m128 SubTmpB = \_mm\_shuffle\_ps(SubE, SubF, \_MM\_SHUFFLE(0, 0, 3, 1));}
+\DoxyCodeLine{424     \_\_m128 SubFacB = \_mm\_castsi128\_ps(\_mm\_shuffle\_epi32(\_mm\_castps\_si128(SubTmpB), \_MM\_SHUFFLE(3, 1, 1, 0)));\textcolor{comment}{//SubF[0], SubE[3], SubE[3], SubE[1];}}
+\DoxyCodeLine{425     \_\_m128 SwpFacB = \_mm\_castsi128\_ps(\_mm\_shuffle\_epi32(\_mm\_castps\_si128(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[1]), \_MM\_SHUFFLE(1, 1, 2, 2)));}
+\DoxyCodeLine{426     \_\_m128 MulFacB = \_mm\_mul\_ps(SwpFacB, SubFacB);}
+\DoxyCodeLine{427 }
+\DoxyCodeLine{428     \_\_m128 SubRes = \_mm\_sub\_ps(MulFacA, MulFacB);}
+\DoxyCodeLine{429 }
+\DoxyCodeLine{430     \_\_m128 SubTmpC = \_mm\_shuffle\_ps(SubE, SubF, \_MM\_SHUFFLE(1, 0, 2, 2));}
+\DoxyCodeLine{431     \_\_m128 SubFacC = \_mm\_castsi128\_ps(\_mm\_shuffle\_epi32(\_mm\_castps\_si128(SubTmpC), \_MM\_SHUFFLE(3, 3, 2, 0)));}
+\DoxyCodeLine{432     \_\_m128 SwpFacC = \_mm\_castsi128\_ps(\_mm\_shuffle\_epi32(\_mm\_castps\_si128(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[1]), \_MM\_SHUFFLE(2, 3, 3, 3)));}
+\DoxyCodeLine{433     \_\_m128 MulFacC = \_mm\_mul\_ps(SwpFacC, SubFacC);}
+\DoxyCodeLine{434 }
+\DoxyCodeLine{435     \_\_m128 AddRes = \_mm\_add\_ps(SubRes, MulFacC);}
+\DoxyCodeLine{436     \_\_m128 DetCof = \_mm\_mul\_ps(AddRes, \_mm\_setr\_ps( 1.0f,-\/1.0f, 1.0f,-\/1.0f));}
+\DoxyCodeLine{437 }
+\DoxyCodeLine{438     \textcolor{comment}{//return m[0][0] * DetCof[0]}}
+\DoxyCodeLine{439     \textcolor{comment}{//   + m[0][1] * DetCof[1]}}
+\DoxyCodeLine{440     \textcolor{comment}{//   + m[0][2] * DetCof[2]}}
+\DoxyCodeLine{441     \textcolor{comment}{//   + m[0][3] * DetCof[3];}}
+\DoxyCodeLine{442 }
+\DoxyCodeLine{443     \textcolor{keywordflow}{return} glm\_vec4\_dot(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[0], DetCof);}
+\DoxyCodeLine{444 \}}
+\DoxyCodeLine{445 }
+\DoxyCodeLine{446 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_vec4 glm\_mat4\_determinant(glm\_vec4 \textcolor{keyword}{const} \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[4])}
+\DoxyCodeLine{447 \{}
+\DoxyCodeLine{448     \textcolor{comment}{// \_mm\_castsi128\_ps(\_mm\_shuffle\_epi32(\_mm\_castps\_si128(add)}}
+\DoxyCodeLine{449 }
+\DoxyCodeLine{450     \textcolor{comment}{//T SubFactor00 = m[2][2] * m[3][3] -\/ m[3][2] * m[2][3];}}
+\DoxyCodeLine{451     \textcolor{comment}{//T SubFactor01 = m[2][1] * m[3][3] -\/ m[3][1] * m[2][3];}}
+\DoxyCodeLine{452     \textcolor{comment}{//T SubFactor02 = m[2][1] * m[3][2] -\/ m[3][1] * m[2][2];}}
+\DoxyCodeLine{453     \textcolor{comment}{//T SubFactor03 = m[2][0] * m[3][3] -\/ m[3][0] * m[2][3];}}
+\DoxyCodeLine{454     \textcolor{comment}{//T SubFactor04 = m[2][0] * m[3][2] -\/ m[3][0] * m[2][2];}}
+\DoxyCodeLine{455     \textcolor{comment}{//T SubFactor05 = m[2][0] * m[3][1] -\/ m[3][0] * m[2][1];}}
+\DoxyCodeLine{456 }
+\DoxyCodeLine{457     \textcolor{comment}{// First 2 columns}}
+\DoxyCodeLine{458     \_\_m128 Swp2A = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[2], \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[2], \_MM\_SHUFFLE(0, 1, 1, 2));}
+\DoxyCodeLine{459     \_\_m128 Swp3A = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[3], \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[3], \_MM\_SHUFFLE(3, 2, 3, 3));}
+\DoxyCodeLine{460     \_\_m128 MulA = \_mm\_mul\_ps(Swp2A, Swp3A);}
+\DoxyCodeLine{461 }
+\DoxyCodeLine{462     \textcolor{comment}{// Second 2 columns}}
+\DoxyCodeLine{463     \_\_m128 Swp2B = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[2], \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[2], \_MM\_SHUFFLE(3, 2, 3, 3));}
+\DoxyCodeLine{464     \_\_m128 Swp3B = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[3], \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[3], \_MM\_SHUFFLE(0, 1, 1, 2));}
+\DoxyCodeLine{465     \_\_m128 MulB = \_mm\_mul\_ps(Swp2B, Swp3B);}
+\DoxyCodeLine{466 }
+\DoxyCodeLine{467     \textcolor{comment}{// Columns subtraction}}
+\DoxyCodeLine{468     \_\_m128 SubE = \_mm\_sub\_ps(MulA, MulB);}
+\DoxyCodeLine{469 }
+\DoxyCodeLine{470     \textcolor{comment}{// Last 2 rows}}
+\DoxyCodeLine{471     \_\_m128 Swp2C = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[2], \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[2], \_MM\_SHUFFLE(0, 0, 1, 2));}
+\DoxyCodeLine{472     \_\_m128 Swp3C = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[3], \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[3], \_MM\_SHUFFLE(1, 2, 0, 0));}
+\DoxyCodeLine{473     \_\_m128 MulC = \_mm\_mul\_ps(Swp2C, Swp3C);}
+\DoxyCodeLine{474     \_\_m128 SubF = \_mm\_sub\_ps(\_mm\_movehl\_ps(MulC, MulC), MulC);}
+\DoxyCodeLine{475 }
+\DoxyCodeLine{476     \textcolor{comment}{//vec<4, T, Q> DetCof(}}
+\DoxyCodeLine{477     \textcolor{comment}{//  + (m[1][1] * SubFactor00 -\/ m[1][2] * SubFactor01 + m[1][3] * SubFactor02),}}
+\DoxyCodeLine{478     \textcolor{comment}{//  -\/ (m[1][0] * SubFactor00 -\/ m[1][2] * SubFactor03 + m[1][3] * SubFactor04),}}
+\DoxyCodeLine{479     \textcolor{comment}{//  + (m[1][0] * SubFactor01 -\/ m[1][1] * SubFactor03 + m[1][3] * SubFactor05),}}
+\DoxyCodeLine{480     \textcolor{comment}{//  -\/ (m[1][0] * SubFactor02 -\/ m[1][1] * SubFactor04 + m[1][2] * SubFactor05));}}
+\DoxyCodeLine{481 }
+\DoxyCodeLine{482     \_\_m128 SubFacA = \_mm\_shuffle\_ps(SubE, SubE, \_MM\_SHUFFLE(2, 1, 0, 0));}
+\DoxyCodeLine{483     \_\_m128 SwpFacA = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[1], \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[1], \_MM\_SHUFFLE(0, 0, 0, 1));}
+\DoxyCodeLine{484     \_\_m128 MulFacA = \_mm\_mul\_ps(SwpFacA, SubFacA);}
+\DoxyCodeLine{485 }
+\DoxyCodeLine{486     \_\_m128 SubTmpB = \_mm\_shuffle\_ps(SubE, SubF, \_MM\_SHUFFLE(0, 0, 3, 1));}
+\DoxyCodeLine{487     \_\_m128 SubFacB = \_mm\_shuffle\_ps(SubTmpB, SubTmpB, \_MM\_SHUFFLE(3, 1, 1, 0));\textcolor{comment}{//SubF[0], SubE[3], SubE[3], SubE[1];}}
+\DoxyCodeLine{488     \_\_m128 SwpFacB = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[1], \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[1], \_MM\_SHUFFLE(1, 1, 2, 2));}
+\DoxyCodeLine{489     \_\_m128 MulFacB = \_mm\_mul\_ps(SwpFacB, SubFacB);}
+\DoxyCodeLine{490 }
+\DoxyCodeLine{491     \_\_m128 SubRes = \_mm\_sub\_ps(MulFacA, MulFacB);}
+\DoxyCodeLine{492 }
+\DoxyCodeLine{493     \_\_m128 SubTmpC = \_mm\_shuffle\_ps(SubE, SubF, \_MM\_SHUFFLE(1, 0, 2, 2));}
+\DoxyCodeLine{494     \_\_m128 SubFacC = \_mm\_shuffle\_ps(SubTmpC, SubTmpC, \_MM\_SHUFFLE(3, 3, 2, 0));}
+\DoxyCodeLine{495     \_\_m128 SwpFacC = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[1], \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[1], \_MM\_SHUFFLE(2, 3, 3, 3));}
+\DoxyCodeLine{496     \_\_m128 MulFacC = \_mm\_mul\_ps(SwpFacC, SubFacC);}
+\DoxyCodeLine{497 }
+\DoxyCodeLine{498     \_\_m128 AddRes = \_mm\_add\_ps(SubRes, MulFacC);}
+\DoxyCodeLine{499     \_\_m128 DetCof = \_mm\_mul\_ps(AddRes, \_mm\_setr\_ps( 1.0f,-\/1.0f, 1.0f,-\/1.0f));}
+\DoxyCodeLine{500 }
+\DoxyCodeLine{501     \textcolor{comment}{//return m[0][0] * DetCof[0]}}
+\DoxyCodeLine{502     \textcolor{comment}{//   + m[0][1] * DetCof[1]}}
+\DoxyCodeLine{503     \textcolor{comment}{//   + m[0][2] * DetCof[2]}}
+\DoxyCodeLine{504     \textcolor{comment}{//   + m[0][3] * DetCof[3];}}
+\DoxyCodeLine{505 }
+\DoxyCodeLine{506     \textcolor{keywordflow}{return} glm\_vec4\_dot(\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}[0], DetCof);}
+\DoxyCodeLine{507 \}}
+\DoxyCodeLine{508 }
+\DoxyCodeLine{509 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \textcolor{keywordtype}{void} glm\_mat4\_inverse(glm\_vec4 \textcolor{keyword}{const} \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[4], glm\_vec4 out[4])}
+\DoxyCodeLine{510 \{}
+\DoxyCodeLine{511     \_\_m128 Fac0;}
+\DoxyCodeLine{512     \{}
+\DoxyCodeLine{513         \textcolor{comment}{//  valType SubFactor00 = m[2][2] * m[3][3] -\/ m[3][2] * m[2][3];}}
+\DoxyCodeLine{514         \textcolor{comment}{//  valType SubFactor00 = m[2][2] * m[3][3] -\/ m[3][2] * m[2][3];}}
+\DoxyCodeLine{515         \textcolor{comment}{//  valType SubFactor06 = m[1][2] * m[3][3] -\/ m[3][2] * m[1][3];}}
+\DoxyCodeLine{516         \textcolor{comment}{//  valType SubFactor13 = m[1][2] * m[2][3] -\/ m[2][2] * m[1][3];}}
+\DoxyCodeLine{517 }
+\DoxyCodeLine{518         \_\_m128 Swp0a = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{519         \_\_m128 Swp0b = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{520 }
+\DoxyCodeLine{521         \_\_m128 Swp00 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{522         \_\_m128 Swp01 = \_mm\_shuffle\_ps(Swp0a, Swp0a, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{523         \_\_m128 Swp02 = \_mm\_shuffle\_ps(Swp0b, Swp0b, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{524         \_\_m128 Swp03 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{525 }
+\DoxyCodeLine{526         \_\_m128 Mul00 = \_mm\_mul\_ps(Swp00, Swp01);}
+\DoxyCodeLine{527         \_\_m128 Mul01 = \_mm\_mul\_ps(Swp02, Swp03);}
+\DoxyCodeLine{528         Fac0 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{529     \}}
+\DoxyCodeLine{530 }
+\DoxyCodeLine{531     \_\_m128 Fac1;}
+\DoxyCodeLine{532     \{}
+\DoxyCodeLine{533         \textcolor{comment}{//  valType SubFactor01 = m[2][1] * m[3][3] -\/ m[3][1] * m[2][3];}}
+\DoxyCodeLine{534         \textcolor{comment}{//  valType SubFactor01 = m[2][1] * m[3][3] -\/ m[3][1] * m[2][3];}}
+\DoxyCodeLine{535         \textcolor{comment}{//  valType SubFactor07 = m[1][1] * m[3][3] -\/ m[3][1] * m[1][3];}}
+\DoxyCodeLine{536         \textcolor{comment}{//  valType SubFactor14 = m[1][1] * m[2][3] -\/ m[2][1] * m[1][3];}}
+\DoxyCodeLine{537 }
+\DoxyCodeLine{538         \_\_m128 Swp0a = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{539         \_\_m128 Swp0b = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{540 }
+\DoxyCodeLine{541         \_\_m128 Swp00 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{542         \_\_m128 Swp01 = \_mm\_shuffle\_ps(Swp0a, Swp0a, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{543         \_\_m128 Swp02 = \_mm\_shuffle\_ps(Swp0b, Swp0b, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{544         \_\_m128 Swp03 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{545 }
+\DoxyCodeLine{546         \_\_m128 Mul00 = \_mm\_mul\_ps(Swp00, Swp01);}
+\DoxyCodeLine{547         \_\_m128 Mul01 = \_mm\_mul\_ps(Swp02, Swp03);}
+\DoxyCodeLine{548         Fac1 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{549     \}}
+\DoxyCodeLine{550 }
+\DoxyCodeLine{551 }
+\DoxyCodeLine{552     \_\_m128 Fac2;}
+\DoxyCodeLine{553     \{}
+\DoxyCodeLine{554         \textcolor{comment}{//  valType SubFactor02 = m[2][1] * m[3][2] -\/ m[3][1] * m[2][2];}}
+\DoxyCodeLine{555         \textcolor{comment}{//  valType SubFactor02 = m[2][1] * m[3][2] -\/ m[3][1] * m[2][2];}}
+\DoxyCodeLine{556         \textcolor{comment}{//  valType SubFactor08 = m[1][1] * m[3][2] -\/ m[3][1] * m[1][2];}}
+\DoxyCodeLine{557         \textcolor{comment}{//  valType SubFactor15 = m[1][1] * m[2][2] -\/ m[2][1] * m[1][2];}}
+\DoxyCodeLine{558 }
+\DoxyCodeLine{559         \_\_m128 Swp0a = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{560         \_\_m128 Swp0b = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{561 }
+\DoxyCodeLine{562         \_\_m128 Swp00 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{563         \_\_m128 Swp01 = \_mm\_shuffle\_ps(Swp0a, Swp0a, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{564         \_\_m128 Swp02 = \_mm\_shuffle\_ps(Swp0b, Swp0b, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{565         \_\_m128 Swp03 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{566 }
+\DoxyCodeLine{567         \_\_m128 Mul00 = \_mm\_mul\_ps(Swp00, Swp01);}
+\DoxyCodeLine{568         \_\_m128 Mul01 = \_mm\_mul\_ps(Swp02, Swp03);}
+\DoxyCodeLine{569         Fac2 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{570     \}}
+\DoxyCodeLine{571 }
+\DoxyCodeLine{572     \_\_m128 Fac3;}
+\DoxyCodeLine{573     \{}
+\DoxyCodeLine{574         \textcolor{comment}{//  valType SubFactor03 = m[2][0] * m[3][3] -\/ m[3][0] * m[2][3];}}
+\DoxyCodeLine{575         \textcolor{comment}{//  valType SubFactor03 = m[2][0] * m[3][3] -\/ m[3][0] * m[2][3];}}
+\DoxyCodeLine{576         \textcolor{comment}{//  valType SubFactor09 = m[1][0] * m[3][3] -\/ m[3][0] * m[1][3];}}
+\DoxyCodeLine{577         \textcolor{comment}{//  valType SubFactor16 = m[1][0] * m[2][3] -\/ m[2][0] * m[1][3];}}
+\DoxyCodeLine{578 }
+\DoxyCodeLine{579         \_\_m128 Swp0a = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{580         \_\_m128 Swp0b = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{581 }
+\DoxyCodeLine{582         \_\_m128 Swp00 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{583         \_\_m128 Swp01 = \_mm\_shuffle\_ps(Swp0a, Swp0a, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{584         \_\_m128 Swp02 = \_mm\_shuffle\_ps(Swp0b, Swp0b, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{585         \_\_m128 Swp03 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{586 }
+\DoxyCodeLine{587         \_\_m128 Mul00 = \_mm\_mul\_ps(Swp00, Swp01);}
+\DoxyCodeLine{588         \_\_m128 Mul01 = \_mm\_mul\_ps(Swp02, Swp03);}
+\DoxyCodeLine{589         Fac3 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{590     \}}
+\DoxyCodeLine{591 }
+\DoxyCodeLine{592     \_\_m128 Fac4;}
+\DoxyCodeLine{593     \{}
+\DoxyCodeLine{594         \textcolor{comment}{//  valType SubFactor04 = m[2][0] * m[3][2] -\/ m[3][0] * m[2][2];}}
+\DoxyCodeLine{595         \textcolor{comment}{//  valType SubFactor04 = m[2][0] * m[3][2] -\/ m[3][0] * m[2][2];}}
+\DoxyCodeLine{596         \textcolor{comment}{//  valType SubFactor10 = m[1][0] * m[3][2] -\/ m[3][0] * m[1][2];}}
+\DoxyCodeLine{597         \textcolor{comment}{//  valType SubFactor17 = m[1][0] * m[2][2] -\/ m[2][0] * m[1][2];}}
+\DoxyCodeLine{598 }
+\DoxyCodeLine{599         \_\_m128 Swp0a = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{600         \_\_m128 Swp0b = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{601 }
+\DoxyCodeLine{602         \_\_m128 Swp00 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{603         \_\_m128 Swp01 = \_mm\_shuffle\_ps(Swp0a, Swp0a, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{604         \_\_m128 Swp02 = \_mm\_shuffle\_ps(Swp0b, Swp0b, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{605         \_\_m128 Swp03 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{606 }
+\DoxyCodeLine{607         \_\_m128 Mul00 = \_mm\_mul\_ps(Swp00, Swp01);}
+\DoxyCodeLine{608         \_\_m128 Mul01 = \_mm\_mul\_ps(Swp02, Swp03);}
+\DoxyCodeLine{609         Fac4 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{610     \}}
+\DoxyCodeLine{611 }
+\DoxyCodeLine{612     \_\_m128 Fac5;}
+\DoxyCodeLine{613     \{}
+\DoxyCodeLine{614         \textcolor{comment}{//  valType SubFactor05 = m[2][0] * m[3][1] -\/ m[3][0] * m[2][1];}}
+\DoxyCodeLine{615         \textcolor{comment}{//  valType SubFactor05 = m[2][0] * m[3][1] -\/ m[3][0] * m[2][1];}}
+\DoxyCodeLine{616         \textcolor{comment}{//  valType SubFactor12 = m[1][0] * m[3][1] -\/ m[3][0] * m[1][1];}}
+\DoxyCodeLine{617         \textcolor{comment}{//  valType SubFactor18 = m[1][0] * m[2][1] -\/ m[2][0] * m[1][1];}}
+\DoxyCodeLine{618 }
+\DoxyCodeLine{619         \_\_m128 Swp0a = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{620         \_\_m128 Swp0b = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{621 }
+\DoxyCodeLine{622         \_\_m128 Swp00 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{623         \_\_m128 Swp01 = \_mm\_shuffle\_ps(Swp0a, Swp0a, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{624         \_\_m128 Swp02 = \_mm\_shuffle\_ps(Swp0b, Swp0b, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{625         \_\_m128 Swp03 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{626 }
+\DoxyCodeLine{627         \_\_m128 Mul00 = \_mm\_mul\_ps(Swp00, Swp01);}
+\DoxyCodeLine{628         \_\_m128 Mul01 = \_mm\_mul\_ps(Swp02, Swp03);}
+\DoxyCodeLine{629         Fac5 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{630     \}}
+\DoxyCodeLine{631 }
+\DoxyCodeLine{632     \_\_m128 SignA = \_mm\_set\_ps( 1.0f,-\/1.0f, 1.0f,-\/1.0f);}
+\DoxyCodeLine{633     \_\_m128 SignB = \_mm\_set\_ps(-\/1.0f, 1.0f,-\/1.0f, 1.0f);}
+\DoxyCodeLine{634 }
+\DoxyCodeLine{635     \textcolor{comment}{// m[1][0]}}
+\DoxyCodeLine{636     \textcolor{comment}{// m[0][0]}}
+\DoxyCodeLine{637     \textcolor{comment}{// m[0][0]}}
+\DoxyCodeLine{638     \textcolor{comment}{// m[0][0]}}
+\DoxyCodeLine{639     \_\_m128 Temp0 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[0], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{640     \_\_m128 Vec0 = \_mm\_shuffle\_ps(Temp0, Temp0, \_MM\_SHUFFLE(2, 2, 2, 0));}
+\DoxyCodeLine{641 }
+\DoxyCodeLine{642     \textcolor{comment}{// m[1][1]}}
+\DoxyCodeLine{643     \textcolor{comment}{// m[0][1]}}
+\DoxyCodeLine{644     \textcolor{comment}{// m[0][1]}}
+\DoxyCodeLine{645     \textcolor{comment}{// m[0][1]}}
+\DoxyCodeLine{646     \_\_m128 Temp1 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[0], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{647     \_\_m128 Vec1 = \_mm\_shuffle\_ps(Temp1, Temp1, \_MM\_SHUFFLE(2, 2, 2, 0));}
+\DoxyCodeLine{648 }
+\DoxyCodeLine{649     \textcolor{comment}{// m[1][2]}}
+\DoxyCodeLine{650     \textcolor{comment}{// m[0][2]}}
+\DoxyCodeLine{651     \textcolor{comment}{// m[0][2]}}
+\DoxyCodeLine{652     \textcolor{comment}{// m[0][2]}}
+\DoxyCodeLine{653     \_\_m128 Temp2 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[0], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{654     \_\_m128 Vec2 = \_mm\_shuffle\_ps(Temp2, Temp2, \_MM\_SHUFFLE(2, 2, 2, 0));}
+\DoxyCodeLine{655 }
+\DoxyCodeLine{656     \textcolor{comment}{// m[1][3]}}
+\DoxyCodeLine{657     \textcolor{comment}{// m[0][3]}}
+\DoxyCodeLine{658     \textcolor{comment}{// m[0][3]}}
+\DoxyCodeLine{659     \textcolor{comment}{// m[0][3]}}
+\DoxyCodeLine{660     \_\_m128 Temp3 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[0], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{661     \_\_m128 Vec3 = \_mm\_shuffle\_ps(Temp3, Temp3, \_MM\_SHUFFLE(2, 2, 2, 0));}
+\DoxyCodeLine{662 }
+\DoxyCodeLine{663     \textcolor{comment}{// col0}}
+\DoxyCodeLine{664     \textcolor{comment}{// + (Vec1[0] * Fac0[0] -\/ Vec2[0] * Fac1[0] + Vec3[0] * Fac2[0]),}}
+\DoxyCodeLine{665     \textcolor{comment}{// -\/ (Vec1[1] * Fac0[1] -\/ Vec2[1] * Fac1[1] + Vec3[1] * Fac2[1]),}}
+\DoxyCodeLine{666     \textcolor{comment}{// + (Vec1[2] * Fac0[2] -\/ Vec2[2] * Fac1[2] + Vec3[2] * Fac2[2]),}}
+\DoxyCodeLine{667     \textcolor{comment}{// -\/ (Vec1[3] * Fac0[3] -\/ Vec2[3] * Fac1[3] + Vec3[3] * Fac2[3]),}}
+\DoxyCodeLine{668     \_\_m128 Mul00 = \_mm\_mul\_ps(Vec1, Fac0);}
+\DoxyCodeLine{669     \_\_m128 Mul01 = \_mm\_mul\_ps(Vec2, Fac1);}
+\DoxyCodeLine{670     \_\_m128 Mul02 = \_mm\_mul\_ps(Vec3, Fac2);}
+\DoxyCodeLine{671     \_\_m128 Sub00 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{672     \_\_m128 Add00 = \_mm\_add\_ps(Sub00, Mul02);}
+\DoxyCodeLine{673     \_\_m128 Inv0 = \_mm\_mul\_ps(SignB, Add00);}
+\DoxyCodeLine{674 }
+\DoxyCodeLine{675     \textcolor{comment}{// col1}}
+\DoxyCodeLine{676     \textcolor{comment}{// -\/ (Vec0[0] * Fac0[0] -\/ Vec2[0] * Fac3[0] + Vec3[0] * Fac4[0]),}}
+\DoxyCodeLine{677     \textcolor{comment}{// + (Vec0[0] * Fac0[1] -\/ Vec2[1] * Fac3[1] + Vec3[1] * Fac4[1]),}}
+\DoxyCodeLine{678     \textcolor{comment}{// -\/ (Vec0[0] * Fac0[2] -\/ Vec2[2] * Fac3[2] + Vec3[2] * Fac4[2]),}}
+\DoxyCodeLine{679     \textcolor{comment}{// + (Vec0[0] * Fac0[3] -\/ Vec2[3] * Fac3[3] + Vec3[3] * Fac4[3]),}}
+\DoxyCodeLine{680     \_\_m128 Mul03 = \_mm\_mul\_ps(Vec0, Fac0);}
+\DoxyCodeLine{681     \_\_m128 Mul04 = \_mm\_mul\_ps(Vec2, Fac3);}
+\DoxyCodeLine{682     \_\_m128 Mul05 = \_mm\_mul\_ps(Vec3, Fac4);}
+\DoxyCodeLine{683     \_\_m128 Sub01 = \_mm\_sub\_ps(Mul03, Mul04);}
+\DoxyCodeLine{684     \_\_m128 Add01 = \_mm\_add\_ps(Sub01, Mul05);}
+\DoxyCodeLine{685     \_\_m128 Inv1 = \_mm\_mul\_ps(SignA, Add01);}
+\DoxyCodeLine{686 }
+\DoxyCodeLine{687     \textcolor{comment}{// col2}}
+\DoxyCodeLine{688     \textcolor{comment}{// + (Vec0[0] * Fac1[0] -\/ Vec1[0] * Fac3[0] + Vec3[0] * Fac5[0]),}}
+\DoxyCodeLine{689     \textcolor{comment}{// -\/ (Vec0[0] * Fac1[1] -\/ Vec1[1] * Fac3[1] + Vec3[1] * Fac5[1]),}}
+\DoxyCodeLine{690     \textcolor{comment}{// + (Vec0[0] * Fac1[2] -\/ Vec1[2] * Fac3[2] + Vec3[2] * Fac5[2]),}}
+\DoxyCodeLine{691     \textcolor{comment}{// -\/ (Vec0[0] * Fac1[3] -\/ Vec1[3] * Fac3[3] + Vec3[3] * Fac5[3]),}}
+\DoxyCodeLine{692     \_\_m128 Mul06 = \_mm\_mul\_ps(Vec0, Fac1);}
+\DoxyCodeLine{693     \_\_m128 Mul07 = \_mm\_mul\_ps(Vec1, Fac3);}
+\DoxyCodeLine{694     \_\_m128 Mul08 = \_mm\_mul\_ps(Vec3, Fac5);}
+\DoxyCodeLine{695     \_\_m128 Sub02 = \_mm\_sub\_ps(Mul06, Mul07);}
+\DoxyCodeLine{696     \_\_m128 Add02 = \_mm\_add\_ps(Sub02, Mul08);}
+\DoxyCodeLine{697     \_\_m128 Inv2 = \_mm\_mul\_ps(SignB, Add02);}
+\DoxyCodeLine{698 }
+\DoxyCodeLine{699     \textcolor{comment}{// col3}}
+\DoxyCodeLine{700     \textcolor{comment}{// -\/ (Vec1[0] * Fac2[0] -\/ Vec1[0] * Fac4[0] + Vec2[0] * Fac5[0]),}}
+\DoxyCodeLine{701     \textcolor{comment}{// + (Vec1[0] * Fac2[1] -\/ Vec1[1] * Fac4[1] + Vec2[1] * Fac5[1]),}}
+\DoxyCodeLine{702     \textcolor{comment}{// -\/ (Vec1[0] * Fac2[2] -\/ Vec1[2] * Fac4[2] + Vec2[2] * Fac5[2]),}}
+\DoxyCodeLine{703     \textcolor{comment}{// + (Vec1[0] * Fac2[3] -\/ Vec1[3] * Fac4[3] + Vec2[3] * Fac5[3]));}}
+\DoxyCodeLine{704     \_\_m128 Mul09 = \_mm\_mul\_ps(Vec0, Fac2);}
+\DoxyCodeLine{705     \_\_m128 Mul10 = \_mm\_mul\_ps(Vec1, Fac4);}
+\DoxyCodeLine{706     \_\_m128 Mul11 = \_mm\_mul\_ps(Vec2, Fac5);}
+\DoxyCodeLine{707     \_\_m128 Sub03 = \_mm\_sub\_ps(Mul09, Mul10);}
+\DoxyCodeLine{708     \_\_m128 Add03 = \_mm\_add\_ps(Sub03, Mul11);}
+\DoxyCodeLine{709     \_\_m128 Inv3 = \_mm\_mul\_ps(SignA, Add03);}
+\DoxyCodeLine{710 }
+\DoxyCodeLine{711     \_\_m128 Row0 = \_mm\_shuffle\_ps(Inv0, Inv1, \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{712     \_\_m128 Row1 = \_mm\_shuffle\_ps(Inv2, Inv3, \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{713     \_\_m128 Row2 = \_mm\_shuffle\_ps(Row0, Row1, \_MM\_SHUFFLE(2, 0, 2, 0));}
+\DoxyCodeLine{714 }
+\DoxyCodeLine{715     \textcolor{comment}{//  valType Determinant = m[0][0] * Inverse[0][0]}}
+\DoxyCodeLine{716     \textcolor{comment}{//                      + m[0][1] * Inverse[1][0]}}
+\DoxyCodeLine{717     \textcolor{comment}{//                      + m[0][2] * Inverse[2][0]}}
+\DoxyCodeLine{718     \textcolor{comment}{//                      + m[0][3] * Inverse[3][0];}}
+\DoxyCodeLine{719     \_\_m128 Det0 = glm\_vec4\_dot(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[0], Row2);}
+\DoxyCodeLine{720     \_\_m128 Rcp0 = \_mm\_div\_ps(\_mm\_set1\_ps(1.0f), Det0);}
+\DoxyCodeLine{721     \textcolor{comment}{//\_\_m128 Rcp0 = \_mm\_rcp\_ps(Det0);}}
+\DoxyCodeLine{722 }
+\DoxyCodeLine{723     \textcolor{comment}{//  Inverse /= Determinant;}}
+\DoxyCodeLine{724     out[0] = \_mm\_mul\_ps(Inv0, Rcp0);}
+\DoxyCodeLine{725     out[1] = \_mm\_mul\_ps(Inv1, Rcp0);}
+\DoxyCodeLine{726     out[2] = \_mm\_mul\_ps(Inv2, Rcp0);}
+\DoxyCodeLine{727     out[3] = \_mm\_mul\_ps(Inv3, Rcp0);}
+\DoxyCodeLine{728 \}}
+\DoxyCodeLine{729 }
+\DoxyCodeLine{730 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \textcolor{keywordtype}{void} glm\_mat4\_inverse\_lowp(glm\_vec4 \textcolor{keyword}{const} \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[4], glm\_vec4 out[4])}
+\DoxyCodeLine{731 \{}
+\DoxyCodeLine{732     \_\_m128 Fac0;}
+\DoxyCodeLine{733     \{}
+\DoxyCodeLine{734         \textcolor{comment}{//  valType SubFactor00 = m[2][2] * m[3][3] -\/ m[3][2] * m[2][3];}}
+\DoxyCodeLine{735         \textcolor{comment}{//  valType SubFactor00 = m[2][2] * m[3][3] -\/ m[3][2] * m[2][3];}}
+\DoxyCodeLine{736         \textcolor{comment}{//  valType SubFactor06 = m[1][2] * m[3][3] -\/ m[3][2] * m[1][3];}}
+\DoxyCodeLine{737         \textcolor{comment}{//  valType SubFactor13 = m[1][2] * m[2][3] -\/ m[2][2] * m[1][3];}}
+\DoxyCodeLine{738 }
+\DoxyCodeLine{739         \_\_m128 Swp0a = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{740         \_\_m128 Swp0b = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{741 }
+\DoxyCodeLine{742         \_\_m128 Swp00 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{743         \_\_m128 Swp01 = \_mm\_shuffle\_ps(Swp0a, Swp0a, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{744         \_\_m128 Swp02 = \_mm\_shuffle\_ps(Swp0b, Swp0b, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{745         \_\_m128 Swp03 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{746 }
+\DoxyCodeLine{747         \_\_m128 Mul00 = \_mm\_mul\_ps(Swp00, Swp01);}
+\DoxyCodeLine{748         \_\_m128 Mul01 = \_mm\_mul\_ps(Swp02, Swp03);}
+\DoxyCodeLine{749         Fac0 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{750     \}}
+\DoxyCodeLine{751 }
+\DoxyCodeLine{752     \_\_m128 Fac1;}
+\DoxyCodeLine{753     \{}
+\DoxyCodeLine{754         \textcolor{comment}{//  valType SubFactor01 = m[2][1] * m[3][3] -\/ m[3][1] * m[2][3];}}
+\DoxyCodeLine{755         \textcolor{comment}{//  valType SubFactor01 = m[2][1] * m[3][3] -\/ m[3][1] * m[2][3];}}
+\DoxyCodeLine{756         \textcolor{comment}{//  valType SubFactor07 = m[1][1] * m[3][3] -\/ m[3][1] * m[1][3];}}
+\DoxyCodeLine{757         \textcolor{comment}{//  valType SubFactor14 = m[1][1] * m[2][3] -\/ m[2][1] * m[1][3];}}
+\DoxyCodeLine{758 }
+\DoxyCodeLine{759         \_\_m128 Swp0a = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{760         \_\_m128 Swp0b = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{761 }
+\DoxyCodeLine{762         \_\_m128 Swp00 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{763         \_\_m128 Swp01 = \_mm\_shuffle\_ps(Swp0a, Swp0a, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{764         \_\_m128 Swp02 = \_mm\_shuffle\_ps(Swp0b, Swp0b, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{765         \_\_m128 Swp03 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{766 }
+\DoxyCodeLine{767         \_\_m128 Mul00 = \_mm\_mul\_ps(Swp00, Swp01);}
+\DoxyCodeLine{768         \_\_m128 Mul01 = \_mm\_mul\_ps(Swp02, Swp03);}
+\DoxyCodeLine{769         Fac1 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{770     \}}
+\DoxyCodeLine{771 }
+\DoxyCodeLine{772 }
+\DoxyCodeLine{773     \_\_m128 Fac2;}
+\DoxyCodeLine{774     \{}
+\DoxyCodeLine{775         \textcolor{comment}{//  valType SubFactor02 = m[2][1] * m[3][2] -\/ m[3][1] * m[2][2];}}
+\DoxyCodeLine{776         \textcolor{comment}{//  valType SubFactor02 = m[2][1] * m[3][2] -\/ m[3][1] * m[2][2];}}
+\DoxyCodeLine{777         \textcolor{comment}{//  valType SubFactor08 = m[1][1] * m[3][2] -\/ m[3][1] * m[1][2];}}
+\DoxyCodeLine{778         \textcolor{comment}{//  valType SubFactor15 = m[1][1] * m[2][2] -\/ m[2][1] * m[1][2];}}
+\DoxyCodeLine{779 }
+\DoxyCodeLine{780         \_\_m128 Swp0a = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{781         \_\_m128 Swp0b = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{782 }
+\DoxyCodeLine{783         \_\_m128 Swp00 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{784         \_\_m128 Swp01 = \_mm\_shuffle\_ps(Swp0a, Swp0a, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{785         \_\_m128 Swp02 = \_mm\_shuffle\_ps(Swp0b, Swp0b, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{786         \_\_m128 Swp03 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{787 }
+\DoxyCodeLine{788         \_\_m128 Mul00 = \_mm\_mul\_ps(Swp00, Swp01);}
+\DoxyCodeLine{789         \_\_m128 Mul01 = \_mm\_mul\_ps(Swp02, Swp03);}
+\DoxyCodeLine{790         Fac2 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{791     \}}
+\DoxyCodeLine{792 }
+\DoxyCodeLine{793     \_\_m128 Fac3;}
+\DoxyCodeLine{794     \{}
+\DoxyCodeLine{795         \textcolor{comment}{//  valType SubFactor03 = m[2][0] * m[3][3] -\/ m[3][0] * m[2][3];}}
+\DoxyCodeLine{796         \textcolor{comment}{//  valType SubFactor03 = m[2][0] * m[3][3] -\/ m[3][0] * m[2][3];}}
+\DoxyCodeLine{797         \textcolor{comment}{//  valType SubFactor09 = m[1][0] * m[3][3] -\/ m[3][0] * m[1][3];}}
+\DoxyCodeLine{798         \textcolor{comment}{//  valType SubFactor16 = m[1][0] * m[2][3] -\/ m[2][0] * m[1][3];}}
+\DoxyCodeLine{799 }
+\DoxyCodeLine{800         \_\_m128 Swp0a = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{801         \_\_m128 Swp0b = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{802 }
+\DoxyCodeLine{803         \_\_m128 Swp00 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{804         \_\_m128 Swp01 = \_mm\_shuffle\_ps(Swp0a, Swp0a, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{805         \_\_m128 Swp02 = \_mm\_shuffle\_ps(Swp0b, Swp0b, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{806         \_\_m128 Swp03 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{807 }
+\DoxyCodeLine{808         \_\_m128 Mul00 = \_mm\_mul\_ps(Swp00, Swp01);}
+\DoxyCodeLine{809         \_\_m128 Mul01 = \_mm\_mul\_ps(Swp02, Swp03);}
+\DoxyCodeLine{810         Fac3 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{811     \}}
+\DoxyCodeLine{812 }
+\DoxyCodeLine{813     \_\_m128 Fac4;}
+\DoxyCodeLine{814     \{}
+\DoxyCodeLine{815         \textcolor{comment}{//  valType SubFactor04 = m[2][0] * m[3][2] -\/ m[3][0] * m[2][2];}}
+\DoxyCodeLine{816         \textcolor{comment}{//  valType SubFactor04 = m[2][0] * m[3][2] -\/ m[3][0] * m[2][2];}}
+\DoxyCodeLine{817         \textcolor{comment}{//  valType SubFactor10 = m[1][0] * m[3][2] -\/ m[3][0] * m[1][2];}}
+\DoxyCodeLine{818         \textcolor{comment}{//  valType SubFactor17 = m[1][0] * m[2][2] -\/ m[2][0] * m[1][2];}}
+\DoxyCodeLine{819 }
+\DoxyCodeLine{820         \_\_m128 Swp0a = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{821         \_\_m128 Swp0b = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{822 }
+\DoxyCodeLine{823         \_\_m128 Swp00 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{824         \_\_m128 Swp01 = \_mm\_shuffle\_ps(Swp0a, Swp0a, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{825         \_\_m128 Swp02 = \_mm\_shuffle\_ps(Swp0b, Swp0b, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{826         \_\_m128 Swp03 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{827 }
+\DoxyCodeLine{828         \_\_m128 Mul00 = \_mm\_mul\_ps(Swp00, Swp01);}
+\DoxyCodeLine{829         \_\_m128 Mul01 = \_mm\_mul\_ps(Swp02, Swp03);}
+\DoxyCodeLine{830         Fac4 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{831     \}}
+\DoxyCodeLine{832 }
+\DoxyCodeLine{833     \_\_m128 Fac5;}
+\DoxyCodeLine{834     \{}
+\DoxyCodeLine{835         \textcolor{comment}{//  valType SubFactor05 = m[2][0] * m[3][1] -\/ m[3][0] * m[2][1];}}
+\DoxyCodeLine{836         \textcolor{comment}{//  valType SubFactor05 = m[2][0] * m[3][1] -\/ m[3][0] * m[2][1];}}
+\DoxyCodeLine{837         \textcolor{comment}{//  valType SubFactor12 = m[1][0] * m[3][1] -\/ m[3][0] * m[1][1];}}
+\DoxyCodeLine{838         \textcolor{comment}{//  valType SubFactor18 = m[1][0] * m[2][1] -\/ m[2][0] * m[1][1];}}
+\DoxyCodeLine{839 }
+\DoxyCodeLine{840         \_\_m128 Swp0a = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{841         \_\_m128 Swp0b = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[3], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{842 }
+\DoxyCodeLine{843         \_\_m128 Swp00 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{844         \_\_m128 Swp01 = \_mm\_shuffle\_ps(Swp0a, Swp0a, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{845         \_\_m128 Swp02 = \_mm\_shuffle\_ps(Swp0b, Swp0b, \_MM\_SHUFFLE(2, 0, 0, 0));}
+\DoxyCodeLine{846         \_\_m128 Swp03 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[2], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{847 }
+\DoxyCodeLine{848         \_\_m128 Mul00 = \_mm\_mul\_ps(Swp00, Swp01);}
+\DoxyCodeLine{849         \_\_m128 Mul01 = \_mm\_mul\_ps(Swp02, Swp03);}
+\DoxyCodeLine{850         Fac5 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{851     \}}
+\DoxyCodeLine{852 }
+\DoxyCodeLine{853     \_\_m128 SignA = \_mm\_set\_ps( 1.0f,-\/1.0f, 1.0f,-\/1.0f);}
+\DoxyCodeLine{854     \_\_m128 SignB = \_mm\_set\_ps(-\/1.0f, 1.0f,-\/1.0f, 1.0f);}
+\DoxyCodeLine{855 }
+\DoxyCodeLine{856     \textcolor{comment}{// m[1][0]}}
+\DoxyCodeLine{857     \textcolor{comment}{// m[0][0]}}
+\DoxyCodeLine{858     \textcolor{comment}{// m[0][0]}}
+\DoxyCodeLine{859     \textcolor{comment}{// m[0][0]}}
+\DoxyCodeLine{860     \_\_m128 Temp0 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[0], \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{861     \_\_m128 Vec0 = \_mm\_shuffle\_ps(Temp0, Temp0, \_MM\_SHUFFLE(2, 2, 2, 0));}
+\DoxyCodeLine{862 }
+\DoxyCodeLine{863     \textcolor{comment}{// m[1][1]}}
+\DoxyCodeLine{864     \textcolor{comment}{// m[0][1]}}
+\DoxyCodeLine{865     \textcolor{comment}{// m[0][1]}}
+\DoxyCodeLine{866     \textcolor{comment}{// m[0][1]}}
+\DoxyCodeLine{867     \_\_m128 Temp1 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[0], \_MM\_SHUFFLE(1, 1, 1, 1));}
+\DoxyCodeLine{868     \_\_m128 Vec1 = \_mm\_shuffle\_ps(Temp1, Temp1, \_MM\_SHUFFLE(2, 2, 2, 0));}
+\DoxyCodeLine{869 }
+\DoxyCodeLine{870     \textcolor{comment}{// m[1][2]}}
+\DoxyCodeLine{871     \textcolor{comment}{// m[0][2]}}
+\DoxyCodeLine{872     \textcolor{comment}{// m[0][2]}}
+\DoxyCodeLine{873     \textcolor{comment}{// m[0][2]}}
+\DoxyCodeLine{874     \_\_m128 Temp2 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[0], \_MM\_SHUFFLE(2, 2, 2, 2));}
+\DoxyCodeLine{875     \_\_m128 Vec2 = \_mm\_shuffle\_ps(Temp2, Temp2, \_MM\_SHUFFLE(2, 2, 2, 0));}
+\DoxyCodeLine{876 }
+\DoxyCodeLine{877     \textcolor{comment}{// m[1][3]}}
+\DoxyCodeLine{878     \textcolor{comment}{// m[0][3]}}
+\DoxyCodeLine{879     \textcolor{comment}{// m[0][3]}}
+\DoxyCodeLine{880     \textcolor{comment}{// m[0][3]}}
+\DoxyCodeLine{881     \_\_m128 Temp3 = \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[1], \mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[0], \_MM\_SHUFFLE(3, 3, 3, 3));}
+\DoxyCodeLine{882     \_\_m128 Vec3 = \_mm\_shuffle\_ps(Temp3, Temp3, \_MM\_SHUFFLE(2, 2, 2, 0));}
+\DoxyCodeLine{883 }
+\DoxyCodeLine{884     \textcolor{comment}{// col0}}
+\DoxyCodeLine{885     \textcolor{comment}{// + (Vec1[0] * Fac0[0] -\/ Vec2[0] * Fac1[0] + Vec3[0] * Fac2[0]),}}
+\DoxyCodeLine{886     \textcolor{comment}{// -\/ (Vec1[1] * Fac0[1] -\/ Vec2[1] * Fac1[1] + Vec3[1] * Fac2[1]),}}
+\DoxyCodeLine{887     \textcolor{comment}{// + (Vec1[2] * Fac0[2] -\/ Vec2[2] * Fac1[2] + Vec3[2] * Fac2[2]),}}
+\DoxyCodeLine{888     \textcolor{comment}{// -\/ (Vec1[3] * Fac0[3] -\/ Vec2[3] * Fac1[3] + Vec3[3] * Fac2[3]),}}
+\DoxyCodeLine{889     \_\_m128 Mul00 = \_mm\_mul\_ps(Vec1, Fac0);}
+\DoxyCodeLine{890     \_\_m128 Mul01 = \_mm\_mul\_ps(Vec2, Fac1);}
+\DoxyCodeLine{891     \_\_m128 Mul02 = \_mm\_mul\_ps(Vec3, Fac2);}
+\DoxyCodeLine{892     \_\_m128 Sub00 = \_mm\_sub\_ps(Mul00, Mul01);}
+\DoxyCodeLine{893     \_\_m128 Add00 = \_mm\_add\_ps(Sub00, Mul02);}
+\DoxyCodeLine{894     \_\_m128 Inv0 = \_mm\_mul\_ps(SignB, Add00);}
+\DoxyCodeLine{895 }
+\DoxyCodeLine{896     \textcolor{comment}{// col1}}
+\DoxyCodeLine{897     \textcolor{comment}{// -\/ (Vec0[0] * Fac0[0] -\/ Vec2[0] * Fac3[0] + Vec3[0] * Fac4[0]),}}
+\DoxyCodeLine{898     \textcolor{comment}{// + (Vec0[0] * Fac0[1] -\/ Vec2[1] * Fac3[1] + Vec3[1] * Fac4[1]),}}
+\DoxyCodeLine{899     \textcolor{comment}{// -\/ (Vec0[0] * Fac0[2] -\/ Vec2[2] * Fac3[2] + Vec3[2] * Fac4[2]),}}
+\DoxyCodeLine{900     \textcolor{comment}{// + (Vec0[0] * Fac0[3] -\/ Vec2[3] * Fac3[3] + Vec3[3] * Fac4[3]),}}
+\DoxyCodeLine{901     \_\_m128 Mul03 = \_mm\_mul\_ps(Vec0, Fac0);}
+\DoxyCodeLine{902     \_\_m128 Mul04 = \_mm\_mul\_ps(Vec2, Fac3);}
+\DoxyCodeLine{903     \_\_m128 Mul05 = \_mm\_mul\_ps(Vec3, Fac4);}
+\DoxyCodeLine{904     \_\_m128 Sub01 = \_mm\_sub\_ps(Mul03, Mul04);}
+\DoxyCodeLine{905     \_\_m128 Add01 = \_mm\_add\_ps(Sub01, Mul05);}
+\DoxyCodeLine{906     \_\_m128 Inv1 = \_mm\_mul\_ps(SignA, Add01);}
+\DoxyCodeLine{907 }
+\DoxyCodeLine{908     \textcolor{comment}{// col2}}
+\DoxyCodeLine{909     \textcolor{comment}{// + (Vec0[0] * Fac1[0] -\/ Vec1[0] * Fac3[0] + Vec3[0] * Fac5[0]),}}
+\DoxyCodeLine{910     \textcolor{comment}{// -\/ (Vec0[0] * Fac1[1] -\/ Vec1[1] * Fac3[1] + Vec3[1] * Fac5[1]),}}
+\DoxyCodeLine{911     \textcolor{comment}{// + (Vec0[0] * Fac1[2] -\/ Vec1[2] * Fac3[2] + Vec3[2] * Fac5[2]),}}
+\DoxyCodeLine{912     \textcolor{comment}{// -\/ (Vec0[0] * Fac1[3] -\/ Vec1[3] * Fac3[3] + Vec3[3] * Fac5[3]),}}
+\DoxyCodeLine{913     \_\_m128 Mul06 = \_mm\_mul\_ps(Vec0, Fac1);}
+\DoxyCodeLine{914     \_\_m128 Mul07 = \_mm\_mul\_ps(Vec1, Fac3);}
+\DoxyCodeLine{915     \_\_m128 Mul08 = \_mm\_mul\_ps(Vec3, Fac5);}
+\DoxyCodeLine{916     \_\_m128 Sub02 = \_mm\_sub\_ps(Mul06, Mul07);}
+\DoxyCodeLine{917     \_\_m128 Add02 = \_mm\_add\_ps(Sub02, Mul08);}
+\DoxyCodeLine{918     \_\_m128 Inv2 = \_mm\_mul\_ps(SignB, Add02);}
+\DoxyCodeLine{919 }
+\DoxyCodeLine{920     \textcolor{comment}{// col3}}
+\DoxyCodeLine{921     \textcolor{comment}{// -\/ (Vec1[0] * Fac2[0] -\/ Vec1[0] * Fac4[0] + Vec2[0] * Fac5[0]),}}
+\DoxyCodeLine{922     \textcolor{comment}{// + (Vec1[0] * Fac2[1] -\/ Vec1[1] * Fac4[1] + Vec2[1] * Fac5[1]),}}
+\DoxyCodeLine{923     \textcolor{comment}{// -\/ (Vec1[0] * Fac2[2] -\/ Vec1[2] * Fac4[2] + Vec2[2] * Fac5[2]),}}
+\DoxyCodeLine{924     \textcolor{comment}{// + (Vec1[0] * Fac2[3] -\/ Vec1[3] * Fac4[3] + Vec2[3] * Fac5[3]));}}
+\DoxyCodeLine{925     \_\_m128 Mul09 = \_mm\_mul\_ps(Vec0, Fac2);}
+\DoxyCodeLine{926     \_\_m128 Mul10 = \_mm\_mul\_ps(Vec1, Fac4);}
+\DoxyCodeLine{927     \_\_m128 Mul11 = \_mm\_mul\_ps(Vec2, Fac5);}
+\DoxyCodeLine{928     \_\_m128 Sub03 = \_mm\_sub\_ps(Mul09, Mul10);}
+\DoxyCodeLine{929     \_\_m128 Add03 = \_mm\_add\_ps(Sub03, Mul11);}
+\DoxyCodeLine{930     \_\_m128 Inv3 = \_mm\_mul\_ps(SignA, Add03);}
+\DoxyCodeLine{931 }
+\DoxyCodeLine{932     \_\_m128 Row0 = \_mm\_shuffle\_ps(Inv0, Inv1, \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{933     \_\_m128 Row1 = \_mm\_shuffle\_ps(Inv2, Inv3, \_MM\_SHUFFLE(0, 0, 0, 0));}
+\DoxyCodeLine{934     \_\_m128 Row2 = \_mm\_shuffle\_ps(Row0, Row1, \_MM\_SHUFFLE(2, 0, 2, 0));}
+\DoxyCodeLine{935 }
+\DoxyCodeLine{936     \textcolor{comment}{//  valType Determinant = m[0][0] * Inverse[0][0]}}
+\DoxyCodeLine{937     \textcolor{comment}{//                      + m[0][1] * Inverse[1][0]}}
+\DoxyCodeLine{938     \textcolor{comment}{//                      + m[0][2] * Inverse[2][0]}}
+\DoxyCodeLine{939     \textcolor{comment}{//                      + m[0][3] * Inverse[3][0];}}
+\DoxyCodeLine{940     \_\_m128 Det0 = glm\_vec4\_dot(\mbox{\hyperlink{glad_8h_a83ad0ee7f1e06b59c90271716e689080}{in}}[0], Row2);}
+\DoxyCodeLine{941     \_\_m128 Rcp0 = \_mm\_rcp\_ps(Det0);}
+\DoxyCodeLine{942     \textcolor{comment}{//\_\_m128 Rcp0 = \_mm\_div\_ps(one, Det0);}}
+\DoxyCodeLine{943     \textcolor{comment}{//  Inverse /= Determinant;}}
+\DoxyCodeLine{944     out[0] = \_mm\_mul\_ps(Inv0, Rcp0);}
+\DoxyCodeLine{945     out[1] = \_mm\_mul\_ps(Inv1, Rcp0);}
+\DoxyCodeLine{946     out[2] = \_mm\_mul\_ps(Inv2, Rcp0);}
+\DoxyCodeLine{947     out[3] = \_mm\_mul\_ps(Inv3, Rcp0);}
+\DoxyCodeLine{948 \}}
+\DoxyCodeLine{949 \textcolor{comment}{/*}}
+\DoxyCodeLine{950 \textcolor{comment}{GLM\_FUNC\_QUALIFIER void glm\_mat4\_rotate(\_\_m128 const in[4], float Angle, float const v[3], \_\_m128 out[4])}}
+\DoxyCodeLine{951 \textcolor{comment}{\{}}
+\DoxyCodeLine{952 \textcolor{comment}{    float a = glm::radians(Angle);}}
+\DoxyCodeLine{953 \textcolor{comment}{    float c = cos(a);}}
+\DoxyCodeLine{954 \textcolor{comment}{    float s = sin(a);}}
+\DoxyCodeLine{955 \textcolor{comment}{}}
+\DoxyCodeLine{956 \textcolor{comment}{    glm::vec4 AxisA(v[0], v[1], v[2], float(0));}}
+\DoxyCodeLine{957 \textcolor{comment}{    \_\_m128 AxisB = \_mm\_set\_ps(AxisA.w, AxisA.z, AxisA.y, AxisA.x);}}
+\DoxyCodeLine{958 \textcolor{comment}{    \_\_m128 AxisC = detail::sse\_nrm\_ps(AxisB);}}
+\DoxyCodeLine{959 \textcolor{comment}{}}
+\DoxyCodeLine{960 \textcolor{comment}{    \_\_m128 Cos0 = \_mm\_set\_ss(c);}}
+\DoxyCodeLine{961 \textcolor{comment}{    \_\_m128 CosA = \_mm\_shuffle\_ps(Cos0, Cos0, \_MM\_SHUFFLE(0, 0, 0, 0));}}
+\DoxyCodeLine{962 \textcolor{comment}{    \_\_m128 Sin0 = \_mm\_set\_ss(s);}}
+\DoxyCodeLine{963 \textcolor{comment}{    \_\_m128 SinA = \_mm\_shuffle\_ps(Sin0, Sin0, \_MM\_SHUFFLE(0, 0, 0, 0));}}
+\DoxyCodeLine{964 \textcolor{comment}{}}
+\DoxyCodeLine{965 \textcolor{comment}{    // vec<3, T, Q> temp = (valType(1) -\/ c) * axis;}}
+\DoxyCodeLine{966 \textcolor{comment}{    \_\_m128 Temp0 = \_mm\_sub\_ps(one, CosA);}}
+\DoxyCodeLine{967 \textcolor{comment}{    \_\_m128 Temp1 = \_mm\_mul\_ps(Temp0, AxisC);}}
+\DoxyCodeLine{968 \textcolor{comment}{}}
+\DoxyCodeLine{969 \textcolor{comment}{    //Rotate[0][0] = c + temp[0] * axis[0];}}
+\DoxyCodeLine{970 \textcolor{comment}{    //Rotate[0][1] = 0 + temp[0] * axis[1] + s * axis[2];}}
+\DoxyCodeLine{971 \textcolor{comment}{    //Rotate[0][2] = 0 + temp[0] * axis[2] -\/ s * axis[1];}}
+\DoxyCodeLine{972 \textcolor{comment}{    \_\_m128 Axis0 = \_mm\_shuffle\_ps(AxisC, AxisC, \_MM\_SHUFFLE(0, 0, 0, 0));}}
+\DoxyCodeLine{973 \textcolor{comment}{    \_\_m128 TmpA0 = \_mm\_mul\_ps(Axis0, AxisC);}}
+\DoxyCodeLine{974 \textcolor{comment}{    \_\_m128 CosA0 = \_mm\_shuffle\_ps(Cos0, Cos0, \_MM\_SHUFFLE(1, 1, 1, 0));}}
+\DoxyCodeLine{975 \textcolor{comment}{    \_\_m128 TmpA1 = \_mm\_add\_ps(CosA0, TmpA0);}}
+\DoxyCodeLine{976 \textcolor{comment}{    \_\_m128 SinA0 = SinA;//\_mm\_set\_ps(0.0f, s, -\/s, 0.0f);}}
+\DoxyCodeLine{977 \textcolor{comment}{    \_\_m128 TmpA2 = \_mm\_shuffle\_ps(AxisC, AxisC, \_MM\_SHUFFLE(3, 1, 2, 3));}}
+\DoxyCodeLine{978 \textcolor{comment}{    \_\_m128 TmpA3 = \_mm\_mul\_ps(SinA0, TmpA2);}}
+\DoxyCodeLine{979 \textcolor{comment}{    \_\_m128 TmpA4 = \_mm\_add\_ps(TmpA1, TmpA3);}}
+\DoxyCodeLine{980 \textcolor{comment}{}}
+\DoxyCodeLine{981 \textcolor{comment}{    //Rotate[1][0] = 0 + temp[1] * axis[0] -\/ s * axis[2];}}
+\DoxyCodeLine{982 \textcolor{comment}{    //Rotate[1][1] = c + temp[1] * axis[1];}}
+\DoxyCodeLine{983 \textcolor{comment}{    //Rotate[1][2] = 0 + temp[1] * axis[2] + s * axis[0];}}
+\DoxyCodeLine{984 \textcolor{comment}{    \_\_m128 Axis1 = \_mm\_shuffle\_ps(AxisC, AxisC, \_MM\_SHUFFLE(1, 1, 1, 1));}}
+\DoxyCodeLine{985 \textcolor{comment}{    \_\_m128 TmpB0 = \_mm\_mul\_ps(Axis1, AxisC);}}
+\DoxyCodeLine{986 \textcolor{comment}{    \_\_m128 CosA1 = \_mm\_shuffle\_ps(Cos0, Cos0, \_MM\_SHUFFLE(1, 1, 0, 1));}}
+\DoxyCodeLine{987 \textcolor{comment}{    \_\_m128 TmpB1 = \_mm\_add\_ps(CosA1, TmpB0);}}
+\DoxyCodeLine{988 \textcolor{comment}{    \_\_m128 SinB0 = SinA;//\_mm\_set\_ps(-\/s, 0.0f, s, 0.0f);}}
+\DoxyCodeLine{989 \textcolor{comment}{    \_\_m128 TmpB2 = \_mm\_shuffle\_ps(AxisC, AxisC, \_MM\_SHUFFLE(3, 0, 3, 2));}}
+\DoxyCodeLine{990 \textcolor{comment}{    \_\_m128 TmpB3 = \_mm\_mul\_ps(SinA0, TmpB2);}}
+\DoxyCodeLine{991 \textcolor{comment}{    \_\_m128 TmpB4 = \_mm\_add\_ps(TmpB1, TmpB3);}}
+\DoxyCodeLine{992 \textcolor{comment}{}}
+\DoxyCodeLine{993 \textcolor{comment}{    //Rotate[2][0] = 0 + temp[2] * axis[0] + s * axis[1];}}
+\DoxyCodeLine{994 \textcolor{comment}{    //Rotate[2][1] = 0 + temp[2] * axis[1] -\/ s * axis[0];}}
+\DoxyCodeLine{995 \textcolor{comment}{    //Rotate[2][2] = c + temp[2] * axis[2];}}
+\DoxyCodeLine{996 \textcolor{comment}{    \_\_m128 Axis2 = \_mm\_shuffle\_ps(AxisC, AxisC, \_MM\_SHUFFLE(2, 2, 2, 2));}}
+\DoxyCodeLine{997 \textcolor{comment}{    \_\_m128 TmpC0 = \_mm\_mul\_ps(Axis2, AxisC);}}
+\DoxyCodeLine{998 \textcolor{comment}{    \_\_m128 CosA2 = \_mm\_shuffle\_ps(Cos0, Cos0, \_MM\_SHUFFLE(1, 0, 1, 1));}}
+\DoxyCodeLine{999 \textcolor{comment}{    \_\_m128 TmpC1 = \_mm\_add\_ps(CosA2, TmpC0);}}
+\DoxyCodeLine{1000 \textcolor{comment}{    \_\_m128 SinC0 = SinA;//\_mm\_set\_ps(s, -\/s, 0.0f, 0.0f);}}
+\DoxyCodeLine{1001 \textcolor{comment}{    \_\_m128 TmpC2 = \_mm\_shuffle\_ps(AxisC, AxisC, \_MM\_SHUFFLE(3, 3, 0, 1));}}
+\DoxyCodeLine{1002 \textcolor{comment}{    \_\_m128 TmpC3 = \_mm\_mul\_ps(SinA0, TmpC2);}}
+\DoxyCodeLine{1003 \textcolor{comment}{    \_\_m128 TmpC4 = \_mm\_add\_ps(TmpC1, TmpC3);}}
+\DoxyCodeLine{1004 \textcolor{comment}{}}
+\DoxyCodeLine{1005 \textcolor{comment}{    \_\_m128 Result[4];}}
+\DoxyCodeLine{1006 \textcolor{comment}{    Result[0] = TmpA4;}}
+\DoxyCodeLine{1007 \textcolor{comment}{    Result[1] = TmpB4;}}
+\DoxyCodeLine{1008 \textcolor{comment}{    Result[2] = TmpC4;}}
+\DoxyCodeLine{1009 \textcolor{comment}{    Result[3] = \_mm\_set\_ps(1, 0, 0, 0);}}
+\DoxyCodeLine{1010 \textcolor{comment}{}}
+\DoxyCodeLine{1011 \textcolor{comment}{    //mat<4, 4, valType> Result;}}
+\DoxyCodeLine{1012 \textcolor{comment}{    //Result[0] = m[0] * Rotate[0][0] + m[1] * Rotate[0][1] + m[2] * Rotate[0][2];}}
+\DoxyCodeLine{1013 \textcolor{comment}{    //Result[1] = m[0] * Rotate[1][0] + m[1] * Rotate[1][1] + m[2] * Rotate[1][2];}}
+\DoxyCodeLine{1014 \textcolor{comment}{    //Result[2] = m[0] * Rotate[2][0] + m[1] * Rotate[2][1] + m[2] * Rotate[2][2];}}
+\DoxyCodeLine{1015 \textcolor{comment}{    //Result[3] = m[3];}}
+\DoxyCodeLine{1016 \textcolor{comment}{    //return Result;}}
+\DoxyCodeLine{1017 \textcolor{comment}{    sse\_mul\_ps(in, Result, out);}}
+\DoxyCodeLine{1018 \textcolor{comment}{\}}}
+\DoxyCodeLine{1019 \textcolor{comment}{*/}}
+\DoxyCodeLine{1020 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \textcolor{keywordtype}{void} glm\_mat4\_outerProduct(\_\_m128 \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}}, \_\_m128 \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a42ce7cdc612e53abee15043f80220d97}{r}}, \_\_m128 out[4])}
+\DoxyCodeLine{1021 \{}
+\DoxyCodeLine{1022     out[0] = \_mm\_mul\_ps(\mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}}, \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a42ce7cdc612e53abee15043f80220d97}{r}}, \mbox{\hyperlink{glad_8h_a42ce7cdc612e53abee15043f80220d97}{r}}, \_MM\_SHUFFLE(0, 0, 0, 0)));}
+\DoxyCodeLine{1023     out[1] = \_mm\_mul\_ps(\mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}}, \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a42ce7cdc612e53abee15043f80220d97}{r}}, \mbox{\hyperlink{glad_8h_a42ce7cdc612e53abee15043f80220d97}{r}}, \_MM\_SHUFFLE(1, 1, 1, 1)));}
+\DoxyCodeLine{1024     out[2] = \_mm\_mul\_ps(\mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}}, \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a42ce7cdc612e53abee15043f80220d97}{r}}, \mbox{\hyperlink{glad_8h_a42ce7cdc612e53abee15043f80220d97}{r}}, \_MM\_SHUFFLE(2, 2, 2, 2)));}
+\DoxyCodeLine{1025     out[3] = \_mm\_mul\_ps(\mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}}, \_mm\_shuffle\_ps(\mbox{\hyperlink{glad_8h_a42ce7cdc612e53abee15043f80220d97}{r}}, \mbox{\hyperlink{glad_8h_a42ce7cdc612e53abee15043f80220d97}{r}}, \_MM\_SHUFFLE(3, 3, 3, 3)));}
+\DoxyCodeLine{1026 \}}
+\DoxyCodeLine{1027 }
+\DoxyCodeLine{1028 \textcolor{preprocessor}{\#endif}\textcolor{comment}{//GLM\_ARCH \& GLM\_ARCH\_SSE2\_BIT}}
+
+\end{DoxyCode}

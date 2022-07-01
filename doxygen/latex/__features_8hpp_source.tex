@@ -1,0 +1,400 @@
+\hypertarget{__features_8hpp_source}{}\doxysection{\+\_\+features.\+hpp}
+\label{__features_8hpp_source}\index{include/glm/detail/\_features.hpp@{include/glm/detail/\_features.hpp}}
+\mbox{\hyperlink{__features_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{comment}{// \#define GLM\_CXX98\_EXCEPTIONS}}
+\DoxyCodeLine{4 \textcolor{comment}{// \#define GLM\_CXX98\_RTTI}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{// \#define GLM\_CXX11\_RVALUE\_REFERENCES}}
+\DoxyCodeLine{7 \textcolor{comment}{// Rvalue references -\/ GCC 4.3}}
+\DoxyCodeLine{8 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2006/n2118.html}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{comment}{// GLM\_CXX11\_TRAILING\_RETURN}}
+\DoxyCodeLine{11 \textcolor{comment}{// Rvalue references for *this -\/ GCC not supported}}
+\DoxyCodeLine{12 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2439.htm}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{comment}{// GLM\_CXX11\_NONSTATIC\_MEMBER\_INIT}}
+\DoxyCodeLine{15 \textcolor{comment}{// Initialization of class objects by rvalues -\/ GCC any}}
+\DoxyCodeLine{16 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2004/n1610.html}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{comment}{// GLM\_CXX11\_NONSTATIC\_MEMBER\_INIT}}
+\DoxyCodeLine{19 \textcolor{comment}{// Non-\/static data member initializers -\/ GCC 4.7}}
+\DoxyCodeLine{20 \textcolor{comment}{// http://www.open-\/std.org/JTC1/SC22/WG21/docs/papers/2008/n2756.htm}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{comment}{// \#define GLM\_CXX11\_VARIADIC\_TEMPLATE}}
+\DoxyCodeLine{23 \textcolor{comment}{// Variadic templates -\/ GCC 4.3}}
+\DoxyCodeLine{24 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2242.pdf}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{comment}{//}}
+\DoxyCodeLine{27 \textcolor{comment}{// Extending variadic template template parameters -\/ GCC 4.4}}
+\DoxyCodeLine{28 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2008/n2555.pdf}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{comment}{// \#define GLM\_CXX11\_GENERALIZED\_INITIALIZERS}}
+\DoxyCodeLine{31 \textcolor{comment}{// Initializer lists -\/ GCC 4.4}}
+\DoxyCodeLine{32 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2008/n2672.htm}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{comment}{// \#define GLM\_CXX11\_STATIC\_ASSERT}}
+\DoxyCodeLine{35 \textcolor{comment}{// Static assertions -\/ GCC 4.3}}
+\DoxyCodeLine{36 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2004/n1720.html}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{comment}{// \#define GLM\_CXX11\_AUTO\_TYPE}}
+\DoxyCodeLine{39 \textcolor{comment}{// auto-\/typed variables -\/ GCC 4.4}}
+\DoxyCodeLine{40 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2006/n1984.pdf}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{comment}{// \#define GLM\_CXX11\_AUTO\_TYPE}}
+\DoxyCodeLine{43 \textcolor{comment}{// Multi-\/declarator auto -\/ GCC 4.4}}
+\DoxyCodeLine{44 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2004/n1737.pdf}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{// \#define GLM\_CXX11\_AUTO\_TYPE}}
+\DoxyCodeLine{47 \textcolor{comment}{// Removal of auto as a storage-\/class specifier -\/ GCC 4.4}}
+\DoxyCodeLine{48 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2008/n2546.htm}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{comment}{// \#define GLM\_CXX11\_AUTO\_TYPE}}
+\DoxyCodeLine{51 \textcolor{comment}{// New function declarator syntax -\/ GCC 4.4}}
+\DoxyCodeLine{52 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2008/n2541.htm}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{comment}{// \#define GLM\_CXX11\_LAMBDAS}}
+\DoxyCodeLine{55 \textcolor{comment}{// New wording for C++0x lambdas -\/ GCC 4.5}}
+\DoxyCodeLine{56 \textcolor{comment}{// http://www.open-\/std.org/JTC1/SC22/WG21/docs/papers/2009/n2927.pdf}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{comment}{// \#define GLM\_CXX11\_DECLTYPE}}
+\DoxyCodeLine{59 \textcolor{comment}{// Declared type of an expression -\/ GCC 4.3}}
+\DoxyCodeLine{60 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2343.pdf}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{comment}{//}}
+\DoxyCodeLine{63 \textcolor{comment}{// Right angle brackets -\/ GCC 4.3}}
+\DoxyCodeLine{64 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2005/n1757.html}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{comment}{//}}
+\DoxyCodeLine{67 \textcolor{comment}{// Default template arguments for function templates    DR226   GCC 4.3}}
+\DoxyCodeLine{68 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/cwg\_defects.html\#226}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{comment}{//}}
+\DoxyCodeLine{71 \textcolor{comment}{// Solving the SFINAE problem for expressions   DR339   GCC 4.4}}
+\DoxyCodeLine{72 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{comment}{// \#define GLM\_CXX11\_ALIAS\_TEMPLATE}}
+\DoxyCodeLine{75 \textcolor{comment}{// Template aliases N2258   GCC 4.7}}
+\DoxyCodeLine{76 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2258.pdf}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{comment}{//}}
+\DoxyCodeLine{79 \textcolor{comment}{// Extern templates N1987   Yes}}
+\DoxyCodeLine{80 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2006/n1987.htm}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \textcolor{comment}{// \#define GLM\_CXX11\_NULLPTR}}
+\DoxyCodeLine{83 \textcolor{comment}{// Null pointer constant    N2431   GCC 4.6}}
+\DoxyCodeLine{84 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2431.pdf}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{comment}{// \#define GLM\_CXX11\_STRONG\_ENUMS}}
+\DoxyCodeLine{87 \textcolor{comment}{// Strongly-\/typed enums N2347   GCC 4.4}}
+\DoxyCodeLine{88 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2347.pdf}}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 \textcolor{comment}{//}}
+\DoxyCodeLine{91 \textcolor{comment}{// Forward declarations for enums   N2764   GCC 4.6}}
+\DoxyCodeLine{92 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2008/n2764.pdf}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 \textcolor{comment}{//}}
+\DoxyCodeLine{95 \textcolor{comment}{// Generalized attributes   N2761   GCC 4.8}}
+\DoxyCodeLine{96 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2008/n2761.pdf}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{comment}{//}}
+\DoxyCodeLine{99 \textcolor{comment}{// Generalized constant expressions N2235   GCC 4.6}}
+\DoxyCodeLine{100 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2235.pdf}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 \textcolor{comment}{//}}
+\DoxyCodeLine{103 \textcolor{comment}{// Alignment support    N2341   GCC 4.8}}
+\DoxyCodeLine{104 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2341.pdf}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 \textcolor{comment}{// \#define GLM\_CXX11\_DELEGATING\_CONSTRUCTORS}}
+\DoxyCodeLine{107 \textcolor{comment}{// Delegating constructors  N1986   GCC 4.7}}
+\DoxyCodeLine{108 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2006/n1986.pdf}}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 \textcolor{comment}{//}}
+\DoxyCodeLine{111 \textcolor{comment}{// Inheriting constructors  N2540   GCC 4.8}}
+\DoxyCodeLine{112 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2008/n2540.htm}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \textcolor{comment}{// \#define GLM\_CXX11\_EXPLICIT\_CONVERSIONS}}
+\DoxyCodeLine{115 \textcolor{comment}{// Explicit conversion operators    N2437   GCC 4.5}}
+\DoxyCodeLine{116 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2437.pdf}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \textcolor{comment}{//}}
+\DoxyCodeLine{119 \textcolor{comment}{// New character types  N2249   GCC 4.4}}
+\DoxyCodeLine{120 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2249.html}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122 \textcolor{comment}{//}}
+\DoxyCodeLine{123 \textcolor{comment}{// Unicode string literals  N2442   GCC 4.5}}
+\DoxyCodeLine{124 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2442.htm}}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 \textcolor{comment}{//}}
+\DoxyCodeLine{127 \textcolor{comment}{// Raw string literals  N2442   GCC 4.5}}
+\DoxyCodeLine{128 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2442.htm}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 \textcolor{comment}{//}}
+\DoxyCodeLine{131 \textcolor{comment}{// Universal character name literals    N2170   GCC 4.5}}
+\DoxyCodeLine{132 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2170.html}}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134 \textcolor{comment}{// \#define GLM\_CXX11\_USER\_LITERALS}}
+\DoxyCodeLine{135 \textcolor{comment}{// User-\/defined literals        N2765   GCC 4.7}}
+\DoxyCodeLine{136 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2008/n2765.pdf}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138 \textcolor{comment}{//}}
+\DoxyCodeLine{139 \textcolor{comment}{// Standard Layout Types    N2342   GCC 4.5}}
+\DoxyCodeLine{140 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2342.htm}}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142 \textcolor{comment}{// \#define GLM\_CXX11\_DEFAULTED\_FUNCTIONS}}
+\DoxyCodeLine{143 \textcolor{comment}{// \#define GLM\_CXX11\_DELETED\_FUNCTIONS}}
+\DoxyCodeLine{144 \textcolor{comment}{// Defaulted and deleted functions  N2346   GCC 4.4}}
+\DoxyCodeLine{145 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2346.htm}}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147 \textcolor{comment}{//}}
+\DoxyCodeLine{148 \textcolor{comment}{// Extended friend declarations N1791   GCC 4.7}}
+\DoxyCodeLine{149 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2005/n1791.pdf}}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151 \textcolor{comment}{//}}
+\DoxyCodeLine{152 \textcolor{comment}{// Extending sizeof N2253   GCC 4.4}}
+\DoxyCodeLine{153 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2253.html}}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155 \textcolor{comment}{// \#define GLM\_CXX11\_INLINE\_NAMESPACES}}
+\DoxyCodeLine{156 \textcolor{comment}{// Inline namespaces    N2535   GCC 4.4}}
+\DoxyCodeLine{157 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2008/n2535.htm}}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159 \textcolor{comment}{// \#define GLM\_CXX11\_UNRESTRICTED\_UNIONS}}
+\DoxyCodeLine{160 \textcolor{comment}{// Unrestricted unions  N2544   GCC 4.6}}
+\DoxyCodeLine{161 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2008/n2544.pdf}}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163 \textcolor{comment}{// \#define GLM\_CXX11\_LOCAL\_TYPE\_TEMPLATE\_ARGS}}
+\DoxyCodeLine{164 \textcolor{comment}{// Local and unnamed types as template arguments    N2657   GCC 4.5}}
+\DoxyCodeLine{165 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2008/n2657.htm}}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167 \textcolor{comment}{// \#define GLM\_CXX11\_RANGE\_FOR}}
+\DoxyCodeLine{168 \textcolor{comment}{// Range-\/based for  N2930   GCC 4.6}}
+\DoxyCodeLine{169 \textcolor{comment}{// http://www.open-\/std.org/JTC1/SC22/WG21/docs/papers/2009/n2930.html}}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171 \textcolor{comment}{// \#define GLM\_CXX11\_OVERRIDE\_CONTROL}}
+\DoxyCodeLine{172 \textcolor{comment}{// Explicit virtual overrides   N2928 N3206 N3272   GCC 4.7}}
+\DoxyCodeLine{173 \textcolor{comment}{// http://www.open-\/std.org/JTC1/SC22/WG21/docs/papers/2009/n2928.htm}}
+\DoxyCodeLine{174 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2010/n3206.htm}}
+\DoxyCodeLine{175 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2011/n3272.htm}}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177 \textcolor{comment}{//}}
+\DoxyCodeLine{178 \textcolor{comment}{// Minimal support for garbage collection and reachability-\/based leak detection N2670   No}}
+\DoxyCodeLine{179 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2008/n2670.htm}}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181 \textcolor{comment}{// \#define GLM\_CXX11\_NOEXCEPT}}
+\DoxyCodeLine{182 \textcolor{comment}{// Allowing move constructors to throw [noexcept]   N3050   GCC 4.6 (core language only)}}
+\DoxyCodeLine{183 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2010/n3050.html}}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{185 \textcolor{comment}{//}}
+\DoxyCodeLine{186 \textcolor{comment}{// Defining move special member functions   N3053   GCC 4.6}}
+\DoxyCodeLine{187 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2010/n3053.html}}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189 \textcolor{comment}{//}}
+\DoxyCodeLine{190 \textcolor{comment}{// Sequence points  N2239   Yes}}
+\DoxyCodeLine{191 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2239.html}}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193 \textcolor{comment}{//}}
+\DoxyCodeLine{194 \textcolor{comment}{// Atomic operations    N2427   GCC 4.4}}
+\DoxyCodeLine{195 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2239.html}}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197 \textcolor{comment}{//}}
+\DoxyCodeLine{198 \textcolor{comment}{// Strong Compare and Exchange  N2748   GCC 4.5}}
+\DoxyCodeLine{199 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2427.html}}
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201 \textcolor{comment}{//}}
+\DoxyCodeLine{202 \textcolor{comment}{// Bidirectional Fences N2752   GCC 4.8}}
+\DoxyCodeLine{203 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2008/n2752.htm}}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205 \textcolor{comment}{//}}
+\DoxyCodeLine{206 \textcolor{comment}{// Memory model N2429   GCC 4.8}}
+\DoxyCodeLine{207 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2429.htm}}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{209 \textcolor{comment}{//}}
+\DoxyCodeLine{210 \textcolor{comment}{// Data-\/dependency ordering: atomics and memory model   N2664   GCC 4.4}}
+\DoxyCodeLine{211 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2008/n2664.htm}}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213 \textcolor{comment}{//}}
+\DoxyCodeLine{214 \textcolor{comment}{// Propagating exceptions   N2179   GCC 4.4}}
+\DoxyCodeLine{215 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2179.html}}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{217 \textcolor{comment}{//}}
+\DoxyCodeLine{218 \textcolor{comment}{// Abandoning a process and at\_quick\_exit   N2440   GCC 4.8}}
+\DoxyCodeLine{219 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2440.htm}}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221 \textcolor{comment}{//}}
+\DoxyCodeLine{222 \textcolor{comment}{// Allow atomics use in signal handlers N2547   Yes}}
+\DoxyCodeLine{223 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2008/n2547.htm}}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225 \textcolor{comment}{//}}
+\DoxyCodeLine{226 \textcolor{comment}{// Thread-\/local storage N2659   GCC 4.8}}
+\DoxyCodeLine{227 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2008/n2659.htm}}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{229 \textcolor{comment}{//}}
+\DoxyCodeLine{230 \textcolor{comment}{// Dynamic initialization and destruction with concurrency  N2660   GCC 4.3}}
+\DoxyCodeLine{231 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2008/n2660.htm}}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{233 \textcolor{comment}{//}}
+\DoxyCodeLine{234 \textcolor{comment}{// \_\_func\_\_ predefined identifier   N2340   GCC 4.3}}
+\DoxyCodeLine{235 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2007/n2340.htm}}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{237 \textcolor{comment}{//}}
+\DoxyCodeLine{238 \textcolor{comment}{// C99 preprocessor N1653   GCC 4.3}}
+\DoxyCodeLine{239 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2004/n1653.htm}}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241 \textcolor{comment}{//}}
+\DoxyCodeLine{242 \textcolor{comment}{// long long    N1811   GCC 4.3}}
+\DoxyCodeLine{243 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2005/n1811.pdf}}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245 \textcolor{comment}{//}}
+\DoxyCodeLine{246 \textcolor{comment}{// Extended integral types  N1988   Yes}}
+\DoxyCodeLine{247 \textcolor{comment}{// http://www.open-\/std.org/jtc1/sc22/wg21/docs/papers/2006/n1988.pdf}}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#if(GLM\_COMPILER \& GLM\_COMPILER\_GCC)}}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251 \textcolor{preprocessor}{\#   define GLM\_CXX11\_STATIC\_ASSERT}}
+\DoxyCodeLine{252 }
+\DoxyCodeLine{253 \textcolor{preprocessor}{\#elif(GLM\_COMPILER \& GLM\_COMPILER\_CLANG)}}
+\DoxyCodeLine{254 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_exceptions))}}
+\DoxyCodeLine{255 \textcolor{preprocessor}{\#       define GLM\_CXX98\_EXCEPTIONS}}
+\DoxyCodeLine{256 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{257 }
+\DoxyCodeLine{258 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_rtti))}}
+\DoxyCodeLine{259 \textcolor{preprocessor}{\#       define GLM\_CXX98\_RTTI}}
+\DoxyCodeLine{260 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{261 }
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_access\_control\_sfinae))}}
+\DoxyCodeLine{263 \textcolor{preprocessor}{\#       define GLM\_CXX11\_ACCESS\_CONTROL\_SFINAE}}
+\DoxyCodeLine{264 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{266 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_alias\_templates))}}
+\DoxyCodeLine{267 \textcolor{preprocessor}{\#       define GLM\_CXX11\_ALIAS\_TEMPLATE}}
+\DoxyCodeLine{268 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{270 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_alignas))}}
+\DoxyCodeLine{271 \textcolor{preprocessor}{\#       define GLM\_CXX11\_ALIGNAS}}
+\DoxyCodeLine{272 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{273 }
+\DoxyCodeLine{274 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_attributes))}}
+\DoxyCodeLine{275 \textcolor{preprocessor}{\#       define GLM\_CXX11\_ATTRIBUTES}}
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{277 }
+\DoxyCodeLine{278 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_constexpr))}}
+\DoxyCodeLine{279 \textcolor{preprocessor}{\#       define GLM\_CXX11\_CONSTEXPR}}
+\DoxyCodeLine{280 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{281 }
+\DoxyCodeLine{282 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_decltype))}}
+\DoxyCodeLine{283 \textcolor{preprocessor}{\#       define GLM\_CXX11\_DECLTYPE}}
+\DoxyCodeLine{284 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{285 }
+\DoxyCodeLine{286 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_default\_function\_template\_args))}}
+\DoxyCodeLine{287 \textcolor{preprocessor}{\#       define GLM\_CXX11\_DEFAULT\_FUNCTION\_TEMPLATE\_ARGS}}
+\DoxyCodeLine{288 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{289 }
+\DoxyCodeLine{290 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_defaulted\_functions))}}
+\DoxyCodeLine{291 \textcolor{preprocessor}{\#       define GLM\_CXX11\_DEFAULTED\_FUNCTIONS}}
+\DoxyCodeLine{292 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{293 }
+\DoxyCodeLine{294 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_delegating\_constructors))}}
+\DoxyCodeLine{295 \textcolor{preprocessor}{\#       define GLM\_CXX11\_DELEGATING\_CONSTRUCTORS}}
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{297 }
+\DoxyCodeLine{298 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_deleted\_functions))}}
+\DoxyCodeLine{299 \textcolor{preprocessor}{\#       define GLM\_CXX11\_DELETED\_FUNCTIONS}}
+\DoxyCodeLine{300 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{301 }
+\DoxyCodeLine{302 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_explicit\_conversions))}}
+\DoxyCodeLine{303 \textcolor{preprocessor}{\#       define GLM\_CXX11\_EXPLICIT\_CONVERSIONS}}
+\DoxyCodeLine{304 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{305 }
+\DoxyCodeLine{306 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_generalized\_initializers))}}
+\DoxyCodeLine{307 \textcolor{preprocessor}{\#       define GLM\_CXX11\_GENERALIZED\_INITIALIZERS}}
+\DoxyCodeLine{308 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{309 }
+\DoxyCodeLine{310 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_implicit\_moves))}}
+\DoxyCodeLine{311 \textcolor{preprocessor}{\#       define GLM\_CXX11\_IMPLICIT\_MOVES}}
+\DoxyCodeLine{312 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{313 }
+\DoxyCodeLine{314 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_inheriting\_constructors))}}
+\DoxyCodeLine{315 \textcolor{preprocessor}{\#       define GLM\_CXX11\_INHERITING\_CONSTRUCTORS}}
+\DoxyCodeLine{316 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{317 }
+\DoxyCodeLine{318 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_inline\_namespaces))}}
+\DoxyCodeLine{319 \textcolor{preprocessor}{\#       define GLM\_CXX11\_INLINE\_NAMESPACES}}
+\DoxyCodeLine{320 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{321 }
+\DoxyCodeLine{322 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_lambdas))}}
+\DoxyCodeLine{323 \textcolor{preprocessor}{\#       define GLM\_CXX11\_LAMBDAS}}
+\DoxyCodeLine{324 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{325 }
+\DoxyCodeLine{326 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_local\_type\_template\_args))}}
+\DoxyCodeLine{327 \textcolor{preprocessor}{\#       define GLM\_CXX11\_LOCAL\_TYPE\_TEMPLATE\_ARGS}}
+\DoxyCodeLine{328 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{329 }
+\DoxyCodeLine{330 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_noexcept))}}
+\DoxyCodeLine{331 \textcolor{preprocessor}{\#       define GLM\_CXX11\_NOEXCEPT}}
+\DoxyCodeLine{332 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{333 }
+\DoxyCodeLine{334 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_nonstatic\_member\_init))}}
+\DoxyCodeLine{335 \textcolor{preprocessor}{\#       define GLM\_CXX11\_NONSTATIC\_MEMBER\_INIT}}
+\DoxyCodeLine{336 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{337 }
+\DoxyCodeLine{338 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_nullptr))}}
+\DoxyCodeLine{339 \textcolor{preprocessor}{\#       define GLM\_CXX11\_NULLPTR}}
+\DoxyCodeLine{340 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{341 }
+\DoxyCodeLine{342 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_override\_control))}}
+\DoxyCodeLine{343 \textcolor{preprocessor}{\#       define GLM\_CXX11\_OVERRIDE\_CONTROL}}
+\DoxyCodeLine{344 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{345 }
+\DoxyCodeLine{346 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_reference\_qualified\_functions))}}
+\DoxyCodeLine{347 \textcolor{preprocessor}{\#       define GLM\_CXX11\_REFERENCE\_QUALIFIED\_FUNCTIONS}}
+\DoxyCodeLine{348 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{349 }
+\DoxyCodeLine{350 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_range\_for))}}
+\DoxyCodeLine{351 \textcolor{preprocessor}{\#       define GLM\_CXX11\_RANGE\_FOR}}
+\DoxyCodeLine{352 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{353 }
+\DoxyCodeLine{354 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_raw\_string\_literals))}}
+\DoxyCodeLine{355 \textcolor{preprocessor}{\#       define GLM\_CXX11\_RAW\_STRING\_LITERALS}}
+\DoxyCodeLine{356 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{357 }
+\DoxyCodeLine{358 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_rvalue\_references))}}
+\DoxyCodeLine{359 \textcolor{preprocessor}{\#       define GLM\_CXX11\_RVALUE\_REFERENCES}}
+\DoxyCodeLine{360 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{361 }
+\DoxyCodeLine{362 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_static\_assert))}}
+\DoxyCodeLine{363 \textcolor{preprocessor}{\#       define GLM\_CXX11\_STATIC\_ASSERT}}
+\DoxyCodeLine{364 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{365 }
+\DoxyCodeLine{366 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_auto\_type))}}
+\DoxyCodeLine{367 \textcolor{preprocessor}{\#       define GLM\_CXX11\_AUTO\_TYPE}}
+\DoxyCodeLine{368 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{369 }
+\DoxyCodeLine{370 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_strong\_enums))}}
+\DoxyCodeLine{371 \textcolor{preprocessor}{\#       define GLM\_CXX11\_STRONG\_ENUMS}}
+\DoxyCodeLine{372 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{373 }
+\DoxyCodeLine{374 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_trailing\_return))}}
+\DoxyCodeLine{375 \textcolor{preprocessor}{\#       define GLM\_CXX11\_TRAILING\_RETURN}}
+\DoxyCodeLine{376 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{377 }
+\DoxyCodeLine{378 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_unicode\_literals))}}
+\DoxyCodeLine{379 \textcolor{preprocessor}{\#       define GLM\_CXX11\_UNICODE\_LITERALS}}
+\DoxyCodeLine{380 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{381 }
+\DoxyCodeLine{382 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_unrestricted\_unions))}}
+\DoxyCodeLine{383 \textcolor{preprocessor}{\#       define GLM\_CXX11\_UNRESTRICTED\_UNIONS}}
+\DoxyCodeLine{384 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{385 }
+\DoxyCodeLine{386 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_user\_literals))}}
+\DoxyCodeLine{387 \textcolor{preprocessor}{\#       define GLM\_CXX11\_USER\_LITERALS}}
+\DoxyCodeLine{388 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{389 }
+\DoxyCodeLine{390 \textcolor{preprocessor}{\#   if(\_\_has\_feature(cxx\_variadic\_templates))}}
+\DoxyCodeLine{391 \textcolor{preprocessor}{\#       define GLM\_CXX11\_VARIADIC\_TEMPLATES}}
+\DoxyCodeLine{392 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{393 }
+\DoxyCodeLine{394 \textcolor{preprocessor}{\#endif}\textcolor{comment}{//(GLM\_COMPILER \& GLM\_COMPILER\_CLANG)}}
+
+\end{DoxyCode}

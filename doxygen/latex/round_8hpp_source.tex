@@ -1,0 +1,79 @@
+\hypertarget{round_8hpp_source}{}\doxysection{round.\+hpp}
+\label{round_8hpp_source}\index{include/glm/gtc/round.hpp@{include/glm/gtc/round.hpp}}
+\mbox{\hyperlink{round_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{comment}{// Dependencies}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}../detail/setup.hpp"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}../detail/qualifier.hpp"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}../detail/\_vectorize.hpp"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}../vector\_relational.hpp"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}../common.hpp"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <limits>}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_GTC\_integer extension included"{}})}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{29 \{}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{36     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genIUType>}
+\DoxyCodeLine{37     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__gtc__round_gadf491730354aa7da67fbe23d4d688763}{isPowerOfTwo}}(genIUType \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{46     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{47     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1vec}{vec<L, bool, Q>}} \mbox{\hyperlink{group__gtc__round_gadf491730354aa7da67fbe23d4d688763}{isPowerOfTwo}}(\mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{53     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genIUType>}
+\DoxyCodeLine{54     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genIUType \mbox{\hyperlink{group__gtc__round_ga5c3ef36ae32aa4271f1544f92bd578b6}{ceilPowerOfTwo}}(genIUType \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{64     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{65     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \mbox{\hyperlink{group__gtc__round_ga5c3ef36ae32aa4271f1544f92bd578b6}{ceilPowerOfTwo}}(\mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{71     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genIUType>}
+\DoxyCodeLine{72     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genIUType \mbox{\hyperlink{group__gtc__round_gafe273a57935d04c9db677bf67f9a71f4}{floorPowerOfTwo}}(genIUType \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{82     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{83     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \mbox{\hyperlink{group__gtc__round_gafe273a57935d04c9db677bf67f9a71f4}{floorPowerOfTwo}}(\mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{88     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genIUType>}
+\DoxyCodeLine{89     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genIUType \mbox{\hyperlink{group__gtc__round_gae4e1bf5d1cd179f59261a7342bdcafca}{roundPowerOfTwo}}(genIUType \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{98     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{99     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \mbox{\hyperlink{group__gtc__round_gae4e1bf5d1cd179f59261a7342bdcafca}{roundPowerOfTwo}}(\mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{104     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genIUType>}
+\DoxyCodeLine{105     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__gtc__round_gaec593d33956a8fe43f78fccc63ddde9a}{isMultiple}}(genIUType \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, genIUType Multiple);}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{114     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{115     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1vec}{vec<L, bool, Q>}} \mbox{\hyperlink{group__gtc__round_gaec593d33956a8fe43f78fccc63ddde9a}{isMultiple}}(\mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, T Multiple);}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{124     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{125     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1vec}{vec<L, bool, Q>}} \mbox{\hyperlink{group__gtc__round_gaec593d33956a8fe43f78fccc63ddde9a}{isMultiple}}(\mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, \mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \textcolor{keyword}{const}\& Multiple);}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{135     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{136     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtc__round_ga1d89ac88582aaf4d5dfa5feb4a376fd4}{ceilMultiple}}(genType \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, genType Multiple);}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{148     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{149     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \mbox{\hyperlink{group__gtc__round_ga1d89ac88582aaf4d5dfa5feb4a376fd4}{ceilMultiple}}(\mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, \mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \textcolor{keyword}{const}\& Multiple);}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{159     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{160     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtc__round_ga2ffa3cd5f2ea746ee1bf57c46da6315e}{floorMultiple}}(genType \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, genType Multiple);}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{172     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{173     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \mbox{\hyperlink{group__gtc__round_ga2ffa3cd5f2ea746ee1bf57c46da6315e}{floorMultiple}}(\mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, \mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \textcolor{keyword}{const}\& Multiple);}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{183     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{184     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtc__round_gab892defcc9c0b0618df7251253dc0fbb}{roundMultiple}}(genType \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, genType Multiple);}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{196     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{197     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \mbox{\hyperlink{group__gtc__round_gab892defcc9c0b0618df7251253dc0fbb}{roundMultiple}}(\mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, \mbox{\hyperlink{structglm_1_1vec}{vec<L, T, Q>}} \textcolor{keyword}{const}\& Multiple);}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{200 \} \textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{202 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{round_8inl}{round.inl}}"{}}}
+
+\end{DoxyCode}

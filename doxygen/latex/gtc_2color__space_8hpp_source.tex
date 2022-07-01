@@ -1,0 +1,41 @@
+\hypertarget{gtc_2color__space_8hpp_source}{}\doxysection{color\+\_\+space.\+hpp}
+\label{gtc_2color__space_8hpp_source}\index{include/glm/gtc/color\_space.hpp@{include/glm/gtc/color\_space.hpp}}
+\mbox{\hyperlink{gtc_2color__space_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{comment}{// Dependencies}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}../detail/setup.hpp"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}../detail/qualifier.hpp"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}../exponential.hpp"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}../vec3.hpp"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}../vec4.hpp"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <limits>}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_GTC\_color\_space extension included"{}})}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{29 \{}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{35     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{36     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, T, Q> \mbox{\hyperlink{group__gtc__color__space_ga12a34c560bb2db262bd02605d99aa512}{convertLinearToSRGB}}(vec<L, T, Q> \textcolor{keyword}{const}\& ColorLinear);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{40     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{41     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, T, Q> \mbox{\hyperlink{group__gtc__color__space_ga12a34c560bb2db262bd02605d99aa512}{convertLinearToSRGB}}(vec<L, T, Q> \textcolor{keyword}{const}\& ColorLinear, T Gamma);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{45     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{46     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, T, Q> \mbox{\hyperlink{group__gtc__color__space_ga9deb7729e709faeb1b89d65541f0dab0}{convertSRGBToLinear}}(vec<L, T, Q> \textcolor{keyword}{const}\& ColorSRGB);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{49     \textcolor{comment}{// IEC 61966-\/2-\/1:1999 / Rec. 709 specification https://www.w3.org/Graphics/Color/srgb}}
+\DoxyCodeLine{50     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{51     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, T, Q> \mbox{\hyperlink{group__gtc__color__space_ga9deb7729e709faeb1b89d65541f0dab0}{convertSRGBToLinear}}(vec<L, T, Q> \textcolor{keyword}{const}\& ColorSRGB, T Gamma);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{54 \} \textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{gtx_2color__space_8inl}{color\_space.inl}}"{}}}
+
+\end{DoxyCode}

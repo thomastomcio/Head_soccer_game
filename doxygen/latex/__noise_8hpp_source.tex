@@ -1,0 +1,87 @@
+\hypertarget{__noise_8hpp_source}{}\doxysection{\+\_\+noise.\+hpp}
+\label{__noise_8hpp_source}\index{include/glm/detail/\_noise.hpp@{include/glm/detail/\_noise.hpp}}
+\mbox{\hyperlink{__noise_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}../common.hpp"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}\{}
+\DoxyCodeLine{6 \textcolor{keyword}{namespace }detail}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{9     \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} T \mbox{\hyperlink{namespaceglm_1_1detail_a9968154b610b2b78f492b2f7babd728c}{mod289}}(T \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{10     \{}
+\DoxyCodeLine{11         \textcolor{keywordflow}{return} \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}} -\/ \mbox{\hyperlink{group__core__func__common_gac433646923ab80af6d9964f1570855d5}{floor}}(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}} * (\textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(1.0) / \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(289.0))) * \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(289.0);}
+\DoxyCodeLine{12     \}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{15     \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} T \mbox{\hyperlink{namespaceglm_1_1detail_adce908e01ac22b5e55c29bacbf6a37a5}{permute}}(T \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{16     \{}
+\DoxyCodeLine{17         \textcolor{keywordflow}{return} \mbox{\hyperlink{namespaceglm_1_1detail_a9968154b610b2b78f492b2f7babd728c}{mod289}}(((\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}} * \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(34)) + \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(1)) * \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{18     \}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{21     \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \mbox{\hyperlink{structglm_1_1vec_3_012_00_01_t_00_01_q_01_4}{vec<2, T, Q>}} \mbox{\hyperlink{namespaceglm_1_1detail_adce908e01ac22b5e55c29bacbf6a37a5}{permute}}(\mbox{\hyperlink{structglm_1_1vec_3_012_00_01_t_00_01_q_01_4}{vec<2, T, Q>}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{22     \{}
+\DoxyCodeLine{23         \textcolor{keywordflow}{return} \mbox{\hyperlink{namespaceglm_1_1detail_a9968154b610b2b78f492b2f7babd728c}{mod289}}(((\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}} * \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(34)) + \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(1)) * \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{24     \}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{27     \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \mbox{\hyperlink{structglm_1_1vec_3_013_00_01_t_00_01_q_01_4}{vec<3, T, Q>}} \mbox{\hyperlink{namespaceglm_1_1detail_adce908e01ac22b5e55c29bacbf6a37a5}{permute}}(\mbox{\hyperlink{structglm_1_1vec_3_013_00_01_t_00_01_q_01_4}{vec<3, T, Q>}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{28     \{}
+\DoxyCodeLine{29         \textcolor{keywordflow}{return} \mbox{\hyperlink{namespaceglm_1_1detail_a9968154b610b2b78f492b2f7babd728c}{mod289}}(((\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}} * \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(34)) + \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(1)) * \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{30     \}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{33     \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \mbox{\hyperlink{structglm_1_1vec_3_014_00_01_t_00_01_q_01_4}{vec<4, T, Q>}} \mbox{\hyperlink{namespaceglm_1_1detail_adce908e01ac22b5e55c29bacbf6a37a5}{permute}}(\mbox{\hyperlink{structglm_1_1vec_3_014_00_01_t_00_01_q_01_4}{vec<4, T, Q>}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{34     \{}
+\DoxyCodeLine{35         \textcolor{keywordflow}{return} \mbox{\hyperlink{namespaceglm_1_1detail_a9968154b610b2b78f492b2f7babd728c}{mod289}}(((\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}} * \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(34)) + \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(1)) * \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{39     \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} T \mbox{\hyperlink{namespaceglm_1_1detail_a82e6fa9d633a5f76f8b7e046ac5d91f4}{taylorInvSqrt}}(T \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a42ce7cdc612e53abee15043f80220d97}{r}})}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41         \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(1.79284291400159) -\/ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(0.85373472095314) * \mbox{\hyperlink{glad_8h_a42ce7cdc612e53abee15043f80220d97}{r}};}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{45     \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \mbox{\hyperlink{structglm_1_1vec_3_012_00_01_t_00_01_q_01_4}{vec<2, T, Q>}} \mbox{\hyperlink{namespaceglm_1_1detail_a82e6fa9d633a5f76f8b7e046ac5d91f4}{taylorInvSqrt}}(\mbox{\hyperlink{structglm_1_1vec_3_012_00_01_t_00_01_q_01_4}{vec<2, T, Q>}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a42ce7cdc612e53abee15043f80220d97}{r}})}
+\DoxyCodeLine{46     \{}
+\DoxyCodeLine{47         \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(1.79284291400159) -\/ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(0.85373472095314) * \mbox{\hyperlink{glad_8h_a42ce7cdc612e53abee15043f80220d97}{r}};}
+\DoxyCodeLine{48     \}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{51     \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \mbox{\hyperlink{structglm_1_1vec_3_013_00_01_t_00_01_q_01_4}{vec<3, T, Q>}} \mbox{\hyperlink{namespaceglm_1_1detail_a82e6fa9d633a5f76f8b7e046ac5d91f4}{taylorInvSqrt}}(\mbox{\hyperlink{structglm_1_1vec_3_013_00_01_t_00_01_q_01_4}{vec<3, T, Q>}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a42ce7cdc612e53abee15043f80220d97}{r}})}
+\DoxyCodeLine{52     \{}
+\DoxyCodeLine{53         \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(1.79284291400159) -\/ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(0.85373472095314) * \mbox{\hyperlink{glad_8h_a42ce7cdc612e53abee15043f80220d97}{r}};}
+\DoxyCodeLine{54     \}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{57     \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \mbox{\hyperlink{structglm_1_1vec_3_014_00_01_t_00_01_q_01_4}{vec<4, T, Q>}} \mbox{\hyperlink{namespaceglm_1_1detail_a82e6fa9d633a5f76f8b7e046ac5d91f4}{taylorInvSqrt}}(\mbox{\hyperlink{structglm_1_1vec_3_014_00_01_t_00_01_q_01_4}{vec<4, T, Q>}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a42ce7cdc612e53abee15043f80220d97}{r}})}
+\DoxyCodeLine{58     \{}
+\DoxyCodeLine{59         \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(1.79284291400159) -\/ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(0.85373472095314) * \mbox{\hyperlink{glad_8h_a42ce7cdc612e53abee15043f80220d97}{r}};}
+\DoxyCodeLine{60     \}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{63     \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \mbox{\hyperlink{structglm_1_1vec_3_012_00_01_t_00_01_q_01_4}{vec<2, T, Q>}} \mbox{\hyperlink{namespaceglm_1_1detail_ac182f6288b0be7f5eff5cf3f63af2873}{fade}}(\mbox{\hyperlink{structglm_1_1vec_3_012_00_01_t_00_01_q_01_4}{vec<2, T, Q>}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a7d65d00ca3b0630d9b5c52df855b19f5}{t}})}
+\DoxyCodeLine{64     \{}
+\DoxyCodeLine{65         \textcolor{keywordflow}{return} (\mbox{\hyperlink{glad_8h_a7d65d00ca3b0630d9b5c52df855b19f5}{t}} * \mbox{\hyperlink{glad_8h_a7d65d00ca3b0630d9b5c52df855b19f5}{t}} * \mbox{\hyperlink{glad_8h_a7d65d00ca3b0630d9b5c52df855b19f5}{t}}) * (\mbox{\hyperlink{glad_8h_a7d65d00ca3b0630d9b5c52df855b19f5}{t}} * (\mbox{\hyperlink{glad_8h_a7d65d00ca3b0630d9b5c52df855b19f5}{t}} * \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(6) -\/ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(15)) + \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(10));}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{69     \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \mbox{\hyperlink{structglm_1_1vec_3_013_00_01_t_00_01_q_01_4}{vec<3, T, Q>}} \mbox{\hyperlink{namespaceglm_1_1detail_ac182f6288b0be7f5eff5cf3f63af2873}{fade}}(\mbox{\hyperlink{structglm_1_1vec_3_013_00_01_t_00_01_q_01_4}{vec<3, T, Q>}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a7d65d00ca3b0630d9b5c52df855b19f5}{t}})}
+\DoxyCodeLine{70     \{}
+\DoxyCodeLine{71         \textcolor{keywordflow}{return} (\mbox{\hyperlink{glad_8h_a7d65d00ca3b0630d9b5c52df855b19f5}{t}} * \mbox{\hyperlink{glad_8h_a7d65d00ca3b0630d9b5c52df855b19f5}{t}} * \mbox{\hyperlink{glad_8h_a7d65d00ca3b0630d9b5c52df855b19f5}{t}}) * (\mbox{\hyperlink{glad_8h_a7d65d00ca3b0630d9b5c52df855b19f5}{t}} * (\mbox{\hyperlink{glad_8h_a7d65d00ca3b0630d9b5c52df855b19f5}{t}} * \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(6) -\/ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(15)) + \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(10));}
+\DoxyCodeLine{72     \}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{75     \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \mbox{\hyperlink{structglm_1_1vec_3_014_00_01_t_00_01_q_01_4}{vec<4, T, Q>}} \mbox{\hyperlink{namespaceglm_1_1detail_ac182f6288b0be7f5eff5cf3f63af2873}{fade}}(\mbox{\hyperlink{structglm_1_1vec_3_014_00_01_t_00_01_q_01_4}{vec<4, T, Q>}} \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a7d65d00ca3b0630d9b5c52df855b19f5}{t}})}
+\DoxyCodeLine{76     \{}
+\DoxyCodeLine{77         \textcolor{keywordflow}{return} (\mbox{\hyperlink{glad_8h_a7d65d00ca3b0630d9b5c52df855b19f5}{t}} * \mbox{\hyperlink{glad_8h_a7d65d00ca3b0630d9b5c52df855b19f5}{t}} * \mbox{\hyperlink{glad_8h_a7d65d00ca3b0630d9b5c52df855b19f5}{t}}) * (\mbox{\hyperlink{glad_8h_a7d65d00ca3b0630d9b5c52df855b19f5}{t}} * (\mbox{\hyperlink{glad_8h_a7d65d00ca3b0630d9b5c52df855b19f5}{t}} * \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(6) -\/ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(15)) + \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(10));}
+\DoxyCodeLine{78     \}}
+\DoxyCodeLine{79 \}\textcolor{comment}{//namespace detail}}
+\DoxyCodeLine{80 \}\textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{81 }
+
+\end{DoxyCode}

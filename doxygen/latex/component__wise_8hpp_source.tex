@@ -1,0 +1,46 @@
+\hypertarget{component__wise_8hpp_source}{}\doxysection{component\+\_\+wise.\+hpp}
+\label{component__wise_8hpp_source}\index{include/glm/gtx/component\_wise.hpp@{include/glm/gtx/component\_wise.hpp}}
+\mbox{\hyperlink{component__wise_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{comment}{// Dependencies}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}../detail/setup.hpp"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}../detail/qualifier.hpp"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#ifndef GLM\_ENABLE\_EXPERIMENTAL}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#   error "{}GLM: GLM\_GTX\_component\_wise is an experimental extension and may change in the future. Use \#define GLM\_ENABLE\_EXPERIMENTAL before including it, if you really want to use it."{}}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_GTX\_component\_wise extension included"{}})}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{30 \{}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{37     \textcolor{keyword}{template}<\textcolor{keyword}{typename} \textcolor{keywordtype}{float}Type, length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{38     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, floatType, Q> \mbox{\hyperlink{group__gtx__component__wise_ga3f5d893b2805999d155de26f7a9593d2}{compNormalize}}(vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{43     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} \textcolor{keywordtype}{float}Type, qualifier Q>}
+\DoxyCodeLine{44     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, T, Q> \mbox{\hyperlink{group__gtx__component__wise_gab0e4a1a73c60f93d8bfbe97f331476a9}{compScale}}(vec<L, floatType, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{48     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{49     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keyword}{typename} genType::value\_type \mbox{\hyperlink{group__gtx__component__wise_gaf71833350e15e74d31cbf8a3e7f27051}{compAdd}}(genType \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{53     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{54     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keyword}{typename} genType::value\_type \mbox{\hyperlink{group__gtx__component__wise_gae8ab88024197202c9479d33bdc5a8a5d}{compMul}}(genType \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{58     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{59     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keyword}{typename} genType::value\_type \mbox{\hyperlink{group__gtx__component__wise_gab5d0832b5c7bb01b8d7395973bfb1425}{compMin}}(genType \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{63     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{64     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keyword}{typename} genType::value\_type \mbox{\hyperlink{group__gtx__component__wise_gabfa4bb19298c8c73d4217ba759c496b6}{compMax}}(genType \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{67 \}\textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{component__wise_8inl}{component\_wise.inl}}"{}}}
+
+\end{DoxyCode}

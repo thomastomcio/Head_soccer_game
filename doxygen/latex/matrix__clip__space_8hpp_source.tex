@@ -1,0 +1,194 @@
+\hypertarget{matrix__clip__space_8hpp_source}{}\doxysection{matrix\+\_\+clip\+\_\+space.\+hpp}
+\label{matrix__clip__space_8hpp_source}\index{include/glm/ext/matrix\_clip\_space.hpp@{include/glm/ext/matrix\_clip\_space.hpp}}
+\mbox{\hyperlink{matrix__clip__space_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{comment}{// Dependencies}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}../ext/scalar\_constants.hpp"{}}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}../geometric.hpp"{}}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include "{}../trigonometric.hpp"{}}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_EXT\_matrix\_clip\_space extension included"{}})}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{32 \{}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{42     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{43     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gaa8568ef1d14d6654becb860ed6163817}{ortho}}(}
+\DoxyCodeLine{44         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}});}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{52     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{53     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gad889c03e019e5f3dbe17ffc46b3d2224}{orthoLH\_ZO}}(}
+\DoxyCodeLine{54         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}}, T \mbox{\hyperlink{glad_8h_a12d99226e590bbaaf0be69169eeb4834}{zNear}}, T \mbox{\hyperlink{glad_8h_a1052a8235df129542aea6da80fbec6a1}{zFar}});}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{62     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{63     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga6483b1c6f456214b172870d4302067f2}{orthoLH\_NO}}(}
+\DoxyCodeLine{64         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}}, T \mbox{\hyperlink{glad_8h_a12d99226e590bbaaf0be69169eeb4834}{zNear}}, T \mbox{\hyperlink{glad_8h_a1052a8235df129542aea6da80fbec6a1}{zFar}});}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{72     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{73     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gab74a81b31fdf79b83780190ed01058b0}{orthoRH\_ZO}}(}
+\DoxyCodeLine{74         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}}, T \mbox{\hyperlink{glad_8h_a12d99226e590bbaaf0be69169eeb4834}{zNear}}, T \mbox{\hyperlink{glad_8h_a1052a8235df129542aea6da80fbec6a1}{zFar}});}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{82     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{83     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga612cba4d8b1ffb8abf0968b4daf1461e}{orthoRH\_NO}}(}
+\DoxyCodeLine{84         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}}, T \mbox{\hyperlink{glad_8h_a12d99226e590bbaaf0be69169eeb4834}{zNear}}, T \mbox{\hyperlink{glad_8h_a1052a8235df129542aea6da80fbec6a1}{zFar}});}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{92     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{93     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga8079772d895a0d75d705a611d521fd60}{orthoZO}}(}
+\DoxyCodeLine{94         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}}, T \mbox{\hyperlink{glad_8h_a12d99226e590bbaaf0be69169eeb4834}{zNear}}, T \mbox{\hyperlink{glad_8h_a1052a8235df129542aea6da80fbec6a1}{zFar}});}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{102     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{103     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gaaf196eb7ed62a815932e4f55a76fdbbb}{orthoNO}}(}
+\DoxyCodeLine{104         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}}, T \mbox{\hyperlink{glad_8h_a12d99226e590bbaaf0be69169eeb4834}{zNear}}, T \mbox{\hyperlink{glad_8h_a1052a8235df129542aea6da80fbec6a1}{zFar}});}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{113     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{114     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga8dd6ed0963b92e610448163d12f20dc7}{orthoLH}}(}
+\DoxyCodeLine{115         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}}, T \mbox{\hyperlink{glad_8h_a12d99226e590bbaaf0be69169eeb4834}{zNear}}, T \mbox{\hyperlink{glad_8h_a1052a8235df129542aea6da80fbec6a1}{zFar}});}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{124     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{125     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gafb9a54c12086283da25e5e4b48b755a9}{orthoRH}}(}
+\DoxyCodeLine{126         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}}, T \mbox{\hyperlink{glad_8h_a12d99226e590bbaaf0be69169eeb4834}{zNear}}, T \mbox{\hyperlink{glad_8h_a1052a8235df129542aea6da80fbec6a1}{zFar}});}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{135     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{136     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gaa8568ef1d14d6654becb860ed6163817}{ortho}}(}
+\DoxyCodeLine{137         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}}, T \mbox{\hyperlink{glad_8h_a12d99226e590bbaaf0be69169eeb4834}{zNear}}, T \mbox{\hyperlink{glad_8h_a1052a8235df129542aea6da80fbec6a1}{zFar}});}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{143     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{144     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gacb5c1add5780bdb8fb5c18259f88c59d}{frustumLH\_ZO}}(}
+\DoxyCodeLine{145         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}}, T near, T far);}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{151     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{152     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga268c2e08a8531e5aca32181e5ed49aa2}{frustumLH\_NO}}(}
+\DoxyCodeLine{153         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}}, T near, T far);}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{159     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{160     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga2a0614c8f5bc13c5f9f4b0cf9c39278a}{frustumRH\_ZO}}(}
+\DoxyCodeLine{161         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}}, T near, T far);}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{167     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{168     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gaf83f2f11c373982d3fdbf138be7d7c27}{frustumRH\_NO}}(}
+\DoxyCodeLine{169         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}}, T near, T far);}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{175     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{176     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga5c91ea8845dbaad8f8ab47103866459e}{frustumZO}}(}
+\DoxyCodeLine{177         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}}, T near, T far);}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{183     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{184     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga3c50f09a1f20ab527a6f99b6f36be23f}{frustumNO}}(}
+\DoxyCodeLine{185         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}}, T near, T far);}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{192     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{193     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gaf040a59a5112c06be7579fee2b05bc6f}{frustumLH}}(}
+\DoxyCodeLine{194         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}}, T near, T far);}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{201     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{202     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gaa881f9ebd1a43e2d032c9a524faf0e7b}{frustumRH}}(}
+\DoxyCodeLine{203         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}}, T near, T far);}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{210     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{211     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gaf2b9bdfe77c910ce3ae07c1a386d110e}{frustum}}(}
+\DoxyCodeLine{212         T \mbox{\hyperlink{glad_8h_a85b8f6c07fbc1fb5d77c2ae090f21995}{left}}, T \mbox{\hyperlink{glad_8h_a5ffadbbacc6b89cf6218bc43b384d3fe}{right}}, T \mbox{\hyperlink{glad_8h_a95fc257e5ddf46f7db9d5e898cdf1991}{bottom}}, T \mbox{\hyperlink{glad_8h_a5ab323daeacf8dfdb8f91132fecdca23}{top}}, T near, T far);}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{214 }
+\DoxyCodeLine{224     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{225     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga703204a33716e0eefc1a6ff383ab62ed}{perspectiveRH\_ZO}}(}
+\DoxyCodeLine{226         T fovy, T aspect, T near, T far);}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{237     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{238     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga68eacfaf3cbfbc7a5465a9a0e4701ce6}{perspectiveRH\_NO}}(}
+\DoxyCodeLine{239         T fovy, T aspect, T near, T far);}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{250     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{251     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga947bfc6e136d0a6bc75b8a0fa10f568d}{perspectiveLH\_ZO}}(}
+\DoxyCodeLine{252         T fovy, T aspect, T near, T far);}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{263     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{264     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gaaf666c22f31e443004f2192706ef4fdc}{perspectiveLH\_NO}}(}
+\DoxyCodeLine{265         T fovy, T aspect, T near, T far);}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{276     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{277     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga32430648d1b0aecd30c08943ce33a1f0}{perspectiveZO}}(}
+\DoxyCodeLine{278         T fovy, T aspect, T near, T far);}
+\DoxyCodeLine{279 }
+\DoxyCodeLine{289     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{290     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga7c2215fd8b8b9f37e29c548d0e48bd91}{perspectiveNO}}(}
+\DoxyCodeLine{291         T fovy, T aspect, T near, T far);}
+\DoxyCodeLine{292 }
+\DoxyCodeLine{303     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{304     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga0786f78f02365fc789c6a4cd809bd441}{perspectiveRH}}(}
+\DoxyCodeLine{305         T fovy, T aspect, T near, T far);}
+\DoxyCodeLine{306 }
+\DoxyCodeLine{317     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{318     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga8b7f443c7e30e879fc98fcf1b922d958}{perspectiveLH}}(}
+\DoxyCodeLine{319         T fovy, T aspect, T near, T far);}
+\DoxyCodeLine{320 }
+\DoxyCodeLine{331     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{332     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga9e13be491fd69a438c8fda440cf0156e}{perspective}}(}
+\DoxyCodeLine{333         T fovy, T aspect, T near, T far);}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{345     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{346     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga19141a2882d584872baf2bed83acad68}{perspectiveFovRH\_ZO}}(}
+\DoxyCodeLine{347         T fov, T \mbox{\hyperlink{glad_8h_a77a72419a6bb6d8b56f8d9db93a120d0}{width}}, T \mbox{\hyperlink{glad_8h_a2e94a4956fa3fc42600a71518b6e6284}{height}}, T near, T far);}
+\DoxyCodeLine{348 }
+\DoxyCodeLine{359     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{360     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga80b35c54ebe2c39b72773a729cbb0ada}{perspectiveFovRH\_NO}}(}
+\DoxyCodeLine{361         T fov, T \mbox{\hyperlink{glad_8h_a77a72419a6bb6d8b56f8d9db93a120d0}{width}}, T \mbox{\hyperlink{glad_8h_a2e94a4956fa3fc42600a71518b6e6284}{height}}, T near, T far);}
+\DoxyCodeLine{362 }
+\DoxyCodeLine{373     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{374     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gaa4b4aa571d1b9e77878183ef37b487fb}{perspectiveFovLH\_ZO}}(}
+\DoxyCodeLine{375         T fov, T \mbox{\hyperlink{glad_8h_a77a72419a6bb6d8b56f8d9db93a120d0}{width}}, T \mbox{\hyperlink{glad_8h_a2e94a4956fa3fc42600a71518b6e6284}{height}}, T near, T far);}
+\DoxyCodeLine{376 }
+\DoxyCodeLine{387     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{388     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga2a6ec32dc6b2b9ef545f9809129b134d}{perspectiveFovLH\_NO}}(}
+\DoxyCodeLine{389         T fov, T \mbox{\hyperlink{glad_8h_a77a72419a6bb6d8b56f8d9db93a120d0}{width}}, T \mbox{\hyperlink{glad_8h_a2e94a4956fa3fc42600a71518b6e6284}{height}}, T near, T far);}
+\DoxyCodeLine{390 }
+\DoxyCodeLine{401     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{402     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga39f32367d8778de4fe4ad55d65af9b79}{perspectiveFovZO}}(}
+\DoxyCodeLine{403         T fov, T \mbox{\hyperlink{glad_8h_a77a72419a6bb6d8b56f8d9db93a120d0}{width}}, T \mbox{\hyperlink{glad_8h_a2e94a4956fa3fc42600a71518b6e6284}{height}}, T near, T far);}
+\DoxyCodeLine{404 }
+\DoxyCodeLine{415     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{416     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gabbcd95c47d3b565f89795f4ff558361c}{perspectiveFovNO}}(}
+\DoxyCodeLine{417         T fov, T \mbox{\hyperlink{glad_8h_a77a72419a6bb6d8b56f8d9db93a120d0}{width}}, T \mbox{\hyperlink{glad_8h_a2e94a4956fa3fc42600a71518b6e6284}{height}}, T near, T far);}
+\DoxyCodeLine{418 }
+\DoxyCodeLine{430     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{431     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gab6c38e30fff812659e1486322f78535f}{perspectiveFovRH}}(}
+\DoxyCodeLine{432         T fov, T \mbox{\hyperlink{glad_8h_a77a72419a6bb6d8b56f8d9db93a120d0}{width}}, T \mbox{\hyperlink{glad_8h_a2e94a4956fa3fc42600a71518b6e6284}{height}}, T near, T far);}
+\DoxyCodeLine{433 }
+\DoxyCodeLine{445     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{446     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gaf1e5e6d8303f1462e892e0884b66f9fa}{perspectiveFovLH}}(}
+\DoxyCodeLine{447         T fov, T \mbox{\hyperlink{glad_8h_a77a72419a6bb6d8b56f8d9db93a120d0}{width}}, T \mbox{\hyperlink{glad_8h_a2e94a4956fa3fc42600a71518b6e6284}{height}}, T near, T far);}
+\DoxyCodeLine{448 }
+\DoxyCodeLine{459     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{460     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga44ce1914c556baee3db105b3867bd46a}{perspectiveFov}}(}
+\DoxyCodeLine{461         T fov, T \mbox{\hyperlink{glad_8h_a77a72419a6bb6d8b56f8d9db93a120d0}{width}}, T \mbox{\hyperlink{glad_8h_a2e94a4956fa3fc42600a71518b6e6284}{height}}, T near, T far);}
+\DoxyCodeLine{462 }
+\DoxyCodeLine{470     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{471     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gaddd559a69ffbcffde8e7a54a9dc3afc5}{infinitePerspectiveLH}}(}
+\DoxyCodeLine{472         T fovy, T aspect, T near);}
+\DoxyCodeLine{473 }
+\DoxyCodeLine{481     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{482     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gadacc69d138327905cd73554e3d75377c}{infinitePerspectiveRH}}(}
+\DoxyCodeLine{483         T fovy, T aspect, T near);}
+\DoxyCodeLine{484 }
+\DoxyCodeLine{492     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{493     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_ga8f955f37bab966fa8d6a5375da30860b}{infinitePerspective}}(}
+\DoxyCodeLine{494         T fovy, T aspect, T near);}
+\DoxyCodeLine{495 }
+\DoxyCodeLine{503     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{504     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gad608a11980b3a1311dcde0cdda5a28da}{tweakedInfinitePerspective}}(}
+\DoxyCodeLine{505         T fovy, T aspect, T near);}
+\DoxyCodeLine{506 }
+\DoxyCodeLine{515     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{516     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, defaultp> \mbox{\hyperlink{group__ext__matrix__clip__space_gad608a11980b3a1311dcde0cdda5a28da}{tweakedInfinitePerspective}}(}
+\DoxyCodeLine{517         T fovy, T aspect, T near, T ep);}
+\DoxyCodeLine{518 }
+\DoxyCodeLine{520 \}\textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{521 }
+\DoxyCodeLine{522 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{matrix__clip__space_8inl}{matrix\_clip\_space.inl}}"{}}}
+
+\end{DoxyCode}

@@ -1,0 +1,35 @@
+\hypertarget{quaternion__common_8hpp}{}\doxysection{include/glm/ext/quaternion\+\_\+common.hpp File Reference}
+\label{quaternion__common_8hpp}\index{include/glm/ext/quaternion\_common.hpp@{include/glm/ext/quaternion\_common.hpp}}
+{\ttfamily \#include \char`\"{}../ext/scalar\+\_\+constants.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../ext/quaternion\+\_\+geometric.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../common.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../trigonometric.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../exponential.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include \char`\"{}quaternion\+\_\+common.\+inl\char`\"{}}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceglm}{glm}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{group__core}{Core features}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\+\_\+\+FUNC\+\_\+\+DECL}} qua$<$ T, Q $>$ \mbox{\hyperlink{group__ext__quaternion__common_gac3fe299d58c0c327ea48063c76cd3369}{glm\+::mix}} (qua$<$ T, Q $>$ const \&\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, qua$<$ T, Q $>$ const \&\mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, T \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}})
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\+\_\+\+FUNC\+\_\+\+DECL}} qua$<$ T, Q $>$ \mbox{\hyperlink{group__ext__quaternion__common_gac81141eb679f52c4eae9df570b597690}{glm\+::lerp}} (qua$<$ T, Q $>$ const \&\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, qua$<$ T, Q $>$ const \&\mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, T \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}})
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\+\_\+\+FUNC\+\_\+\+DECL}} qua$<$ T, Q $>$ \mbox{\hyperlink{group__ext__quaternion__common_gac536fe0ef911df8ecea579d86ee50b08}{glm\+::slerp}} (qua$<$ T, Q $>$ const \&\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, qua$<$ T, Q $>$ const \&\mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, T \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}})
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\+\_\+\+FUNC\+\_\+\+DECL}} qua$<$ T, Q $>$ \mbox{\hyperlink{group__ext__quaternion__common_ga6e0e20f4ce678614aef6d8a89bff1b2e}{glm\+::conjugate}} (qua$<$ T, Q $>$ const \&\mbox{\hyperlink{glad_8h_a8fc1e7b9baaae687804c7eed46ca09c6}{q}})
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\+\_\+\+FUNC\+\_\+\+DECL}} qua$<$ T, Q $>$ \mbox{\hyperlink{group__ext__quaternion__common_ga1f500fd2eb9bca6cd4f16829f6cabd6d}{glm\+::inverse}} (qua$<$ T, Q $>$ const \&\mbox{\hyperlink{glad_8h_a8fc1e7b9baaae687804c7eed46ca09c6}{q}})
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\+\_\+\+FUNC\+\_\+\+DECL}} vec$<$ 4, bool, Q $>$ \mbox{\hyperlink{group__ext__quaternion__common_ga49ea41e6fbe1b03413c391506047d845}{glm\+::isnan}} (qua$<$ T, Q $>$ const \&\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\+\_\+\+FUNC\+\_\+\+DECL}} vec$<$ 4, bool, Q $>$ \mbox{\hyperlink{group__ext__quaternion__common_ga834e828ec30721e389a94d9194e93037}{glm\+::isinf}} (qua$<$ T, Q $>$ const \&\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{group__ext__quaternion__common}{GLM\+\_\+\+EXT\+\_\+quaternion\+\_\+common}} 

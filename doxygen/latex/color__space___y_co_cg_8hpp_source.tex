@@ -1,0 +1,43 @@
+\hypertarget{color__space___y_co_cg_8hpp_source}{}\doxysection{color\+\_\+space\+\_\+\+YCo\+Cg.\+hpp}
+\label{color__space___y_co_cg_8hpp_source}\index{include/glm/gtx/color\_space\_YCoCg.hpp@{include/glm/gtx/color\_space\_YCoCg.hpp}}
+\mbox{\hyperlink{color__space___y_co_cg_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{comment}{// Dependency:}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}../glm.hpp"{}}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#ifndef GLM\_ENABLE\_EXPERIMENTAL}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#   error "{}GLM: GLM\_GTX\_color\_space\_YCoCg is an experimental extension and may change in the future. Use \#define GLM\_ENABLE\_EXPERIMENTAL before including it, if you really want to use it."{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_GTX\_color\_space\_YCoCg extension included"{}})}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{33     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{34     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<3, T, Q> \mbox{\hyperlink{group__gtx__color__space___y_co_cg_ga3a3c1f86c4a1a69a37691bd25756e78a}{rgb2YCoCg}}(}
+\DoxyCodeLine{35         vec<3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{group__gtx__color__space_ga4f9e373913d733dce0807df389f7d2b0}{rgbColor}});}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{39     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{40     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<3, T, Q> \mbox{\hyperlink{group__gtx__color__space___y_co_cg_gacaab5a25db8652b9e88774d071b2995e}{YCoCg2rgb}}(}
+\DoxyCodeLine{41         vec<3, T, Q> \textcolor{keyword}{const}\& YCoCgColor);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{46     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{47     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<3, T, Q> \mbox{\hyperlink{group__gtx__color__space___y_co_cg_ga07fbe87de445c16b1cd6f237bfc1afda}{rgb2YCoCgR}}(}
+\DoxyCodeLine{48         vec<3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{group__gtx__color__space_ga4f9e373913d733dce0807df389f7d2b0}{rgbColor}});}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{53     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{54     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<3, T, Q> \mbox{\hyperlink{group__gtx__color__space___y_co_cg_gad9b048c512cc2e05b97cbdc0f769f8cf}{YCoCgR2rgb}}(}
+\DoxyCodeLine{55         vec<3, T, Q> \textcolor{keyword}{const}\& YCoCgColor);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{58 \}\textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{color__space___y_co_cg_8inl}{color\_space\_YCoCg.inl}}"{}}}
+
+\end{DoxyCode}

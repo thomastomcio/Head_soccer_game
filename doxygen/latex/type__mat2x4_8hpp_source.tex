@@ -1,0 +1,166 @@
+\hypertarget{type__mat2x4_8hpp_source}{}\doxysection{type\+\_\+mat2x4.\+hpp}
+\label{type__mat2x4_8hpp_source}\index{include/glm/detail/type\_mat2x4.hpp@{include/glm/detail/type\_mat2x4.hpp}}
+\mbox{\hyperlink{type__mat2x4_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{type__vec2_8hpp}{type\_vec2.hpp}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{type__vec4_8hpp}{type\_vec4.hpp}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <limits>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <cstddef>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{14     \textcolor{keyword}{struct }\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q>}
+\DoxyCodeLine{15     \{}
+\DoxyCodeLine{16         \textcolor{keyword}{typedef} \mbox{\hyperlink{structglm_1_1vec_3_014_00_01_t_00_01_q_01_4}{vec<4, T, Q>}} \mbox{\hyperlink{structglm_1_1mat_3_012_00_014_00_01_t_00_01_q_01_4_ae14ad10a9d8ce3908ec89ae373a27872}{col\_type}};}
+\DoxyCodeLine{17         \textcolor{keyword}{typedef} \mbox{\hyperlink{structglm_1_1vec_3_012_00_01_t_00_01_q_01_4}{vec<2, T, Q>}} \mbox{\hyperlink{structglm_1_1mat_3_012_00_014_00_01_t_00_01_q_01_4_af7681d37f1454b1e18754262a65eb6d1}{row\_type}};}
+\DoxyCodeLine{18         \textcolor{keyword}{typedef} \mbox{\hyperlink{structglm_1_1mat_3_012_00_014_00_01_t_00_01_q_01_4}{mat<2, 4, T, Q>}} \mbox{\hyperlink{structglm_1_1mat_3_012_00_014_00_01_t_00_01_q_01_4_a04c04d7f08549f03063d04bca3a76ae5}{type}};}
+\DoxyCodeLine{19         \textcolor{keyword}{typedef} \mbox{\hyperlink{structglm_1_1mat_3_014_00_012_00_01_t_00_01_q_01_4}{mat<4, 2, T, Q>}} \mbox{\hyperlink{structglm_1_1mat_3_012_00_014_00_01_t_00_01_q_01_4_a5030a7f34454a6871ed17c1b27cc0929}{transpose\_type}};}
+\DoxyCodeLine{20         \textcolor{keyword}{typedef} T \mbox{\hyperlink{structglm_1_1mat_3_012_00_014_00_01_t_00_01_q_01_4_a837bd82ca90340b03c7ee19f598c5133}{value\_type}};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keyword}{private}:}
+\DoxyCodeLine{23         \mbox{\hyperlink{structglm_1_1vec_3_014_00_01_t_00_01_q_01_4}{col\_type}} \mbox{\hyperlink{glad_8h_ac6e066a8c9e91051799ffa957f0a20a6}{value}}[2];}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keyword}{public}:}
+\DoxyCodeLine{26         \textcolor{comment}{// -\/-\/ Accesses -\/-\/}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28         \textcolor{keyword}{typedef} \mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\_t}} \mbox{\hyperlink{structglm_1_1mat_3_012_00_014_00_01_t_00_01_q_01_4_a5295c484627e965d615f3367c2ca45d8}{length\_type}};}
+\DoxyCodeLine{29         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keyword}{static} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{structglm_1_1mat_3_012_00_014_00_01_t_00_01_q_01_4_a5295c484627e965d615f3367c2ca45d8}{length\_type}} \mbox{\hyperlink{structglm_1_1mat_3_012_00_014_00_01_t_00_01_q_01_4_a52f7dc5b855a6dab6b479a3bcf29357b}{length}}() \{ \textcolor{keywordflow}{return} 2; \}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1vec_3_014_00_01_t_00_01_q_01_4}{col\_type}} \& \mbox{\hyperlink{structglm_1_1mat_3_012_00_014_00_01_t_00_01_q_01_4_a8d320007219effc1b27ded10d9df8e01}{operator[]}}(\mbox{\hyperlink{structglm_1_1mat_3_012_00_014_00_01_t_00_01_q_01_4_a5295c484627e965d615f3367c2ca45d8}{length\_type}} i);}
+\DoxyCodeLine{32         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{structglm_1_1vec_3_014_00_01_t_00_01_q_01_4}{col\_type}} \textcolor{keyword}{const}\& \mbox{\hyperlink{structglm_1_1mat_3_012_00_014_00_01_t_00_01_q_01_4_a5372b1b03149f64fd45ef68ee4373788}{operator[]}}(\mbox{\hyperlink{structglm_1_1mat_3_012_00_014_00_01_t_00_01_q_01_4_a5295c484627e965d615f3367c2ca45d8}{length\_type}} i) \textcolor{keyword}{const};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34         \textcolor{comment}{// -\/-\/ Constructors -\/-\/}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{structglm_1_1mat}{mat}}() \mbox{\hyperlink{setup_8hpp_aefce7051c376a64ba89fa93a9f63bc2c}{GLM\_DEFAULT}};}
+\DoxyCodeLine{37         template<\mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} P>}
+\DoxyCodeLine{38         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{structglm_1_1mat}{mat}}(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, P> const\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}});}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} explicit \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{structglm_1_1mat}{mat}}(T scalar);}
+\DoxyCodeLine{41         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{structglm_1_1mat}{mat}}(}
+\DoxyCodeLine{42             T \mbox{\hyperlink{glad_8h_a98ac434677655cc8438bb72de2719f39}{x0}}, T \mbox{\hyperlink{glad_8h_ae7f97ed6c9c8e502fcbc44c7cb8a8312}{y0}}, T z0, T w0,}
+\DoxyCodeLine{43             T \mbox{\hyperlink{glad_8h_a49825216c96caaeb09237b36651181c5}{x1}}, T \mbox{\hyperlink{glad_8h_a94830297cda3d635f4314f0106ed7ef7}{y1}}, T z1, T \mbox{\hyperlink{glad_8h_ab5b747bf5adb1f9134337c30b9a4ce84}{w1}});}
+\DoxyCodeLine{44         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{structglm_1_1mat}{mat}}(}
+\DoxyCodeLine{45             \mbox{\hyperlink{structglm_1_1vec_3_014_00_01_t_00_01_q_01_4}{col\_type}} const\& \mbox{\hyperlink{glad_8h_a7062a23d1d434121d4a88f530703d06a}{v0}},}
+\DoxyCodeLine{46             \mbox{\hyperlink{structglm_1_1vec_3_014_00_01_t_00_01_q_01_4}{col\_type}} const\& \mbox{\hyperlink{glad_8h_a435c176a02c061b43e19bdf7c86cceae}{v1}});}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48         \textcolor{comment}{// -\/-\/ Conversions -\/-\/}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50         template<}
+\DoxyCodeLine{51             typename X1, typename Y1, typename Z1, typename W1,}
+\DoxyCodeLine{52             typename X2, typename Y2, typename Z2, typename W2>}
+\DoxyCodeLine{53         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{structglm_1_1mat}{mat}}(}
+\DoxyCodeLine{54             X1 \mbox{\hyperlink{glad_8h_a49825216c96caaeb09237b36651181c5}{x1}}, Y1 \mbox{\hyperlink{glad_8h_a94830297cda3d635f4314f0106ed7ef7}{y1}}, Z1 z1, W1 \mbox{\hyperlink{glad_8h_ab5b747bf5adb1f9134337c30b9a4ce84}{w1}},}
+\DoxyCodeLine{55             X2 \mbox{\hyperlink{glad_8h_a7b907a03236685c534d89d604cff23c8}{x2}}, Y2 \mbox{\hyperlink{glad_8h_a2be1135ed68e8d80fa9e130c7814f8c2}{y2}}, Z2 z2, W2 \mbox{\hyperlink{glad_8h_a1ca5aca787be24213d9591fdf074b094}{w2}});}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57         template<typename U, typename V>}
+\DoxyCodeLine{58         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{structglm_1_1mat}{mat}}(}
+\DoxyCodeLine{59             \mbox{\hyperlink{structglm_1_1vec}{vec}}<4, U, Q> const\& \mbox{\hyperlink{glad_8h_a435c176a02c061b43e19bdf7c86cceae}{v1}},}
+\DoxyCodeLine{60             \mbox{\hyperlink{structglm_1_1vec}{vec}}<4, V, Q> const\& \mbox{\hyperlink{glad_8h_a0928f6d0f0f794ba000a21dfae422136}{v2}});}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62         \textcolor{comment}{// -\/-\/ Matrix conversions -\/-\/}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64         template<typename U, \mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} P>}
+\DoxyCodeLine{65         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{setup_8hpp_a6c74f5a5e7b134ab69023ff9a30d4d5d}{GLM\_EXPLICIT}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{structglm_1_1mat}{mat}}(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, U, P> const\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}});}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{setup_8hpp_a6c74f5a5e7b134ab69023ff9a30d4d5d}{GLM\_EXPLICIT}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{structglm_1_1mat}{mat}}(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 2, T, Q> const\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{68         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{setup_8hpp_a6c74f5a5e7b134ab69023ff9a30d4d5d}{GLM\_EXPLICIT}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{structglm_1_1mat}{mat}}(\mbox{\hyperlink{structglm_1_1mat}{mat}}<3, 3, T, Q> const\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{69         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{setup_8hpp_a6c74f5a5e7b134ab69023ff9a30d4d5d}{GLM\_EXPLICIT}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{structglm_1_1mat}{mat}}(\mbox{\hyperlink{structglm_1_1mat}{mat}}<4, 4, T, Q> const\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{70         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{setup_8hpp_a6c74f5a5e7b134ab69023ff9a30d4d5d}{GLM\_EXPLICIT}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{structglm_1_1mat}{mat}}(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 3, T, Q> const\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{71         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{setup_8hpp_a6c74f5a5e7b134ab69023ff9a30d4d5d}{GLM\_EXPLICIT}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{structglm_1_1mat}{mat}}(\mbox{\hyperlink{structglm_1_1mat}{mat}}<3, 2, T, Q> const\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{72         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{setup_8hpp_a6c74f5a5e7b134ab69023ff9a30d4d5d}{GLM\_EXPLICIT}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{structglm_1_1mat}{mat}}(\mbox{\hyperlink{structglm_1_1mat}{mat}}<3, 4, T, Q> const\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{73         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{setup_8hpp_a6c74f5a5e7b134ab69023ff9a30d4d5d}{GLM\_EXPLICIT}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{structglm_1_1mat}{mat}}(\mbox{\hyperlink{structglm_1_1mat}{mat}}<4, 2, T, Q> const\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{74         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{setup_8hpp_a6c74f5a5e7b134ab69023ff9a30d4d5d}{GLM\_EXPLICIT}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \mbox{\hyperlink{structglm_1_1mat}{mat}}(\mbox{\hyperlink{structglm_1_1mat}{mat}}<4, 3, T, Q> const\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76         \textcolor{comment}{// -\/-\/ Unary arithmetic operators -\/-\/}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78         template<typename U>}
+\DoxyCodeLine{79         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> \& operator=(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, U, Q> const\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}});}
+\DoxyCodeLine{80         template<typename U>}
+\DoxyCodeLine{81         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> \& operator+=(U \mbox{\hyperlink{glad_8h_a4af680a6c683f88ed67b76f207f2e6e4}{s}});}
+\DoxyCodeLine{82         template<typename U>}
+\DoxyCodeLine{83         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> \& operator+=(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, U, Q> const\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}});}
+\DoxyCodeLine{84         template<typename U>}
+\DoxyCodeLine{85         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> \& operator-\/=(U \mbox{\hyperlink{glad_8h_a4af680a6c683f88ed67b76f207f2e6e4}{s}});}
+\DoxyCodeLine{86         template<typename U>}
+\DoxyCodeLine{87         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> \& operator-\/=(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, U, Q> const\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}});}
+\DoxyCodeLine{88         template<typename U>}
+\DoxyCodeLine{89         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> \& operator*=(U \mbox{\hyperlink{glad_8h_a4af680a6c683f88ed67b76f207f2e6e4}{s}});}
+\DoxyCodeLine{90         template<typename U>}
+\DoxyCodeLine{91         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> \& operator/=(U \mbox{\hyperlink{glad_8h_a4af680a6c683f88ed67b76f207f2e6e4}{s}});}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93         \textcolor{comment}{// -\/-\/ Increment and decrement operators -\/-\/}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> \& operator++ ();}
+\DoxyCodeLine{96         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> \& operator-\/-\/ ();}
+\DoxyCodeLine{97         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> operator++(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{98         \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> operator-\/-\/(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{99     \};}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101     \textcolor{comment}{// -\/-\/ Unary operators -\/-\/}}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103     template<typename T, \mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} Q>}
+\DoxyCodeLine{104     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> operator+(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}});}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106     template<typename T, \mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} Q>}
+\DoxyCodeLine{107     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> operator-\/(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}});}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109     \textcolor{comment}{// -\/-\/ Binary operators -\/-\/}}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111     template<typename T, \mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} Q>}
+\DoxyCodeLine{112     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> operator+(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}, T scalar);}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114     template<typename T, \mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} Q>}
+\DoxyCodeLine{115     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> operator+(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& m1, \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& m2);}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117     template<typename T, \mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} Q>}
+\DoxyCodeLine{118     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> operator-\/(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}, T scalar);}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120     template<typename T, \mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} Q>}
+\DoxyCodeLine{121     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> operator-\/(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& m1, \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& m2);}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123     template<typename T, \mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} Q>}
+\DoxyCodeLine{124     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> operator*(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}, T scalar);}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126     template<typename T, \mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} Q>}
+\DoxyCodeLine{127     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> operator*(T scalar, \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}});}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129     template<typename T, \mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} Q>}
+\DoxyCodeLine{130     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} typename \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q>::\mbox{\hyperlink{structglm_1_1vec_3_014_00_01_t_00_01_q_01_4}{col\_type}} operator*(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}, typename \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q>::\mbox{\hyperlink{structglm_1_1vec_3_012_00_01_t_00_01_q_01_4}{row\_type}} const\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132     template<typename T, \mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} Q>}
+\DoxyCodeLine{133     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} typename \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q>::\mbox{\hyperlink{structglm_1_1vec_3_012_00_01_t_00_01_q_01_4}{row\_type}} operator*(typename \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q>::\mbox{\hyperlink{structglm_1_1vec_3_014_00_01_t_00_01_q_01_4}{col\_type}} const\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}});}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135     template<typename T, \mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} Q>}
+\DoxyCodeLine{136     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<4, 4, T, Q> operator*(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& m1, \mbox{\hyperlink{structglm_1_1mat}{mat}}<4, 2, T, Q> const\& m2);}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138     template<typename T, \mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} Q>}
+\DoxyCodeLine{139     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> operator*(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& m1, \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 2, T, Q> const\& m2);}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141     template<typename T, \mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} Q>}
+\DoxyCodeLine{142     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<3, 4, T, Q> operator*(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& m1, \mbox{\hyperlink{structglm_1_1mat}{mat}}<3, 2, T, Q> const\& m2);}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144     template<typename T, \mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} Q>}
+\DoxyCodeLine{145     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> operator/(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}, T scalar);}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147     template<typename T, \mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} Q>}
+\DoxyCodeLine{148     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> operator/(T scalar, \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}});}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150     \textcolor{comment}{// -\/-\/ Boolean operators -\/-\/}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152     template<typename T, \mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} Q>}
+\DoxyCodeLine{153     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{bool} operator==(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& m1, \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& m2);}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155     template<typename T, \mbox{\hyperlink{namespaceglm_a36ed105b07c7746804d7fdc7cc90ff25}{qualifier}} Q>}
+\DoxyCodeLine{156     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{bool} operator!=(\mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& m1, \mbox{\hyperlink{structglm_1_1mat}{mat}}<2, 4, T, Q> const\& m2);}
+\DoxyCodeLine{157 \}\textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#ifndef GLM\_EXTERNAL\_TEMPLATE}}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{type__mat2x4_8inl}{type\_mat2x4.inl}}"{}}}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,360 @@
+\hypertarget{platform_8h_source}{}\doxysection{platform.\+h}
+\label{platform_8h_source}\index{include/glm/simd/platform.h@{include/glm/simd/platform.h}}
+\mbox{\hyperlink{platform_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{4 \textcolor{comment}{// Platform}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define GLM\_PLATFORM\_UNKNOWN        0x00000000}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define GLM\_PLATFORM\_WINDOWS        0x00010000}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define GLM\_PLATFORM\_LINUX          0x00020000}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define GLM\_PLATFORM\_APPLE          0x00040000}}
+\DoxyCodeLine{10 \textcolor{comment}{//\#define GLM\_PLATFORM\_IOS          0x00080000}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define GLM\_PLATFORM\_ANDROID        0x00100000}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define GLM\_PLATFORM\_CHROME\_NACL    0x00200000}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define GLM\_PLATFORM\_UNIX           0x00400000}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define GLM\_PLATFORM\_QNXNTO         0x00800000}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define GLM\_PLATFORM\_WINCE          0x01000000}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define GLM\_PLATFORM\_CYGWIN         0x02000000}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#ifdef GLM\_FORCE\_PLATFORM\_UNKNOWN}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#   define GLM\_PLATFORM GLM\_PLATFORM\_UNKNOWN}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#elif defined(\_\_CYGWIN\_\_)}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#   define GLM\_PLATFORM GLM\_PLATFORM\_CYGWIN}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#elif defined(\_\_QNXNTO\_\_)}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#   define GLM\_PLATFORM GLM\_PLATFORM\_QNXNTO}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#elif defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#   define GLM\_PLATFORM GLM\_PLATFORM\_APPLE}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#elif defined(WINCE)}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#   define GLM\_PLATFORM GLM\_PLATFORM\_WINCE}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#elif defined(\_WIN32)}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#   define GLM\_PLATFORM GLM\_PLATFORM\_WINDOWS}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#elif defined(\_\_native\_client\_\_)}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#   define GLM\_PLATFORM GLM\_PLATFORM\_CHROME\_NACL}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#elif defined(\_\_ANDROID\_\_)}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#   define GLM\_PLATFORM GLM\_PLATFORM\_ANDROID}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#elif defined(\_\_linux)}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#   define GLM\_PLATFORM GLM\_PLATFORM\_LINUX}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#elif defined(\_\_unix)}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#   define GLM\_PLATFORM GLM\_PLATFORM\_UNIX}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#   define GLM\_PLATFORM GLM\_PLATFORM\_UNKNOWN}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#endif}\textcolor{comment}{//}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{43 \textcolor{comment}{// Compiler}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#define GLM\_COMPILER\_UNKNOWN        0x00000000}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{// Intel}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#define GLM\_COMPILER\_INTEL          0x00100000}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define GLM\_COMPILER\_INTEL14        0x00100040}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define GLM\_COMPILER\_INTEL15        0x00100050}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#define GLM\_COMPILER\_INTEL16        0x00100060}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define GLM\_COMPILER\_INTEL17        0x00100070}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{comment}{// Visual C++ defines}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#define GLM\_COMPILER\_VC             0x01000000}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define GLM\_COMPILER\_VC12           0x01000001}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define GLM\_COMPILER\_VC14           0x01000002}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define GLM\_COMPILER\_VC15           0x01000003}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define GLM\_COMPILER\_VC15\_3         0x01000004}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#define GLM\_COMPILER\_VC15\_5         0x01000005}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define GLM\_COMPILER\_VC15\_6         0x01000006}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define GLM\_COMPILER\_VC15\_7         0x01000007}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{comment}{// GCC defines}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define GLM\_COMPILER\_GCC            0x02000000}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define GLM\_COMPILER\_GCC46          0x020000D0}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define GLM\_COMPILER\_GCC47          0x020000E0}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define GLM\_COMPILER\_GCC48          0x020000F0}}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define GLM\_COMPILER\_GCC49          0x02000100}}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define GLM\_COMPILER\_GCC5           0x02000200}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define GLM\_COMPILER\_GCC6           0x02000300}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define GLM\_COMPILER\_GCC7           0x02000400}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define GLM\_COMPILER\_GCC8           0x02000500}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{comment}{// CUDA}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define GLM\_COMPILER\_CUDA           0x10000000}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define GLM\_COMPILER\_CUDA70         0x100000A0}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define GLM\_COMPILER\_CUDA75         0x100000B0}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define GLM\_COMPILER\_CUDA80         0x100000C0}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{comment}{// Clang}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define GLM\_COMPILER\_CLANG          0x20000000}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define GLM\_COMPILER\_CLANG34        0x20000050}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define GLM\_COMPILER\_CLANG35        0x20000060}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define GLM\_COMPILER\_CLANG36        0x20000070}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define GLM\_COMPILER\_CLANG37        0x20000080}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define GLM\_COMPILER\_CLANG38        0x20000090}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define GLM\_COMPILER\_CLANG39        0x200000A0}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define GLM\_COMPILER\_CLANG40        0x200000B0}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define GLM\_COMPILER\_CLANG41        0x200000C0}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define GLM\_COMPILER\_CLANG42        0x200000D0}}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 \textcolor{comment}{// Build model}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define GLM\_MODEL\_32                0x00000010}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define GLM\_MODEL\_64                0x00000020}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \textcolor{comment}{// Force generic C++ compiler}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#ifdef GLM\_FORCE\_COMPILER\_UNKNOWN}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#   define GLM\_COMPILER GLM\_COMPILER\_UNKNOWN}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#elif defined(\_\_INTEL\_COMPILER)}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#   if (\_\_INTEL\_COMPILER < 1400)}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#       error "{}GLM requires ICC 2013 SP1 or newer"{}}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#   elif \_\_INTEL\_COMPILER == 1400}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#       define GLM\_COMPILER GLM\_COMPILER\_INTEL14}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#   elif \_\_INTEL\_COMPILER == 1500}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#       define GLM\_COMPILER GLM\_COMPILER\_INTEL15}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#   elif \_\_INTEL\_COMPILER == 1600}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#       define GLM\_COMPILER GLM\_COMPILER\_INTEL16}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#   elif \_\_INTEL\_COMPILER >= 1700}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#       define GLM\_COMPILER GLM\_COMPILER\_INTEL17}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \textcolor{comment}{// CUDA}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#elif defined(\_\_CUDACC\_\_)}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#   if !defined(CUDA\_VERSION) \&\& !defined(GLM\_FORCE\_CUDA)}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#       include <cuda.h>}  \textcolor{comment}{// make sure version is defined since nvcc does not define it itself!}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#   if CUDA\_VERSION < 7000}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#       error "{}GLM requires CUDA 7.0 or higher"{}}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#   elif (CUDA\_VERSION >= 7000 \&\& CUDA\_VERSION < 7500)}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#       define GLM\_COMPILER GLM\_COMPILER\_CUDA70}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#   elif (CUDA\_VERSION >= 7500 \&\& CUDA\_VERSION < 8000)}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#       define GLM\_COMPILER GLM\_COMPILER\_CUDA75}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#   elif (CUDA\_VERSION >= 8000)}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#       define GLM\_COMPILER GLM\_COMPILER\_CUDA80}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129 \textcolor{comment}{// Clang}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#elif defined(\_\_clang\_\_)}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#   if defined(\_\_apple\_build\_version\_\_)}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#       if (\_\_clang\_major\_\_ < 6)}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#           error "{}GLM requires Clang 3.4 / Apple Clang 6.0 or higher"{}}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#       elif \_\_clang\_major\_\_ == 6 \&\& \_\_clang\_minor\_\_ == 0}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#           define GLM\_COMPILER GLM\_COMPILER\_CLANG35}}
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#       elif \_\_clang\_major\_\_ == 6 \&\& \_\_clang\_minor\_\_ >= 1}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#           define GLM\_COMPILER GLM\_COMPILER\_CLANG36}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#       elif \_\_clang\_major\_\_ >= 7}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#           define GLM\_COMPILER GLM\_COMPILER\_CLANG37}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#       endif}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#   else}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#       if ((\_\_clang\_major\_\_ == 3) \&\& (\_\_clang\_minor\_\_ < 4)) || (\_\_clang\_major\_\_ < 3)}}
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#           error "{}GLM requires Clang 3.4 or higher"{}}}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#       elif \_\_clang\_major\_\_ == 3 \&\& \_\_clang\_minor\_\_ == 4}}
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#           define GLM\_COMPILER GLM\_COMPILER\_CLANG34}}
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#       elif \_\_clang\_major\_\_ == 3 \&\& \_\_clang\_minor\_\_ == 5}}
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#           define GLM\_COMPILER GLM\_COMPILER\_CLANG35}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#       elif \_\_clang\_major\_\_ == 3 \&\& \_\_clang\_minor\_\_ == 6}}
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#           define GLM\_COMPILER GLM\_COMPILER\_CLANG36}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#       elif \_\_clang\_major\_\_ == 3 \&\& \_\_clang\_minor\_\_ == 7}}
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#           define GLM\_COMPILER GLM\_COMPILER\_CLANG37}}
+\DoxyCodeLine{152 \textcolor{preprocessor}{\#       elif \_\_clang\_major\_\_ == 3 \&\& \_\_clang\_minor\_\_ == 8}}
+\DoxyCodeLine{153 \textcolor{preprocessor}{\#           define GLM\_COMPILER GLM\_COMPILER\_CLANG38}}
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#       elif \_\_clang\_major\_\_ == 3 \&\& \_\_clang\_minor\_\_ >= 9}}
+\DoxyCodeLine{155 \textcolor{preprocessor}{\#           define GLM\_COMPILER GLM\_COMPILER\_CLANG39}}
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#       elif \_\_clang\_major\_\_ == 4 \&\& \_\_clang\_minor\_\_ == 0}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#           define GLM\_COMPILER GLM\_COMPILER\_CLANG40}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#       elif \_\_clang\_major\_\_ == 4 \&\& \_\_clang\_minor\_\_ == 1}}
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#           define GLM\_COMPILER GLM\_COMPILER\_CLANG41}}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#       elif \_\_clang\_major\_\_ == 4 \&\& \_\_clang\_minor\_\_ >= 2}}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#           define GLM\_COMPILER GLM\_COMPILER\_CLANG42}}
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#       elif \_\_clang\_major\_\_ >= 4}}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#           define GLM\_COMPILER GLM\_COMPILER\_CLANG42}}
+\DoxyCodeLine{164 \textcolor{preprocessor}{\#       endif}}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167 \textcolor{comment}{// Visual C++}}
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#elif defined(\_MSC\_VER)}}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#   if \_MSC\_VER < 1800}}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#       error "{}GLM requires Visual C++ 12 -\/ 2013 or higher"{}}}
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#   elif \_MSC\_VER == 1800}}
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#       define GLM\_COMPILER GLM\_COMPILER\_VC12}}
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#   elif \_MSC\_VER == 1900}}
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#       define GLM\_COMPILER GLM\_COMPILER\_VC14}}
+\DoxyCodeLine{175 \textcolor{preprocessor}{\#   elif \_MSC\_VER == 1910}}
+\DoxyCodeLine{176 \textcolor{preprocessor}{\#       define GLM\_COMPILER GLM\_COMPILER\_VC15}}
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#   elif \_MSC\_VER == 1911}}
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#       define GLM\_COMPILER GLM\_COMPILER\_VC15\_3}}
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#   elif \_MSC\_VER == 1912}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#       define GLM\_COMPILER GLM\_COMPILER\_VC15\_5}}
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#   elif \_MSC\_VER == 1913}}
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#       define GLM\_COMPILER GLM\_COMPILER\_VC15\_6}}
+\DoxyCodeLine{183 \textcolor{preprocessor}{\#   elif \_MSC\_VER >= 1914}}
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#       define GLM\_COMPILER GLM\_COMPILER\_VC15\_7}}
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#   endif}\textcolor{comment}{//\_MSC\_VER}}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 \textcolor{comment}{// G++}}
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#elif defined(\_\_GNUC\_\_) || defined(\_\_MINGW32\_\_)}}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#   if ((\_\_GNUC\_\_ == 4) \&\& (\_\_GNUC\_MINOR\_\_ < 6)) || (\_\_GNUC\_\_ < 4)}}
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#       error "{}GLM requires GCC 4.7 or higher"{}}}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#   elif (\_\_GNUC\_\_ == 4) \&\& (\_\_GNUC\_MINOR\_\_ == 6)}}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#       define GLM\_COMPILER (GLM\_COMPILER\_GCC46)}}
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#   elif (\_\_GNUC\_\_ == 4) \&\& (\_\_GNUC\_MINOR\_\_ == 7)}}
+\DoxyCodeLine{194 \textcolor{preprocessor}{\#       define GLM\_COMPILER (GLM\_COMPILER\_GCC47)}}
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#   elif (\_\_GNUC\_\_ == 4) \&\& (\_\_GNUC\_MINOR\_\_ == 8)}}
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#       define GLM\_COMPILER (GLM\_COMPILER\_GCC48)}}
+\DoxyCodeLine{197 \textcolor{preprocessor}{\#   elif (\_\_GNUC\_\_ == 4) \&\& (\_\_GNUC\_MINOR\_\_ >= 9)}}
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#       define GLM\_COMPILER (GLM\_COMPILER\_GCC49)}}
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#   elif (\_\_GNUC\_\_ == 5)}}
+\DoxyCodeLine{200 \textcolor{preprocessor}{\#       define GLM\_COMPILER (GLM\_COMPILER\_GCC5)}}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#   elif (\_\_GNUC\_\_ == 6)}}
+\DoxyCodeLine{202 \textcolor{preprocessor}{\#       define GLM\_COMPILER (GLM\_COMPILER\_GCC6)}}
+\DoxyCodeLine{203 \textcolor{preprocessor}{\#   elif (\_\_GNUC\_\_ == 7)}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{\#       define GLM\_COMPILER (GLM\_COMPILER\_GCC7)}}
+\DoxyCodeLine{205 \textcolor{preprocessor}{\#   elif (\_\_GNUC\_\_ >= 8)}}
+\DoxyCodeLine{206 \textcolor{preprocessor}{\#       define GLM\_COMPILER (GLM\_COMPILER\_GCC8)}}
+\DoxyCodeLine{207 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{209 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{210 \textcolor{preprocessor}{\#   define GLM\_COMPILER GLM\_COMPILER\_UNKNOWN}}
+\DoxyCodeLine{211 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213 \textcolor{preprocessor}{\#ifndef GLM\_COMPILER}}
+\DoxyCodeLine{214 \textcolor{preprocessor}{\#   error "{}GLM\_COMPILER undefined, your compiler may not be supported by GLM. Add \#define GLM\_COMPILER 0 to ignore this message."{}}}
+\DoxyCodeLine{215 \textcolor{preprocessor}{\#endif}\textcolor{comment}{//GLM\_COMPILER}}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{218 \textcolor{comment}{// Instruction sets}}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{220 \textcolor{comment}{// User defines: GLM\_FORCE\_PURE GLM\_FORCE\_SSE2 GLM\_FORCE\_SSE3 GLM\_FORCE\_AVX GLM\_FORCE\_AVX2 GLM\_FORCE\_AVX2}}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#define GLM\_ARCH\_MIPS\_BIT   (0x10000000)}}
+\DoxyCodeLine{223 \textcolor{preprocessor}{\#define GLM\_ARCH\_PPC\_BIT    (0x20000000)}}
+\DoxyCodeLine{224 \textcolor{preprocessor}{\#define GLM\_ARCH\_ARM\_BIT    (0x40000000)}}
+\DoxyCodeLine{225 \textcolor{preprocessor}{\#define GLM\_ARCH\_X86\_BIT    (0x80000000)}}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227 \textcolor{preprocessor}{\#define GLM\_ARCH\_SIMD\_BIT   (0x00001000)}}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{229 \textcolor{preprocessor}{\#define GLM\_ARCH\_NEON\_BIT   (0x00000001)}}
+\DoxyCodeLine{230 \textcolor{preprocessor}{\#define GLM\_ARCH\_SSE\_BIT    (0x00000002)}}
+\DoxyCodeLine{231 \textcolor{preprocessor}{\#define GLM\_ARCH\_SSE2\_BIT   (0x00000004)}}
+\DoxyCodeLine{232 \textcolor{preprocessor}{\#define GLM\_ARCH\_SSE3\_BIT   (0x00000008)}}
+\DoxyCodeLine{233 \textcolor{preprocessor}{\#define GLM\_ARCH\_SSSE3\_BIT  (0x00000010)}}
+\DoxyCodeLine{234 \textcolor{preprocessor}{\#define GLM\_ARCH\_SSE41\_BIT  (0x00000020)}}
+\DoxyCodeLine{235 \textcolor{preprocessor}{\#define GLM\_ARCH\_SSE42\_BIT  (0x00000040)}}
+\DoxyCodeLine{236 \textcolor{preprocessor}{\#define GLM\_ARCH\_AVX\_BIT    (0x00000080)}}
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#define GLM\_ARCH\_AVX2\_BIT   (0x00000100)}}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239 \textcolor{preprocessor}{\#define GLM\_ARCH\_UNKNOWN    (0)}}
+\DoxyCodeLine{240 \textcolor{preprocessor}{\#define GLM\_ARCH\_X86        (GLM\_ARCH\_X86\_BIT)}}
+\DoxyCodeLine{241 \textcolor{preprocessor}{\#define GLM\_ARCH\_SSE        (GLM\_ARCH\_SSE\_BIT | GLM\_ARCH\_SIMD\_BIT | GLM\_ARCH\_X86)}}
+\DoxyCodeLine{242 \textcolor{preprocessor}{\#define GLM\_ARCH\_SSE2       (GLM\_ARCH\_SSE2\_BIT | GLM\_ARCH\_SSE)}}
+\DoxyCodeLine{243 \textcolor{preprocessor}{\#define GLM\_ARCH\_SSE3       (GLM\_ARCH\_SSE3\_BIT | GLM\_ARCH\_SSE2)}}
+\DoxyCodeLine{244 \textcolor{preprocessor}{\#define GLM\_ARCH\_SSSE3      (GLM\_ARCH\_SSSE3\_BIT | GLM\_ARCH\_SSE3)}}
+\DoxyCodeLine{245 \textcolor{preprocessor}{\#define GLM\_ARCH\_SSE41      (GLM\_ARCH\_SSE41\_BIT | GLM\_ARCH\_SSSE3)}}
+\DoxyCodeLine{246 \textcolor{preprocessor}{\#define GLM\_ARCH\_SSE42      (GLM\_ARCH\_SSE42\_BIT | GLM\_ARCH\_SSE41)}}
+\DoxyCodeLine{247 \textcolor{preprocessor}{\#define GLM\_ARCH\_AVX        (GLM\_ARCH\_AVX\_BIT | GLM\_ARCH\_SSE42)}}
+\DoxyCodeLine{248 \textcolor{preprocessor}{\#define GLM\_ARCH\_AVX2       (GLM\_ARCH\_AVX2\_BIT | GLM\_ARCH\_AVX)}}
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#define GLM\_ARCH\_ARM        (GLM\_ARCH\_ARM\_BIT)}}
+\DoxyCodeLine{250 \textcolor{preprocessor}{\#define GLM\_ARCH\_NEON       (GLM\_ARCH\_NEON\_BIT | GLM\_ARCH\_SIMD\_BIT | GLM\_ARCH\_ARM)}}
+\DoxyCodeLine{251 \textcolor{preprocessor}{\#define GLM\_ARCH\_MIPS       (GLM\_ARCH\_MIPS\_BIT)}}
+\DoxyCodeLine{252 \textcolor{preprocessor}{\#define GLM\_ARCH\_PPC        (GLM\_ARCH\_PPC\_BIT)}}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254 \textcolor{preprocessor}{\#ifdef GLM\_FORCE\_ARCH\_UNKNOWN}}
+\DoxyCodeLine{255 \textcolor{preprocessor}{\#   define GLM\_ARCH GLM\_ARCH\_UNKNOWN}}
+\DoxyCodeLine{256 \textcolor{preprocessor}{\#elif defined(GLM\_FORCE\_PURE) || defined(GLM\_FORCE\_XYZW\_ONLY)}}
+\DoxyCodeLine{257 \textcolor{preprocessor}{\#   if defined(\_\_x86\_64\_\_) || defined(\_M\_X64) || defined(\_M\_IX86) || defined(\_\_i386\_\_)}}
+\DoxyCodeLine{258 \textcolor{preprocessor}{\#       define GLM\_ARCH (GLM\_ARCH\_X86)}}
+\DoxyCodeLine{259 \textcolor{preprocessor}{\#   elif defined(\_\_arm\_\_ ) || defined(\_M\_ARM)}}
+\DoxyCodeLine{260 \textcolor{preprocessor}{\#       define GLM\_ARCH (GLM\_ARCH\_ARM)}}
+\DoxyCodeLine{261 \textcolor{preprocessor}{\#   elif defined(\_\_powerpc\_\_ ) || defined(\_M\_PPC)}}
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#       define GLM\_ARCH (GLM\_ARCH\_PPC)}}
+\DoxyCodeLine{263 \textcolor{preprocessor}{\#   elif defined(\_\_mips\_\_ )}}
+\DoxyCodeLine{264 \textcolor{preprocessor}{\#       define GLM\_ARCH (GLM\_ARCH\_MIPS)}}
+\DoxyCodeLine{265 \textcolor{preprocessor}{\#   else}}
+\DoxyCodeLine{266 \textcolor{preprocessor}{\#       define GLM\_ARCH (GLM\_ARCH\_UNKNOWN)}}
+\DoxyCodeLine{267 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{268 \textcolor{preprocessor}{\#elif defined(GLM\_FORCE\_NEON)}}
+\DoxyCodeLine{269 \textcolor{preprocessor}{\#   define GLM\_ARCH (GLM\_ARCH\_NEON)}}
+\DoxyCodeLine{270 \textcolor{preprocessor}{\#elif defined(GLM\_FORCE\_AVX2)}}
+\DoxyCodeLine{271 \textcolor{preprocessor}{\#   define GLM\_ARCH (GLM\_ARCH\_AVX2)}}
+\DoxyCodeLine{272 \textcolor{preprocessor}{\#elif defined(GLM\_FORCE\_AVX)}}
+\DoxyCodeLine{273 \textcolor{preprocessor}{\#   define GLM\_ARCH (GLM\_ARCH\_AVX)}}
+\DoxyCodeLine{274 \textcolor{preprocessor}{\#elif defined(GLM\_FORCE\_SSE42)}}
+\DoxyCodeLine{275 \textcolor{preprocessor}{\#   define GLM\_ARCH (GLM\_ARCH\_SSE42)}}
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#elif defined(GLM\_FORCE\_SSE41)}}
+\DoxyCodeLine{277 \textcolor{preprocessor}{\#   define GLM\_ARCH (GLM\_ARCH\_SSE41)}}
+\DoxyCodeLine{278 \textcolor{preprocessor}{\#elif defined(GLM\_FORCE\_SSSE3)}}
+\DoxyCodeLine{279 \textcolor{preprocessor}{\#   define GLM\_ARCH (GLM\_ARCH\_SSSE3)}}
+\DoxyCodeLine{280 \textcolor{preprocessor}{\#elif defined(GLM\_FORCE\_SSE3)}}
+\DoxyCodeLine{281 \textcolor{preprocessor}{\#   define GLM\_ARCH (GLM\_ARCH\_SSE3)}}
+\DoxyCodeLine{282 \textcolor{preprocessor}{\#elif defined(GLM\_FORCE\_SSE2)}}
+\DoxyCodeLine{283 \textcolor{preprocessor}{\#   define GLM\_ARCH (GLM\_ARCH\_SSE2)}}
+\DoxyCodeLine{284 \textcolor{preprocessor}{\#elif defined(GLM\_FORCE\_SSE)}}
+\DoxyCodeLine{285 \textcolor{preprocessor}{\#   define GLM\_ARCH (GLM\_ARCH\_SSE)}}
+\DoxyCodeLine{286 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{287 \textcolor{preprocessor}{\#   if defined(\_\_AVX2\_\_)}}
+\DoxyCodeLine{288 \textcolor{preprocessor}{\#       define GLM\_ARCH (GLM\_ARCH\_AVX2)}}
+\DoxyCodeLine{289 \textcolor{preprocessor}{\#   elif defined(\_\_AVX\_\_)}}
+\DoxyCodeLine{290 \textcolor{preprocessor}{\#       define GLM\_ARCH (GLM\_ARCH\_AVX)}}
+\DoxyCodeLine{291 \textcolor{preprocessor}{\#   elif defined(\_\_SSE4\_2\_\_)}}
+\DoxyCodeLine{292 \textcolor{preprocessor}{\#       define GLM\_ARCH (GLM\_ARCH\_SSE42)}}
+\DoxyCodeLine{293 \textcolor{preprocessor}{\#   elif defined(\_\_SSE4\_1\_\_)}}
+\DoxyCodeLine{294 \textcolor{preprocessor}{\#       define GLM\_ARCH (GLM\_ARCH\_SSE41)}}
+\DoxyCodeLine{295 \textcolor{preprocessor}{\#   elif defined(\_\_SSSE3\_\_)}}
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#       define GLM\_ARCH (GLM\_ARCH\_SSSE3)}}
+\DoxyCodeLine{297 \textcolor{preprocessor}{\#   elif defined(\_\_SSE3\_\_)}}
+\DoxyCodeLine{298 \textcolor{preprocessor}{\#       define GLM\_ARCH (GLM\_ARCH\_SSE3)}}
+\DoxyCodeLine{299 \textcolor{preprocessor}{\#   elif defined(\_\_SSE2\_\_) || defined(\_\_x86\_64\_\_) || defined(\_M\_X64) || defined(\_M\_IX86\_FP)}}
+\DoxyCodeLine{300 \textcolor{preprocessor}{\#       define GLM\_ARCH (GLM\_ARCH\_SSE2)}}
+\DoxyCodeLine{301 \textcolor{preprocessor}{\#   elif defined(\_\_i386\_\_)}}
+\DoxyCodeLine{302 \textcolor{preprocessor}{\#       define GLM\_ARCH (GLM\_ARCH\_X86)}}
+\DoxyCodeLine{303 \textcolor{preprocessor}{\#   elif defined(\_\_ARM\_NEON)}}
+\DoxyCodeLine{304 \textcolor{preprocessor}{\#       define GLM\_ARCH (GLM\_ARCH\_ARM | GLM\_ARCH\_NEON)}}
+\DoxyCodeLine{305 \textcolor{preprocessor}{\#   elif defined(\_\_arm\_\_ ) || defined(\_M\_ARM)}}
+\DoxyCodeLine{306 \textcolor{preprocessor}{\#       define GLM\_ARCH (GLM\_ARCH\_ARM)}}
+\DoxyCodeLine{307 \textcolor{preprocessor}{\#   elif defined(\_\_mips\_\_ )}}
+\DoxyCodeLine{308 \textcolor{preprocessor}{\#       define GLM\_ARCH (GLM\_ARCH\_MIPS)}}
+\DoxyCodeLine{309 \textcolor{preprocessor}{\#   elif defined(\_\_powerpc\_\_ ) || defined(\_M\_PPC)}}
+\DoxyCodeLine{310 \textcolor{preprocessor}{\#       define GLM\_ARCH (GLM\_ARCH\_PPC)}}
+\DoxyCodeLine{311 \textcolor{preprocessor}{\#   else}}
+\DoxyCodeLine{312 \textcolor{preprocessor}{\#       define GLM\_ARCH (GLM\_ARCH\_UNKNOWN)}}
+\DoxyCodeLine{313 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{314 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{315 }
+\DoxyCodeLine{316 \textcolor{preprocessor}{\#if GLM\_ARCH \& GLM\_ARCH\_AVX2\_BIT}}
+\DoxyCodeLine{317 \textcolor{preprocessor}{\#   include <immintrin.h>}}
+\DoxyCodeLine{318 \textcolor{preprocessor}{\#elif GLM\_ARCH \& GLM\_ARCH\_AVX\_BIT}}
+\DoxyCodeLine{319 \textcolor{preprocessor}{\#   include <immintrin.h>}}
+\DoxyCodeLine{320 \textcolor{preprocessor}{\#elif GLM\_ARCH \& GLM\_ARCH\_SSE42\_BIT}}
+\DoxyCodeLine{321 \textcolor{preprocessor}{\#   if GLM\_COMPILER \& GLM\_COMPILER\_CLANG}}
+\DoxyCodeLine{322 \textcolor{preprocessor}{\#       include <popcntintrin.h>}}
+\DoxyCodeLine{323 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{324 \textcolor{preprocessor}{\#   include <nmmintrin.h>}}
+\DoxyCodeLine{325 \textcolor{preprocessor}{\#elif GLM\_ARCH \& GLM\_ARCH\_SSE41\_BIT}}
+\DoxyCodeLine{326 \textcolor{preprocessor}{\#   include <smmintrin.h>}}
+\DoxyCodeLine{327 \textcolor{preprocessor}{\#elif GLM\_ARCH \& GLM\_ARCH\_SSSE3\_BIT}}
+\DoxyCodeLine{328 \textcolor{preprocessor}{\#   include <tmmintrin.h>}}
+\DoxyCodeLine{329 \textcolor{preprocessor}{\#elif GLM\_ARCH \& GLM\_ARCH\_SSE3\_BIT}}
+\DoxyCodeLine{330 \textcolor{preprocessor}{\#   include <pmmintrin.h>}}
+\DoxyCodeLine{331 \textcolor{preprocessor}{\#elif GLM\_ARCH \& GLM\_ARCH\_SSE2\_BIT}}
+\DoxyCodeLine{332 \textcolor{preprocessor}{\#   include <emmintrin.h>}}
+\DoxyCodeLine{333 \textcolor{preprocessor}{\#endif}\textcolor{comment}{//GLM\_ARCH}}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{335 \textcolor{preprocessor}{\#if GLM\_ARCH \& GLM\_ARCH\_SSE2\_BIT}}
+\DoxyCodeLine{336     \textcolor{keyword}{typedef} \_\_m128          glm\_f32vec4;}
+\DoxyCodeLine{337     \textcolor{keyword}{typedef} \_\_m128i         glm\_i32vec4;}
+\DoxyCodeLine{338     \textcolor{keyword}{typedef} \_\_m128i         glm\_u32vec4;}
+\DoxyCodeLine{339     \textcolor{keyword}{typedef} \_\_m128d         glm\_f64vec2;}
+\DoxyCodeLine{340     \textcolor{keyword}{typedef} \_\_m128i         glm\_i64vec2;}
+\DoxyCodeLine{341     \textcolor{keyword}{typedef} \_\_m128i         glm\_u64vec2;}
+\DoxyCodeLine{342 }
+\DoxyCodeLine{343     \textcolor{keyword}{typedef} glm\_f32vec4     glm\_vec4;}
+\DoxyCodeLine{344     \textcolor{keyword}{typedef} glm\_i32vec4     glm\_ivec4;}
+\DoxyCodeLine{345     \textcolor{keyword}{typedef} glm\_u32vec4     glm\_uvec4;}
+\DoxyCodeLine{346     \textcolor{keyword}{typedef} glm\_f64vec2     glm\_dvec2;}
+\DoxyCodeLine{347 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{348 }
+\DoxyCodeLine{349 \textcolor{preprocessor}{\#if GLM\_ARCH \& GLM\_ARCH\_AVX\_BIT}}
+\DoxyCodeLine{350     \textcolor{keyword}{typedef} \_\_m256d         glm\_f64vec4;}
+\DoxyCodeLine{351     \textcolor{keyword}{typedef} glm\_f64vec4     glm\_dvec4;}
+\DoxyCodeLine{352 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{353 }
+\DoxyCodeLine{354 \textcolor{preprocessor}{\#if GLM\_ARCH \& GLM\_ARCH\_AVX2\_BIT}}
+\DoxyCodeLine{355     \textcolor{keyword}{typedef} \_\_m256i         glm\_i64vec4;}
+\DoxyCodeLine{356     \textcolor{keyword}{typedef} \_\_m256i         glm\_u64vec4;}
+\DoxyCodeLine{357 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

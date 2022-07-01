@@ -1,0 +1,59 @@
+\hypertarget{scalar__uint__sized_8hpp_source}{}\doxysection{scalar\+\_\+uint\+\_\+sized.\+hpp}
+\label{scalar__uint__sized_8hpp_source}\index{include/glm/ext/scalar\_uint\_sized.hpp@{include/glm/ext/scalar\_uint\_sized.hpp}}
+\mbox{\hyperlink{scalar__uint__sized_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}../detail/setup.hpp"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_EXT\_scalar\_uint\_sized extension included"{}})}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}\{}
+\DoxyCodeLine{22 \textcolor{keyword}{namespace }detail}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#   if GLM\_HAS\_EXTENDED\_INTEGER\_TYPE}}
+\DoxyCodeLine{25         \textcolor{keyword}{typedef} \mbox{\hyperlink{group__gtc__type__precision_ga93adf6dd9803408f3e3aaf9dedda352b}{std::uint8\_t}}        \mbox{\hyperlink{namespaceglm_1_1detail_aef2588f97d090cc19fbbe0c74fe17c8f}{uint8}};}
+\DoxyCodeLine{26         \textcolor{keyword}{typedef} \mbox{\hyperlink{group__gtc__type__precision_gac4eb4f43cae8129b00086dc234d3b8fc}{std::uint16\_t}}      \mbox{\hyperlink{namespaceglm_1_1detail_a47b2a7d006d187338e8031a352d1ce56}{uint16}};}
+\DoxyCodeLine{27         \textcolor{keyword}{typedef} \mbox{\hyperlink{group__gtc__type__precision_ga822ca53a9ad412504532838906276a99}{std::uint32\_t}}      \mbox{\hyperlink{namespaceglm_1_1detail_ade6cfbf377022aaa391af8cd50489222}{uint32}};}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#   else}}
+\DoxyCodeLine{29         \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}       \mbox{\hyperlink{namespaceglm_1_1detail_aef2588f97d090cc19fbbe0c74fe17c8f}{uint8}};}
+\DoxyCodeLine{30         \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short}      \mbox{\hyperlink{namespaceglm_1_1detail_a47b2a7d006d187338e8031a352d1ce56}{uint16}};}
+\DoxyCodeLine{31         \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}        \mbox{\hyperlink{namespaceglm_1_1detail_ade6cfbf377022aaa391af8cd50489222}{uint32}};}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{35     \textcolor{keyword}{struct }\mbox{\hyperlink{structglm_1_1detail_1_1is__int}{is\_int}}<\mbox{\hyperlink{namespaceglm_1_1detail_aef2588f97d090cc19fbbe0c74fe17c8f}{uint8}}>}
+\DoxyCodeLine{36     \{}
+\DoxyCodeLine{37         \textcolor{keyword}{enum} \mbox{\hyperlink{structglm_1_1detail_1_1is__int_3_01uint8_01_4_a969c2ba7977e4bd7677b311e3acd065f}{test}} \{\mbox{\hyperlink{glad_8h_ac6e066a8c9e91051799ffa957f0a20a6}{value}} = \string~0\};}
+\DoxyCodeLine{38     \};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{41     \textcolor{keyword}{struct }\mbox{\hyperlink{structglm_1_1detail_1_1is__int}{is\_int}}<\mbox{\hyperlink{namespaceglm_1_1detail_a47b2a7d006d187338e8031a352d1ce56}{uint16}}>}
+\DoxyCodeLine{42     \{}
+\DoxyCodeLine{43         \textcolor{keyword}{enum} \mbox{\hyperlink{structglm_1_1detail_1_1is__int_3_01uint16_01_4_a9a5dcd10471fc802f193c55b777f6e70}{test}} \{\mbox{\hyperlink{glad_8h_ac6e066a8c9e91051799ffa957f0a20a6}{value}} = \string~0\};}
+\DoxyCodeLine{44     \};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{47     \textcolor{keyword}{struct }\mbox{\hyperlink{structglm_1_1detail_1_1is__int}{is\_int}}<\mbox{\hyperlink{namespaceglm_1_1detail_ae110ab7b33b51165e9b99e03abe3947e}{uint64}}>}
+\DoxyCodeLine{48     \{}
+\DoxyCodeLine{49         \textcolor{keyword}{enum} \mbox{\hyperlink{structglm_1_1detail_1_1is__int_3_01uint64_01_4_a8be9e204582a6cf6049dac4a685cb868}{test}} \{\mbox{\hyperlink{glad_8h_ac6e066a8c9e91051799ffa957f0a20a6}{value}} = \string~0\};}
+\DoxyCodeLine{50     \};}
+\DoxyCodeLine{51 \}\textcolor{comment}{//namespace detail}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 }
+\DoxyCodeLine{56 }
+\DoxyCodeLine{58     \textcolor{keyword}{typedef} \mbox{\hyperlink{namespaceglm_1_1detail_aef2588f97d090cc19fbbe0c74fe17c8f}{detail::uint8}}      \mbox{\hyperlink{group__ext__scalar__uint__sized_ga536143d82147bb78849bfccffece8bff}{uint8}};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{61     \textcolor{keyword}{typedef} \mbox{\hyperlink{namespaceglm_1_1detail_a47b2a7d006d187338e8031a352d1ce56}{detail::uint16}}        \mbox{\hyperlink{group__ext__scalar__uint__sized_ga6201f5c504a50620708b19bae303c32a}{uint16}};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{64     \textcolor{keyword}{typedef} \mbox{\hyperlink{namespaceglm_1_1detail_ade6cfbf377022aaa391af8cd50489222}{detail::uint32}}        \mbox{\hyperlink{group__ext__scalar__uint__sized_ga22033ef3f73efe1da8e437410adda3be}{uint32}};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{67     \textcolor{keyword}{typedef} \mbox{\hyperlink{namespaceglm_1_1detail_ae110ab7b33b51165e9b99e03abe3947e}{detail::uint64}}        \mbox{\hyperlink{group__ext__scalar__uint__sized_gae3632bf9b37da66233d78930dd06378a}{uint64}};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{70 \}\textcolor{comment}{//namespace glm}}
+
+\end{DoxyCode}

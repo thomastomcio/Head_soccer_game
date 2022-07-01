@@ -1,0 +1,37 @@
+\hypertarget{quaternion__geometric_8hpp_source}{}\doxysection{quaternion\+\_\+geometric.\+hpp}
+\label{quaternion__geometric_8hpp_source}\index{include/glm/ext/quaternion\_geometric.hpp@{include/glm/ext/quaternion\_geometric.hpp}}
+\mbox{\hyperlink{quaternion__geometric_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{comment}{// Dependency:}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}../geometric.hpp"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}../exponential.hpp"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}../ext/vector\_relational.hpp"{}}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_EXT\_quaternion\_geometric extension included"{}})}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{37     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{38     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} T \mbox{\hyperlink{namespaceglm_abcd8538aa95a8963803ec42c2fd654cd}{length}}(qua<T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a8fc1e7b9baaae687804c7eed46ca09c6}{q}});}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{46     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{47     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} qua<T, Q> \mbox{\hyperlink{group__core__func__geometric_ga5c6c1379961d4589035a390856f2d66c}{normalize}}(qua<T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a8fc1e7b9baaae687804c7eed46ca09c6}{q}});}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{55     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{56     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} T \mbox{\hyperlink{namespaceglm_a40370edb74dec9048258c063b9c091c9}{dot}}(qua<T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, qua<T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}});}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{64     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{65     \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} qua<T, Q> \mbox{\hyperlink{group__core__func__geometric_gaa9583340130a6b700eced5b100c5ccaa}{cross}}(qua<T, Q> \textcolor{keyword}{const}\& q1, qua<T, Q> \textcolor{keyword}{const}\& q2);}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{68 \} \textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{quaternion__geometric_8inl}{quaternion\_geometric.inl}}"{}}}
+
+\end{DoxyCode}

@@ -1,0 +1,36 @@
+\hypertarget{quaternion__trigonometric_8hpp_source}{}\doxysection{quaternion\+\_\+trigonometric.\+hpp}
+\label{quaternion__trigonometric_8hpp_source}\index{include/glm/ext/quaternion\_trigonometric.hpp@{include/glm/ext/quaternion\_trigonometric.hpp}}
+\mbox{\hyperlink{quaternion__trigonometric_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{comment}{// Dependency:}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}../trigonometric.hpp"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}../exponential.hpp"{}}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{scalar__constants_8hpp}{scalar\_constants.hpp}}"{}}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{vector__relational_8hpp}{vector\_relational.hpp}}"{}}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include <limits>}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_EXT\_quaternion\_trigonometric extension included"{}})}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{32 \{}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{40     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{41     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} T \mbox{\hyperlink{group__ext__quaternion__trigonometric_ga8aa248b31d5ade470c87304df5eb7bd8}{angle}}(qua<T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{47     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{48     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<3, T, Q> \mbox{\hyperlink{group__ext__quaternion__trigonometric_gac2b65b953ea72827e172fc39035964a7}{axis}}(qua<T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{57     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{58     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} qua<T, Q> \mbox{\hyperlink{group__ext__quaternion__trigonometric_gaff39bc5f51f734fea1170ba68da07268}{angleAxis}}(T \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a9e06c1f76a20fed54ca742cd25cb02c4}{angle}}, vec<3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{group__ext__quaternion__trigonometric_gac2b65b953ea72827e172fc39035964a7}{axis}});}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{61 \} \textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{quaternion__trigonometric_8inl}{quaternion\_trigonometric.inl}}"{}}}
+
+\end{DoxyCode}

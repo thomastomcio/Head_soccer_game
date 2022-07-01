@@ -1,0 +1,25 @@
+\hypertarget{exponential_8h_source}{}\doxysection{exponential.\+h}
+\label{exponential_8h_source}\index{include/glm/simd/exponential.h@{include/glm/simd/exponential.h}}
+\mbox{\hyperlink{exponential_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{platform_8h}{platform.h}}"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#if GLM\_ARCH \& GLM\_ARCH\_SSE2\_BIT}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_f32vec4 glm\_vec1\_sqrt\_lowp(glm\_f32vec4 \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     \textcolor{keywordflow}{return} \_mm\_mul\_ss(\_mm\_rsqrt\_ss(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}), \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{13 \}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} glm\_f32vec4 glm\_vec4\_sqrt\_lowp(glm\_f32vec4 \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     \textcolor{keywordflow}{return} \_mm\_mul\_ps(\_mm\_rsqrt\_ps(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}), \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{18 \}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#endif}\textcolor{comment}{//GLM\_ARCH \& GLM\_ARCH\_SSE2\_BIT}}
+
+\end{DoxyCode}

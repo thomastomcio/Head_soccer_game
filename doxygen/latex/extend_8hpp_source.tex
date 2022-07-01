@@ -1,0 +1,33 @@
+\hypertarget{extend_8hpp_source}{}\doxysection{extend.\+hpp}
+\label{extend_8hpp_source}\index{include/glm/gtx/extend.hpp@{include/glm/gtx/extend.hpp}}
+\mbox{\hyperlink{extend_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{comment}{// Dependency:}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}../glm.hpp"{}}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#ifndef GLM\_ENABLE\_EXPERIMENTAL}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#   error "{}GLM: GLM\_GTX\_extend is an experimental extension and may change in the future. Use \#define GLM\_ENABLE\_EXPERIMENTAL before including it, if you really want to use it."{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_GTX\_extend extension included"{}})}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{33     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{34     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} genType \mbox{\hyperlink{group__gtx__extend_ga8140caae613b0f847ab0d7175dc03a37}{extend}}(}
+\DoxyCodeLine{35         genType \textcolor{keyword}{const}\& Origin,}
+\DoxyCodeLine{36         genType \textcolor{keyword}{const}\& Source,}
+\DoxyCodeLine{37         \textcolor{keyword}{typename} genType::value\_type \textcolor{keyword}{const} Length);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{40 \}\textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{extend_8inl}{extend.inl}}"{}}}
+
+\end{DoxyCode}

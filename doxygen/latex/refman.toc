@@ -1,0 +1,155 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Head\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}soccer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}game}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Hierarchical Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class Hierarchy}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}File Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}File List}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Class Documentation}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Ball\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object Class Reference}{9}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Constructor \& Destructor Documentation}{9}{subsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}BallObject()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{9}{subsubsection.5.1.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.2}BallObject()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{10}{subsubsection.5.1.1.2}%
+\contentsline {subsection}{\numberline {5.1.2}Member Function Documentation}{10}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}Move()}{10}{subsubsection.5.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}Reset()}{10}{subsubsection.5.1.2.2}%
+\contentsline {subsection}{\numberline {5.1.3}Member Data Documentation}{10}{subsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.1}Radius}{10}{subsubsection.5.1.3.1}%
+\contentsline {subsubsection}{\numberline {5.1.3.2}Stuck}{10}{subsubsection.5.1.3.2}%
+\contentsline {section}{\numberline {5.2}Game Class Reference}{11}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Constructor \& Destructor Documentation}{11}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.1}Game()}{11}{subsubsection.5.2.1.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.2}$\sim $Game()}{11}{subsubsection.5.2.1.2}%
+\contentsline {subsection}{\numberline {5.2.2}Member Function Documentation}{11}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}DoCollisions()}{11}{subsubsection.5.2.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2.2}Init()}{12}{subsubsection.5.2.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.3}ProcessInput()}{12}{subsubsection.5.2.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.2.4}Render()}{12}{subsubsection.5.2.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.2.5}ResetPlayers()}{12}{subsubsection.5.2.2.5}%
+\contentsline {subsubsection}{\numberline {5.2.2.6}Update()}{12}{subsubsection.5.2.2.6}%
+\contentsline {subsection}{\numberline {5.2.3}Member Data Documentation}{12}{subsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.3.1}Height}{12}{subsubsection.5.2.3.1}%
+\contentsline {subsubsection}{\numberline {5.2.3.2}Keys}{12}{subsubsection.5.2.3.2}%
+\contentsline {subsubsection}{\numberline {5.2.3.3}State}{13}{subsubsection.5.2.3.3}%
+\contentsline {subsubsection}{\numberline {5.2.3.4}Width}{13}{subsubsection.5.2.3.4}%
+\contentsline {section}{\numberline {5.3}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object Class Reference}{13}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Constructor \& Destructor Documentation}{13}{subsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.1}GameObject()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{14}{subsubsection.5.3.1.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.2}GameObject()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{14}{subsubsection.5.3.1.2}%
+\contentsline {subsection}{\numberline {5.3.2}Member Function Documentation}{14}{subsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}Draw()}{14}{subsubsection.5.3.2.1}%
+\contentsline {subsection}{\numberline {5.3.3}Member Data Documentation}{14}{subsection.5.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.3.1}Color}{14}{subsubsection.5.3.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.3.2}Destroyed}{14}{subsubsection.5.3.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3.3}IsSolid}{14}{subsubsection.5.3.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.3.4}Position}{15}{subsubsection.5.3.3.4}%
+\contentsline {subsubsection}{\numberline {5.3.3.5}Rotation}{15}{subsubsection.5.3.3.5}%
+\contentsline {subsubsection}{\numberline {5.3.3.6}Size}{15}{subsubsection.5.3.3.6}%
+\contentsline {subsubsection}{\numberline {5.3.3.7}Sprite}{15}{subsubsection.5.3.3.7}%
+\contentsline {subsubsection}{\numberline {5.3.3.8}Velocity}{15}{subsubsection.5.3.3.8}%
+\contentsline {section}{\numberline {5.4}Resource\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{15}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Member Function Documentation}{16}{subsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.1}Clear()}{16}{subsubsection.5.4.1.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.2}GetShader()}{16}{subsubsection.5.4.1.2}%
+\contentsline {subsubsection}{\numberline {5.4.1.3}GetTexture()}{16}{subsubsection.5.4.1.3}%
+\contentsline {subsubsection}{\numberline {5.4.1.4}LoadShader()}{16}{subsubsection.5.4.1.4}%
+\contentsline {subsubsection}{\numberline {5.4.1.5}LoadTexture()}{16}{subsubsection.5.4.1.5}%
+\contentsline {subsection}{\numberline {5.4.2}Member Data Documentation}{17}{subsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}Shaders}{17}{subsubsection.5.4.2.1}%
+\contentsline {subsubsection}{\numberline {5.4.2.2}Textures}{17}{subsubsection.5.4.2.2}%
+\contentsline {section}{\numberline {5.5}Shader Class Reference}{17}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Constructor \& Destructor Documentation}{18}{subsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.1.1}Shader()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{18}{subsubsection.5.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.5.1.2}Shader()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{18}{subsubsection.5.5.1.2}%
+\contentsline {subsection}{\numberline {5.5.2}Member Function Documentation}{18}{subsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.1}Compile()}{18}{subsubsection.5.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.5.2.2}setBool()}{18}{subsubsection.5.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.3}SetFloat()}{18}{subsubsection.5.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.5.2.4}setFloat()}{19}{subsubsection.5.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.5.2.5}setInt()}{19}{subsubsection.5.5.2.5}%
+\contentsline {subsubsection}{\numberline {5.5.2.6}SetInteger()}{19}{subsubsection.5.5.2.6}%
+\contentsline {subsubsection}{\numberline {5.5.2.7}SetMatrix4()}{19}{subsubsection.5.5.2.7}%
+\contentsline {subsubsection}{\numberline {5.5.2.8}SetVector2f()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{19}{subsubsection.5.5.2.8}%
+\contentsline {subsubsection}{\numberline {5.5.2.9}SetVector2f()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{19}{subsubsection.5.5.2.9}%
+\contentsline {subsubsection}{\numberline {5.5.2.10}SetVector3f()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{20}{subsubsection.5.5.2.10}%
+\contentsline {subsubsection}{\numberline {5.5.2.11}SetVector3f()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{20}{subsubsection.5.5.2.11}%
+\contentsline {subsubsection}{\numberline {5.5.2.12}SetVector4f()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{20}{subsubsection.5.5.2.12}%
+\contentsline {subsubsection}{\numberline {5.5.2.13}SetVector4f()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{20}{subsubsection.5.5.2.13}%
+\contentsline {subsubsection}{\numberline {5.5.2.14}Use()}{20}{subsubsection.5.5.2.14}%
+\contentsline {subsubsection}{\numberline {5.5.2.15}use()}{20}{subsubsection.5.5.2.15}%
+\contentsline {subsection}{\numberline {5.5.3}Member Data Documentation}{21}{subsection.5.5.3}%
+\contentsline {subsubsection}{\numberline {5.5.3.1}ID}{21}{subsubsection.5.5.3.1}%
+\contentsline {section}{\numberline {5.6}Sprite\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Renderer Class Reference}{21}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Constructor \& Destructor Documentation}{21}{subsection.5.6.1}%
+\contentsline {subsubsection}{\numberline {5.6.1.1}SpriteRenderer()}{21}{subsubsection.5.6.1.1}%
+\contentsline {subsubsection}{\numberline {5.6.1.2}$\sim $SpriteRenderer()}{21}{subsubsection.5.6.1.2}%
+\contentsline {subsection}{\numberline {5.6.2}Member Function Documentation}{21}{subsection.5.6.2}%
+\contentsline {subsubsection}{\numberline {5.6.2.1}DrawSprite()}{22}{subsubsection.5.6.2.1}%
+\contentsline {section}{\numberline {5.7}Texture2D Class Reference}{22}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Constructor \& Destructor Documentation}{22}{subsection.5.7.1}%
+\contentsline {subsubsection}{\numberline {5.7.1.1}Texture2D()}{22}{subsubsection.5.7.1.1}%
+\contentsline {subsection}{\numberline {5.7.2}Member Function Documentation}{23}{subsection.5.7.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}Bind()}{23}{subsubsection.5.7.2.1}%
+\contentsline {subsubsection}{\numberline {5.7.2.2}Generate()}{23}{subsubsection.5.7.2.2}%
+\contentsline {subsection}{\numberline {5.7.3}Member Data Documentation}{23}{subsection.5.7.3}%
+\contentsline {subsubsection}{\numberline {5.7.3.1}Filter\_Max}{23}{subsubsection.5.7.3.1}%
+\contentsline {subsubsection}{\numberline {5.7.3.2}Filter\_Min}{23}{subsubsection.5.7.3.2}%
+\contentsline {subsubsection}{\numberline {5.7.3.3}Height}{23}{subsubsection.5.7.3.3}%
+\contentsline {subsubsection}{\numberline {5.7.3.4}ID}{23}{subsubsection.5.7.3.4}%
+\contentsline {subsubsection}{\numberline {5.7.3.5}Image\_Format}{24}{subsubsection.5.7.3.5}%
+\contentsline {subsubsection}{\numberline {5.7.3.6}Internal\_Format}{24}{subsubsection.5.7.3.6}%
+\contentsline {subsubsection}{\numberline {5.7.3.7}Width}{24}{subsubsection.5.7.3.7}%
+\contentsline {subsubsection}{\numberline {5.7.3.8}Wrap\_S}{24}{subsubsection.5.7.3.8}%
+\contentsline {subsubsection}{\numberline {5.7.3.9}Wrap\_T}{24}{subsubsection.5.7.3.9}%
+\contentsline {chapter}{\numberline {6}File Documentation}{25}{chapter.6}%
+\contentsline {section}{\numberline {6.1}include/game.h File Reference}{25}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Enumeration Type Documentation}{25}{subsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.1}GameState}{25}{subsubsection.6.1.1.1}%
+\contentsline {section}{\numberline {6.2}game.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{26}{section.6.2}%
+\contentsline {section}{\numberline {6.3}include/game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}object.h File Reference}{26}{section.6.3}%
+\contentsline {section}{\numberline {6.4}game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}object.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{26}{section.6.4}%
+\contentsline {section}{\numberline {6.5}include/resource\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.h File Reference}{27}{section.6.5}%
+\contentsline {section}{\numberline {6.6}resource\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{27}{section.6.6}%
+\contentsline {section}{\numberline {6.7}include/shader.h File Reference}{28}{section.6.7}%
+\contentsline {section}{\numberline {6.8}shader.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{28}{section.6.8}%
+\contentsline {section}{\numberline {6.9}include/shader\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s.h File Reference}{29}{section.6.9}%
+\contentsline {section}{\numberline {6.10}shader\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{29}{section.6.10}%
+\contentsline {section}{\numberline {6.11}include/sprite\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}renderer.h File Reference}{31}{section.6.11}%
+\contentsline {section}{\numberline {6.12}sprite\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}renderer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{31}{section.6.12}%
+\contentsline {section}{\numberline {6.13}include/texture.h File Reference}{31}{section.6.13}%
+\contentsline {section}{\numberline {6.14}texture.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{32}{section.6.14}%
+\contentsline {section}{\numberline {6.15}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{32}{section.6.15}%
+\contentsline {section}{\numberline {6.16}src/game.cpp File Reference}{32}{section.6.16}%
+\contentsline {subsection}{\numberline {6.16.1}Typedef Documentation}{33}{subsection.6.16.1}%
+\contentsline {subsubsection}{\numberline {6.16.1.1}Collision}{33}{subsubsection.6.16.1.1}%
+\contentsline {subsection}{\numberline {6.16.2}Enumeration Type Documentation}{33}{subsection.6.16.2}%
+\contentsline {subsubsection}{\numberline {6.16.2.1}Direction}{33}{subsubsection.6.16.2.1}%
+\contentsline {subsection}{\numberline {6.16.3}Function Documentation}{33}{subsection.6.16.3}%
+\contentsline {subsubsection}{\numberline {6.16.3.1}CheckCollision()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{34}{subsubsection.6.16.3.1}%
+\contentsline {subsubsection}{\numberline {6.16.3.2}CheckCollision()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{34}{subsubsection.6.16.3.2}%
+\contentsline {subsubsection}{\numberline {6.16.3.3}INITIAL\_BALL\_VELOCITY()}{34}{subsubsection.6.16.3.3}%
+\contentsline {subsubsection}{\numberline {6.16.3.4}PLAYER\_SIZE()}{34}{subsubsection.6.16.3.4}%
+\contentsline {subsubsection}{\numberline {6.16.3.5}PLAYER\_VELOCITY()}{34}{subsubsection.6.16.3.5}%
+\contentsline {subsubsection}{\numberline {6.16.3.6}VectorDirection()}{34}{subsubsection.6.16.3.6}%
+\contentsline {subsection}{\numberline {6.16.4}Variable Documentation}{34}{subsection.6.16.4}%
+\contentsline {subsubsection}{\numberline {6.16.4.1}Ball}{35}{subsubsection.6.16.4.1}%
+\contentsline {subsubsection}{\numberline {6.16.4.2}BALL\_RADIUS}{35}{subsubsection.6.16.4.2}%
+\contentsline {subsubsection}{\numberline {6.16.4.3}Player1}{35}{subsubsection.6.16.4.3}%
+\contentsline {subsubsection}{\numberline {6.16.4.4}Player2}{35}{subsubsection.6.16.4.4}%
+\contentsline {subsubsection}{\numberline {6.16.4.5}Renderer}{35}{subsubsection.6.16.4.5}%
+\contentsline {section}{\numberline {6.17}src/game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}object.cpp File Reference}{35}{section.6.17}%
+\contentsline {section}{\numberline {6.18}src/main.cpp File Reference}{35}{section.6.18}%
+\contentsline {subsection}{\numberline {6.18.1}Function Documentation}{36}{subsection.6.18.1}%
+\contentsline {subsubsection}{\numberline {6.18.1.1}framebuffer\_size\_callback()}{36}{subsubsection.6.18.1.1}%
+\contentsline {subsubsection}{\numberline {6.18.1.2}key\_callback()}{36}{subsubsection.6.18.1.2}%
+\contentsline {subsubsection}{\numberline {6.18.1.3}main()}{36}{subsubsection.6.18.1.3}%
+\contentsline {subsection}{\numberline {6.18.2}Variable Documentation}{36}{subsection.6.18.2}%
+\contentsline {subsubsection}{\numberline {6.18.2.1}Headsoccer}{37}{subsubsection.6.18.2.1}%
+\contentsline {subsubsection}{\numberline {6.18.2.2}SCREEN\_HEIGHT}{37}{subsubsection.6.18.2.2}%
+\contentsline {subsubsection}{\numberline {6.18.2.3}SCREEN\_WIDTH}{37}{subsubsection.6.18.2.3}%
+\contentsline {section}{\numberline {6.19}src/resource\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.cpp File Reference}{37}{section.6.19}%
+\contentsline {section}{\numberline {6.20}src/shader.cpp File Reference}{37}{section.6.20}%
+\contentsline {section}{\numberline {6.21}src/sprite\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}renderer.cpp File Reference}{37}{section.6.21}%
+\contentsline {section}{\numberline {6.22}src/texture.cpp File Reference}{37}{section.6.22}%
+\contentsline {chapter}{Index}{39}{section*.30}%

@@ -1,0 +1,35 @@
+\hypertarget{matrix__cross__product_8hpp_source}{}\doxysection{matrix\+\_\+cross\+\_\+product.\+hpp}
+\label{matrix__cross__product_8hpp_source}\index{include/glm/gtx/matrix\_cross\_product.hpp@{include/glm/gtx/matrix\_cross\_product.hpp}}
+\mbox{\hyperlink{matrix__cross__product_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{comment}{// Dependency:}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}../glm.hpp"{}}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#ifndef GLM\_ENABLE\_EXPERIMENTAL}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#   error "{}GLM: GLM\_GTX\_matrix\_cross\_product is an experimental extension and may change in the future. Use \#define GLM\_ENABLE\_EXPERIMENTAL before including it, if you really want to use it."{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_GTX\_matrix\_cross\_product extension included"{}})}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{34     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{35     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<3, 3, T, Q> \mbox{\hyperlink{group__gtx__matrix__cross__product_ga65f331a2b901c1f43a226f4dd999d1d0}{matrixCross3}}(}
+\DoxyCodeLine{36         vec<3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{40     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{41     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, Q> \mbox{\hyperlink{group__gtx__matrix__cross__product_ga09b5dccce5fe390e24d8293a6e2cdc33}{matrixCross4}}(}
+\DoxyCodeLine{42         vec<3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{45 \}\textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{matrix__cross__product_8inl}{matrix\_cross\_product.inl}}"{}}}
+
+\end{DoxyCode}

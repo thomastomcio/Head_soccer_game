@@ -1,0 +1,78 @@
+\hypertarget{type__trait_8hpp_source}{}\doxysection{type\+\_\+trait.\+hpp}
+\label{type__trait_8hpp_source}\index{include/glm/gtx/type\_trait.hpp@{include/glm/gtx/type\_trait.hpp}}
+\mbox{\hyperlink{type__trait_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#ifndef GLM\_ENABLE\_EXPERIMENTAL}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#   error "{}GLM: GLM\_GTX\_type\_trait is an experimental extension and may change in the future. Use \#define GLM\_ENABLE\_EXPERIMENTAL before including it, if you really want to use it."{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{comment}{// Dependency:}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}../detail/qualifier.hpp"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}../gtc/quaternion.hpp"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}../gtx/dual\_quaternion.hpp"{}}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_GTX\_type\_trait extension included"{}})}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{29 \{}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{34     \textcolor{keyword}{struct }\mbox{\hyperlink{structglm_1_1type}{type}}}
+\DoxyCodeLine{35     \{}
+\DoxyCodeLine{36         \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_a236fedee521c9783b686e86c0e1405e0}{is\_vec}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{37         \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_a21702de90bcb0212e4856a22d947bfa3}{is\_mat}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{38         \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_ac0e332a405282f738486bc2134881df8}{is\_quat}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{39         \textcolor{keyword}{static} \mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\_t}} \textcolor{keyword}{const} \mbox{\hyperlink{glad_8h_a3824c86dfa50d23068c74eafb87375c2}{components}} = 0;}
+\DoxyCodeLine{40         \textcolor{keyword}{static} \mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\_t}} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_aa1006a5c502504cd22582b088e675774}{cols}} = 0;}
+\DoxyCodeLine{41         \textcolor{keyword}{static} \mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\_t}} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_ad04a64a448a28061ed81f90f0f52b691}{rows}} = 0;}
+\DoxyCodeLine{42     \};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{45     \textcolor{keyword}{struct }\mbox{\hyperlink{structglm_1_1type}{type}}<\mbox{\hyperlink{structglm_1_1vec}{vec}}<L, T, Q> >}
+\DoxyCodeLine{46     \{}
+\DoxyCodeLine{47         \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_a236fedee521c9783b686e86c0e1405e0}{is\_vec}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{48         \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_a21702de90bcb0212e4856a22d947bfa3}{is\_mat}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{49         \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_ac0e332a405282f738486bc2134881df8}{is\_quat}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{50         \textcolor{keyword}{static} \mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\_t}} \textcolor{keyword}{const} \mbox{\hyperlink{glad_8h_a3824c86dfa50d23068c74eafb87375c2}{components}} = L;}
+\DoxyCodeLine{51     \};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{keyword}{template}<length\_t C, length\_t R, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{54     \textcolor{keyword}{struct }\mbox{\hyperlink{structglm_1_1type}{type}}<\mbox{\hyperlink{structglm_1_1mat}{mat}}<C, R, T, Q> >}
+\DoxyCodeLine{55     \{}
+\DoxyCodeLine{56         \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_a236fedee521c9783b686e86c0e1405e0}{is\_vec}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{57         \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_a21702de90bcb0212e4856a22d947bfa3}{is\_mat}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{58         \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_ac0e332a405282f738486bc2134881df8}{is\_quat}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{59         \textcolor{keyword}{static} \mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\_t}} \textcolor{keyword}{const} \mbox{\hyperlink{glad_8h_a3824c86dfa50d23068c74eafb87375c2}{components}} = C;}
+\DoxyCodeLine{60         \textcolor{keyword}{static} \mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\_t}} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_aa1006a5c502504cd22582b088e675774}{cols}} = C;}
+\DoxyCodeLine{61         \textcolor{keyword}{static} \mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\_t}} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_ad04a64a448a28061ed81f90f0f52b691}{rows}} = R;}
+\DoxyCodeLine{62     \};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{65     \textcolor{keyword}{struct }\mbox{\hyperlink{structglm_1_1type}{type}}<\mbox{\hyperlink{structglm_1_1qua}{qua}}<T, Q> >}
+\DoxyCodeLine{66     \{}
+\DoxyCodeLine{67         \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_a236fedee521c9783b686e86c0e1405e0}{is\_vec}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{68         \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_a21702de90bcb0212e4856a22d947bfa3}{is\_mat}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{69         \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_ac0e332a405282f738486bc2134881df8}{is\_quat}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{70         \textcolor{keyword}{static} \mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\_t}} \textcolor{keyword}{const} \mbox{\hyperlink{glad_8h_a3824c86dfa50d23068c74eafb87375c2}{components}} = 4;}
+\DoxyCodeLine{71     \};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{74     \textcolor{keyword}{struct }\mbox{\hyperlink{structglm_1_1type}{type}}<\mbox{\hyperlink{structglm_1_1tdualquat}{tdualquat}}<T, Q> >}
+\DoxyCodeLine{75     \{}
+\DoxyCodeLine{76         \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_a236fedee521c9783b686e86c0e1405e0}{is\_vec}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{77         \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_a21702de90bcb0212e4856a22d947bfa3}{is\_mat}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{78         \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1type_ac0e332a405282f738486bc2134881df8}{is\_quat}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{79         \textcolor{keyword}{static} \mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\_t}} \textcolor{keyword}{const} \mbox{\hyperlink{glad_8h_a3824c86dfa50d23068c74eafb87375c2}{components}} = 8;}
+\DoxyCodeLine{80     \};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{83 \}\textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{type__trait_8inl}{type\_trait.inl}}"{}}}
+
+\end{DoxyCode}

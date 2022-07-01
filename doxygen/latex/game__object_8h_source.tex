@@ -1,0 +1,54 @@
+\hypertarget{game__object_8h_source}{}\doxysection{game\+\_\+object.\+h}
+\label{game__object_8h_source}\index{include/game\_object.h@{include/game\_object.h}}
+\mbox{\hyperlink{game__object_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef GAMEOBJECT\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define GAMEOBJECT\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <glad/glad.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <glm/glm.hpp>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{texture_8h}{texture.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{sprite__renderer_8h}{sprite\_renderer.h}}"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{comment}{/* GAMEOBJECT CLASS*/}}
+\DoxyCodeLine{12 \textcolor{comment}{// Container object for holding all state relevant for a single}}
+\DoxyCodeLine{13 \textcolor{comment}{// game object entity. Each object in the game likely needs the}}
+\DoxyCodeLine{14 \textcolor{comment}{// minimal of state as described within GameObject.}}
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_game_object}{GameObject}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     \textcolor{comment}{// object state}}
+\DoxyCodeLine{19     glm::vec2   \mbox{\hyperlink{class_game_object_a978df429d1e874c2915f4ed19570d3f8}{Position}}, \mbox{\hyperlink{class_game_object_aa38b7a7a47923308a8371ab4ca7c85cd}{Size}}, \mbox{\hyperlink{class_game_object_a448624c57e5ac935909a1dfd0900aa8d}{Velocity}};}
+\DoxyCodeLine{20     glm::vec3   \mbox{\hyperlink{class_game_object_a0e22c6244cfddffba0093a9c55c77037}{Color}};}
+\DoxyCodeLine{21     \textcolor{keywordtype}{float}       \mbox{\hyperlink{class_game_object_a08e388888ffd6d485fbec16f94f801a6}{Rotation}};}
+\DoxyCodeLine{22     \textcolor{keywordtype}{bool}        \mbox{\hyperlink{class_game_object_a152228f4cf05c201e79069abe0a3e6d5}{IsSolid}};}
+\DoxyCodeLine{23     \textcolor{keywordtype}{bool}        \mbox{\hyperlink{class_game_object_a95c0fd6ed481a098c444173f4bdf432a}{Destroyed}};}
+\DoxyCodeLine{24     \textcolor{comment}{// render state}}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_texture2_d}{Texture2D}}   \mbox{\hyperlink{class_game_object_a0b13b0332425cfa619594205993e7ce4}{Sprite}};  }
+\DoxyCodeLine{26     \textcolor{comment}{// constructor(s)}}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{GameObject}}();}
+\DoxyCodeLine{28     \mbox{\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{GameObject}}(glm::vec2 pos, glm::vec2 size, \mbox{\hyperlink{class_texture2_d}{Texture2D}} sprite, glm::vec3 color = glm::vec3(1.0f), glm::vec2 velocity = glm::vec2(0.0f, 0.0f));}
+\DoxyCodeLine{29     \textcolor{comment}{// draw sprite}}
+\DoxyCodeLine{30     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_object_addb595c3a1a514c6f2272cf8d5bf633a}{Draw}}(\mbox{\hyperlink{class_sprite_renderer}{SpriteRenderer}} \&renderer);}
+\DoxyCodeLine{31 \};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{comment}{/* BALLOBJECT CLASS*/}}
+\DoxyCodeLine{34 \textcolor{keyword}{class }\mbox{\hyperlink{class_ball_object}{BallObject}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_game_object}{GameObject}}}
+\DoxyCodeLine{35 \{}
+\DoxyCodeLine{36     \textcolor{keyword}{public}:}
+\DoxyCodeLine{37         \textcolor{comment}{//ball state}}
+\DoxyCodeLine{38         \textcolor{keywordtype}{float} \mbox{\hyperlink{class_ball_object_a30eb1a68eab3638117f30b9668cdcf7c}{Radius}};}
+\DoxyCodeLine{39         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ball_object_a1a0e77acac2c3bf67878cbd485dad51b}{Stuck}};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41         \mbox{\hyperlink{class_ball_object_ac2106a42734e5028b3be1a38e8c39e31}{BallObject}}();}
+\DoxyCodeLine{42         \mbox{\hyperlink{class_ball_object_ac2106a42734e5028b3be1a38e8c39e31}{BallObject}}(glm::vec2 pos, \textcolor{keywordtype}{float} radius, glm::vec2 velocity, \mbox{\hyperlink{class_texture2_d}{Texture2D}} sprite);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44         glm::vec2 \mbox{\hyperlink{class_ball_object_a5fb32d2a7eca982bc52acf7d2f8c5480}{Move}}(\textcolor{keywordtype}{float} dt, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} window\_width, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} window\_height);}
+\DoxyCodeLine{45         \textcolor{keywordtype}{void}      \mbox{\hyperlink{class_ball_object_a2fc0644e9a50e2bc6d19e30b0ecd56d8}{Reset}}(glm::vec2 position, glm::vec2 velocity);}
+\DoxyCodeLine{46 \};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

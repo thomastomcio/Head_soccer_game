@@ -1,0 +1,46 @@
+\hypertarget{shader_8h_source}{}\doxysection{shader.\+h}
+\label{shader_8h_source}\index{include/shader.h@{include/shader.h}}
+\mbox{\hyperlink{shader_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SHADER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SHADER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <glad/glad.h>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <glm/glm.hpp>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <glm/gtc/type\_ptr.hpp>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{comment}{// General purpsoe shader object. Compiles from file, generates}}
+\DoxyCodeLine{12 \textcolor{comment}{// compile/link-\/time error messages and hosts several utility }}
+\DoxyCodeLine{13 \textcolor{comment}{// functions for easy management.}}
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_shader}{Shader}}}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \textcolor{comment}{// state}}
+\DoxyCodeLine{18     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d}{ID}}; }
+\DoxyCodeLine{19     \textcolor{comment}{// constructor}}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_shader_a0d654ebaca4e0555197c0724c6d30610}{Shader}}() \{ \}}
+\DoxyCodeLine{21     \textcolor{comment}{// sets the current shader as active}}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_shader}{Shader}}  \&\mbox{\hyperlink{class_shader_a02292f4fdae284b29169db5da29e519a}{Use}}();}
+\DoxyCodeLine{23     \textcolor{comment}{// compiles the shader from given source code}}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void}    \mbox{\hyperlink{class_shader_ace30758935fc09126ec99f5b602cb18f}{Compile}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *vertexSource, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *fragmentSource, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *geometrySource = \textcolor{keyword}{nullptr}); \textcolor{comment}{// note: geometry source code is optional }}
+\DoxyCodeLine{25     \textcolor{comment}{// utility functions}}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void}    \mbox{\hyperlink{class_shader_a90a74282cd77e51812cd2c0ed0eb5cad}{SetFloat}}    (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keywordtype}{float} value, \textcolor{keywordtype}{bool} useShader = \textcolor{keyword}{false});}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void}    \mbox{\hyperlink{class_shader_aac20695848a1a8a283e23d36b0557c20}{SetInteger}}  (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keywordtype}{int} value, \textcolor{keywordtype}{bool} useShader = \textcolor{keyword}{false});}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void}    \mbox{\hyperlink{class_shader_ae5994e58f1eec3278b61655ef2a23b4f}{SetVector2f}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y, \textcolor{keywordtype}{bool} useShader = \textcolor{keyword}{false});}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void}    \mbox{\hyperlink{class_shader_ae5994e58f1eec3278b61655ef2a23b4f}{SetVector2f}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keyword}{const} glm::vec2 \&value, \textcolor{keywordtype}{bool} useShader = \textcolor{keyword}{false});}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void}    \mbox{\hyperlink{class_shader_ac1dbbe3e0134b04c9decf1974252f07b}{SetVector3f}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y, \textcolor{keywordtype}{float} z, \textcolor{keywordtype}{bool} useShader = \textcolor{keyword}{false});}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void}    \mbox{\hyperlink{class_shader_ac1dbbe3e0134b04c9decf1974252f07b}{SetVector3f}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keyword}{const} glm::vec3 \&value, \textcolor{keywordtype}{bool} useShader = \textcolor{keyword}{false});}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void}    \mbox{\hyperlink{class_shader_a9fd94ef003bab74c968ebde2c9c542b4}{SetVector4f}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y, \textcolor{keywordtype}{float} z, \textcolor{keywordtype}{float} w, \textcolor{keywordtype}{bool} useShader = \textcolor{keyword}{false});}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void}    \mbox{\hyperlink{class_shader_a9fd94ef003bab74c968ebde2c9c542b4}{SetVector4f}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keyword}{const} glm::vec4 \&value, \textcolor{keywordtype}{bool} useShader = \textcolor{keyword}{false});}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void}    \mbox{\hyperlink{class_shader_a8bfcef4683f9cba1cfc955b869ee258a}{SetMatrix4}}  (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keyword}{const} glm::mat4 \&matrix, \textcolor{keywordtype}{bool} useShader = \textcolor{keyword}{false});}
+\DoxyCodeLine{35 \textcolor{keyword}{private}:}
+\DoxyCodeLine{36     \textcolor{comment}{// checks if compilation or linking failed and if so, print the error logs}}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void}    checkCompileErrors(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \textcolor{keywordtype}{object}, std::string type); }
+\DoxyCodeLine{38 \};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

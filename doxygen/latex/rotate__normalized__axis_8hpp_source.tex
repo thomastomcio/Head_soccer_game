@@ -1,0 +1,41 @@
+\hypertarget{rotate__normalized__axis_8hpp_source}{}\doxysection{rotate\+\_\+normalized\+\_\+axis.\+hpp}
+\label{rotate__normalized__axis_8hpp_source}\index{include/glm/gtx/rotate\_normalized\_axis.hpp@{include/glm/gtx/rotate\_normalized\_axis.hpp}}
+\mbox{\hyperlink{rotate__normalized__axis_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{comment}{// Dependency:}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}../glm.hpp"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}../gtc/epsilon.hpp"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}../gtc/quaternion.hpp"{}}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#ifndef GLM\_ENABLE\_EXPERIMENTAL}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#   error "{}GLM: GLM\_GTX\_rotate\_normalized\_axis is an experimental extension and may change in the future. Use \#define GLM\_ENABLE\_EXPERIMENTAL before including it, if you really want to use it."{}}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_GTX\_rotate\_normalized\_axis extension included"{}})}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{31 \{}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{46     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{47     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<4, 4, T, Q> \mbox{\hyperlink{group__gtx__rotate__normalized__axis_gafbbff0c6bcc5deb8036cfef4c6fcdd8e}{rotateNormalizedAxis}}(}
+\DoxyCodeLine{48         mat<4, 4, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}},}
+\DoxyCodeLine{49         T \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a9e06c1f76a20fed54ca742cd25cb02c4}{angle}},}
+\DoxyCodeLine{50         vec<3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{group__ext__quaternion__trigonometric_gac2b65b953ea72827e172fc39035964a7}{axis}});}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{59     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{60     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} qua<T, Q> \mbox{\hyperlink{group__gtx__rotate__normalized__axis_gafbbff0c6bcc5deb8036cfef4c6fcdd8e}{rotateNormalizedAxis}}(}
+\DoxyCodeLine{61         qua<T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a8fc1e7b9baaae687804c7eed46ca09c6}{q}},}
+\DoxyCodeLine{62         T \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a9e06c1f76a20fed54ca742cd25cb02c4}{angle}},}
+\DoxyCodeLine{63         vec<3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{group__ext__quaternion__trigonometric_gac2b65b953ea72827e172fc39035964a7}{axis}});}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{66 \}\textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rotate__normalized__axis_8inl}{rotate\_normalized\_axis.inl}}"{}}}
+
+\end{DoxyCode}

@@ -1,0 +1,47 @@
+\hypertarget{vector__query_8hpp_source}{}\doxysection{vector\+\_\+query.\+hpp}
+\label{vector__query_8hpp_source}\index{include/glm/gtx/vector\_query.hpp@{include/glm/gtx/vector\_query.hpp}}
+\mbox{\hyperlink{vector__query_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{comment}{// Dependency:}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}../glm.hpp"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <cfloat>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <limits>}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#ifndef GLM\_ENABLE\_EXPERIMENTAL}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#   error "{}GLM: GLM\_GTX\_vector\_query is an experimental extension and may change in the future. Use \#define GLM\_ENABLE\_EXPERIMENTAL before including it, if you really want to use it."{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_GTX\_vector\_query extension included"{}})}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{29 \{}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{35     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{36     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__gtx__vector__query_ga13da4a787a2ff70e95d561fb19ff91b4}{areCollinear}}(vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a7062a23d1d434121d4a88f530703d06a}{v0}}, vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a435c176a02c061b43e19bdf7c86cceae}{v1}}, T \textcolor{keyword}{const}\& \mbox{\hyperlink{group__ext__scalar__constants_ga2a1e57fc5592b69cfae84174cbfc9429}{epsilon}});}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{40     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{41     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__gtx__vector__query_gac7b95b3f798e3c293262b2bdaad47c57}{areOrthogonal}}(vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a7062a23d1d434121d4a88f530703d06a}{v0}}, vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a435c176a02c061b43e19bdf7c86cceae}{v1}}, T \textcolor{keyword}{const}\& \mbox{\hyperlink{group__ext__scalar__constants_ga2a1e57fc5592b69cfae84174cbfc9429}{epsilon}});}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{45     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{46     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__gtx__matrix__query_gae785af56f47ce220a1609f7f84aa077a}{isNormalized}}(vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, T \textcolor{keyword}{const}\& \mbox{\hyperlink{group__ext__scalar__constants_ga2a1e57fc5592b69cfae84174cbfc9429}{epsilon}});}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{50     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{51     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__gtx__matrix__query_ga9790ec222ce948c0ff0d8ce927340dba}{isNull}}(vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, T \textcolor{keyword}{const}\& \mbox{\hyperlink{group__ext__scalar__constants_ga2a1e57fc5592b69cfae84174cbfc9429}{epsilon}});}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{55     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{56     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, bool, Q> \mbox{\hyperlink{group__gtx__vector__query_gaeb0122462e1f1396b28fed4c78ada959}{isCompNull}}(vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, T \textcolor{keyword}{const}\& \mbox{\hyperlink{group__ext__scalar__constants_ga2a1e57fc5592b69cfae84174cbfc9429}{epsilon}});}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{60     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{61     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__gtx__vector__query_ga1b091c3d7f9ee3b0708311c001c293e3}{areOrthonormal}}(vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a7062a23d1d434121d4a88f530703d06a}{v0}}, vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a435c176a02c061b43e19bdf7c86cceae}{v1}}, T \textcolor{keyword}{const}\& \mbox{\hyperlink{group__ext__scalar__constants_ga2a1e57fc5592b69cfae84174cbfc9429}{epsilon}});}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{64 \}\textcolor{comment}{// namespace glm}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{vector__query_8inl}{vector\_query.inl}}"{}}}
+
+\end{DoxyCode}

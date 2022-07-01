@@ -1,0 +1,80 @@
+\hypertarget{integer_8hpp_source}{}\doxysection{integer.\+hpp}
+\label{integer_8hpp_source}\index{include/glm/integer.hpp@{include/glm/integer.hpp}}
+\mbox{\hyperlink{integer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{qualifier_8hpp}{detail/qualifier.hpp}}"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{gtx_2common_8hpp}{common.hpp}}"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{vector__relational_8hpp}{vector\_relational.hpp}}"{}}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{24 \{}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{36     \textcolor{keyword}{template}<length\_t L, qualifier Q>}
+\DoxyCodeLine{37     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, uint, Q> \mbox{\hyperlink{namespaceglm_a541d30d3289d3a3da69edec69df11a04}{uaddCarry}}(}
+\DoxyCodeLine{38         vec<L, uint, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}},}
+\DoxyCodeLine{39         vec<L, uint, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}},}
+\DoxyCodeLine{40         vec<L, uint, Q> \& carry);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{50     \textcolor{keyword}{template}<length\_t L, qualifier Q>}
+\DoxyCodeLine{51     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, uint, Q> \mbox{\hyperlink{namespaceglm_ac7a75ea277a43b855920597adeebb2e3}{usubBorrow}}(}
+\DoxyCodeLine{52         vec<L, uint, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}},}
+\DoxyCodeLine{53         vec<L, uint, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}},}
+\DoxyCodeLine{54         vec<L, uint, Q> \& borrow);}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{64     \textcolor{keyword}{template}<length\_t L, qualifier Q>}
+\DoxyCodeLine{65     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespaceglm_a8d2521311c96c4b426be9857010b6b76}{umulExtended}}(}
+\DoxyCodeLine{66         vec<L, uint, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}},}
+\DoxyCodeLine{67         vec<L, uint, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}},}
+\DoxyCodeLine{68         vec<L, uint, Q> \& msb,}
+\DoxyCodeLine{69         vec<L, uint, Q> \& lsb);}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{79     \textcolor{keyword}{template}<length\_t L, qualifier Q>}
+\DoxyCodeLine{80     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespaceglm_a940501aa5c66bc19f9ba6ddfe0110097}{imulExtended}}(}
+\DoxyCodeLine{81         vec<L, int, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}},}
+\DoxyCodeLine{82         vec<L, int, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}},}
+\DoxyCodeLine{83         vec<L, int, Q> \& msb,}
+\DoxyCodeLine{84         vec<L, int, Q> \& lsb);}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{102     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{103     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, T, Q> \mbox{\hyperlink{namespaceglm_ab781f965cc1130fc70a0a8aaf50e6813}{bitfieldExtract}}(}
+\DoxyCodeLine{104         vec<L, T, Q> \textcolor{keyword}{const}\& Value,}
+\DoxyCodeLine{105         \textcolor{keywordtype}{int} Offset,}
+\DoxyCodeLine{106         \textcolor{keywordtype}{int} Bits);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{123     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{124     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, T, Q> \mbox{\hyperlink{namespaceglm_acec32bd3c6eb5719c5aea5b423085ae6}{bitfieldInsert}}(}
+\DoxyCodeLine{125         vec<L, T, Q> \textcolor{keyword}{const}\& Base,}
+\DoxyCodeLine{126         vec<L, T, Q> \textcolor{keyword}{const}\& Insert,}
+\DoxyCodeLine{127         \textcolor{keywordtype}{int} Offset,}
+\DoxyCodeLine{128         \textcolor{keywordtype}{int} Bits);}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{139     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{140     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, T, Q> \mbox{\hyperlink{namespaceglm_abaf011115ec2807a589806911d97c10e}{bitfieldReverse}}(vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{148     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genType>}
+\DoxyCodeLine{149     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{int} \mbox{\hyperlink{group__core__func__integer_ga44abfe3379e11cbd29425a843420d0d6}{bitCount}}(genType \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{158     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{159     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, int, Q> \mbox{\hyperlink{group__core__func__integer_ga44abfe3379e11cbd29425a843420d0d6}{bitCount}}(vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{169     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genIUType>}
+\DoxyCodeLine{170     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{int} \mbox{\hyperlink{group__core__func__integer_gaf74c4d969fa34ab8acb9d390f5ca5274}{findLSB}}(genIUType \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{181     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{182     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, int, Q> \mbox{\hyperlink{group__core__func__integer_gaf74c4d969fa34ab8acb9d390f5ca5274}{findLSB}}(vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{193     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genIUType>}
+\DoxyCodeLine{194     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \textcolor{keywordtype}{int} \mbox{\hyperlink{group__core__func__integer_ga7e4a794d766861c70bc961630f8ef621}{findMSB}}(genIUType \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{206     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{207     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, int, Q> \mbox{\hyperlink{group__core__func__integer_ga7e4a794d766861c70bc961630f8ef621}{findMSB}}(vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}});}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{210 \}\textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{212 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{func__integer_8inl}{detail/func\_integer.inl}}"{}}}
+
+\end{DoxyCode}

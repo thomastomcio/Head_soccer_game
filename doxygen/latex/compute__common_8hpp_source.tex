@@ -1,0 +1,56 @@
+\hypertarget{compute__common_8hpp_source}{}\doxysection{compute\+\_\+common.\+hpp}
+\label{compute__common_8hpp_source}\index{include/glm/detail/compute\_common.hpp@{include/glm/detail/compute\_common.hpp}}
+\mbox{\hyperlink{compute__common_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{setup_8hpp}{setup.hpp}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <limits>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}\{}
+\DoxyCodeLine{7 \textcolor{keyword}{namespace }detail}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genFIType, \textcolor{keywordtype}{bool} \textcolor{comment}{/*signed*/}>}
+\DoxyCodeLine{10     \textcolor{keyword}{struct }\mbox{\hyperlink{structglm_1_1detail_1_1compute__abs}{compute\_abs}}}
+\DoxyCodeLine{11     \{\};}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genFIType>}
+\DoxyCodeLine{14     \textcolor{keyword}{struct }\mbox{\hyperlink{structglm_1_1detail_1_1compute__abs}{compute\_abs}}<genFIType, true>}
+\DoxyCodeLine{15     \{}
+\DoxyCodeLine{16         \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \textcolor{keyword}{static} genFIType \mbox{\hyperlink{structglm_1_1detail_1_1compute__abs_3_01gen_f_i_type_00_01true_01_4_aad5bae0fe7de49824b7ff29ba50e6c36}{call}}(genFIType \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{17         \{}
+\DoxyCodeLine{18             \mbox{\hyperlink{setup_8hpp_a6893d4a6bf0ecab00f7c73166379245a}{GLM\_STATIC\_ASSERT}}(}
+\DoxyCodeLine{19                 std::numeric\_limits<genFIType>::is\_iec559 || std::numeric\_limits<genFIType>::is\_signed,}
+\DoxyCodeLine{20                 \textcolor{stringliteral}{"{}'abs' only accept floating-\/point and integer scalar or vector inputs"{}});}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22             \textcolor{keywordflow}{return} \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}} >= genFIType(0) ? \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}} : -\/\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}};}
+\DoxyCodeLine{23             \textcolor{comment}{// TODO, perf comp with: *(((int *) \&x) + 1) \&= 0x7fffffff;}}
+\DoxyCodeLine{24         \}}
+\DoxyCodeLine{25     \};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#if GLM\_COMPILER \& GLM\_COMPILER\_CUDA}}
+\DoxyCodeLine{28     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{29     \textcolor{keyword}{struct }compute\_abs<float, true>}
+\DoxyCodeLine{30     \{}
+\DoxyCodeLine{31         \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \textcolor{keyword}{static} \textcolor{keywordtype}{float} call(\textcolor{keywordtype}{float} \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{32         \{}
+\DoxyCodeLine{33             \textcolor{keywordflow}{return} fabsf(\mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}});}
+\DoxyCodeLine{34         \}}
+\DoxyCodeLine{35     \};}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keyword}{template}<\textcolor{keyword}{typename} genFIType>}
+\DoxyCodeLine{39     \textcolor{keyword}{struct }\mbox{\hyperlink{structglm_1_1detail_1_1compute__abs}{compute\_abs}}<genFIType, false>}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41         \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\_CONSTEXPR}} \textcolor{keyword}{static} genFIType \mbox{\hyperlink{structglm_1_1detail_1_1compute__abs_3_01gen_f_i_type_00_01false_01_4_aa57310c15700b3e3641b672a37371dd1}{call}}(genFIType \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}})}
+\DoxyCodeLine{42         \{}
+\DoxyCodeLine{43             \mbox{\hyperlink{setup_8hpp_a6893d4a6bf0ecab00f7c73166379245a}{GLM\_STATIC\_ASSERT}}(}
+\DoxyCodeLine{44                 (!std::numeric\_limits<genFIType>::is\_signed \&\& std::numeric\_limits<genFIType>::is\_integer),}
+\DoxyCodeLine{45                 \textcolor{stringliteral}{"{}'abs' only accept floating-\/point and integer scalar or vector inputs"{}});}
+\DoxyCodeLine{46             \textcolor{keywordflow}{return} \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}};}
+\DoxyCodeLine{47         \}}
+\DoxyCodeLine{48     \};}
+\DoxyCodeLine{49 \}\textcolor{comment}{//namespace detail}}
+\DoxyCodeLine{50 \}\textcolor{comment}{//namespace glm}}
+
+\end{DoxyCode}

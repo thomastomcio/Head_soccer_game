@@ -1,0 +1,155 @@
+\hypertarget{associated__min__max_8hpp_source}{}\doxysection{associated\+\_\+min\+\_\+max.\+hpp}
+\label{associated__min__max_8hpp_source}\index{include/glm/gtx/associated\_min\_max.hpp@{include/glm/gtx/associated\_min\_max.hpp}}
+\mbox{\hyperlink{associated__min__max_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{comment}{// Dependency:}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}../glm.hpp"{}}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#ifndef GLM\_ENABLE\_EXPERIMENTAL}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#   error "{}GLM: GTX\_associated\_min\_max is an experimental extension and may change in the future. Use \#define GLM\_ENABLE\_EXPERIMENTAL before including it, if you really want to use it."{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_GTX\_associated\_min\_max extension included"{}})}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{34     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{35     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} U \mbox{\hyperlink{group__gtx__associated__min__max_gacc01bd272359572fc28437ae214a02df}{associatedMin}}(T \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, U \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, T \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, U \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{39     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{40     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<2, U, Q> \mbox{\hyperlink{group__gtx__associated__min__max_gacc01bd272359572fc28437ae214a02df}{associatedMin}}(}
+\DoxyCodeLine{41         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{42         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{46     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{47     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, U, Q> \mbox{\hyperlink{group__gtx__associated__min__max_gacc01bd272359572fc28437ae214a02df}{associatedMin}}(}
+\DoxyCodeLine{48         T \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, \textcolor{keyword}{const} vec<L, U, Q>\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{49         T \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, \textcolor{keyword}{const} vec<L, U, Q>\& \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{53     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{54     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, U, Q> \mbox{\hyperlink{group__gtx__associated__min__max_gacc01bd272359572fc28437ae214a02df}{associatedMin}}(}
+\DoxyCodeLine{55         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, U \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{56         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, U \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{60     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U>}
+\DoxyCodeLine{61     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} U \mbox{\hyperlink{group__gtx__associated__min__max_gacc01bd272359572fc28437ae214a02df}{associatedMin}}(}
+\DoxyCodeLine{62         T \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, U \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{63         T \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, U \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}},}
+\DoxyCodeLine{64         T \mbox{\hyperlink{glad_8h_a1483160fae141afea848a5393c286b2b}{z}}, U \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}});}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{68     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{69     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, U, Q> \mbox{\hyperlink{group__gtx__associated__min__max_gacc01bd272359572fc28437ae214a02df}{associatedMin}}(}
+\DoxyCodeLine{70         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{71         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}},}
+\DoxyCodeLine{72         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1483160fae141afea848a5393c286b2b}{z}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}});}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{76     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U>}
+\DoxyCodeLine{77     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} U \mbox{\hyperlink{group__gtx__associated__min__max_gacc01bd272359572fc28437ae214a02df}{associatedMin}}(}
+\DoxyCodeLine{78         T \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, U \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{79         T \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, U \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}},}
+\DoxyCodeLine{80         T \mbox{\hyperlink{glad_8h_a1483160fae141afea848a5393c286b2b}{z}}, U \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}},}
+\DoxyCodeLine{81         T \mbox{\hyperlink{glad_8h_a713abae75276598501f75c68917c5e2d}{w}}, U d);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{85     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{86     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, U, Q> \mbox{\hyperlink{group__gtx__associated__min__max_gacc01bd272359572fc28437ae214a02df}{associatedMin}}(}
+\DoxyCodeLine{87         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{88         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}},}
+\DoxyCodeLine{89         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1483160fae141afea848a5393c286b2b}{z}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}},}
+\DoxyCodeLine{90         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a713abae75276598501f75c68917c5e2d}{w}}, vec<L, U, Q> \textcolor{keyword}{const}\& d);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{94     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{95     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, U, Q> \mbox{\hyperlink{group__gtx__associated__min__max_gacc01bd272359572fc28437ae214a02df}{associatedMin}}(}
+\DoxyCodeLine{96         T \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{97         T \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}},}
+\DoxyCodeLine{98         T \mbox{\hyperlink{glad_8h_a1483160fae141afea848a5393c286b2b}{z}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}},}
+\DoxyCodeLine{99         T \mbox{\hyperlink{glad_8h_a713abae75276598501f75c68917c5e2d}{w}}, vec<L, U, Q> \textcolor{keyword}{const}\& d);}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{103     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{104     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, U, Q> \mbox{\hyperlink{group__gtx__associated__min__max_gacc01bd272359572fc28437ae214a02df}{associatedMin}}(}
+\DoxyCodeLine{105         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, U \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{106         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, U \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}},}
+\DoxyCodeLine{107         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1483160fae141afea848a5393c286b2b}{z}}, U \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}},}
+\DoxyCodeLine{108         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a713abae75276598501f75c68917c5e2d}{w}}, U d);}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{112     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U>}
+\DoxyCodeLine{113     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} U \mbox{\hyperlink{group__gtx__associated__min__max_ga7d9c8785230c8db60f72ec8975f1ba45}{associatedMax}}(T \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, U \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}}, T \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, U \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{117     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{118     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<2, U, Q> \mbox{\hyperlink{group__gtx__associated__min__max_ga7d9c8785230c8db60f72ec8975f1ba45}{associatedMax}}(}
+\DoxyCodeLine{119         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{120         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{124     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{125     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, T, Q> \mbox{\hyperlink{group__gtx__associated__min__max_ga7d9c8785230c8db60f72ec8975f1ba45}{associatedMax}}(}
+\DoxyCodeLine{126         T \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{127         T \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{131     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{132     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, U, Q> \mbox{\hyperlink{group__gtx__associated__min__max_ga7d9c8785230c8db60f72ec8975f1ba45}{associatedMax}}(}
+\DoxyCodeLine{133         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, U \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{134         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, U \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{138     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U>}
+\DoxyCodeLine{139     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} U \mbox{\hyperlink{group__gtx__associated__min__max_ga7d9c8785230c8db60f72ec8975f1ba45}{associatedMax}}(}
+\DoxyCodeLine{140         T \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, U \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{141         T \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, U \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}},}
+\DoxyCodeLine{142         T \mbox{\hyperlink{glad_8h_a1483160fae141afea848a5393c286b2b}{z}}, U \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}});}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{146     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{147     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, U, Q> \mbox{\hyperlink{group__gtx__associated__min__max_ga7d9c8785230c8db60f72ec8975f1ba45}{associatedMax}}(}
+\DoxyCodeLine{148         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{149         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}},}
+\DoxyCodeLine{150         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1483160fae141afea848a5393c286b2b}{z}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}});}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{154     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{155     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, T, Q> \mbox{\hyperlink{group__gtx__associated__min__max_ga7d9c8785230c8db60f72ec8975f1ba45}{associatedMax}}(}
+\DoxyCodeLine{156         T \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{157         T \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}},}
+\DoxyCodeLine{158         T \mbox{\hyperlink{glad_8h_a1483160fae141afea848a5393c286b2b}{z}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}});}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{162     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{163     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, U, Q> \mbox{\hyperlink{group__gtx__associated__min__max_ga7d9c8785230c8db60f72ec8975f1ba45}{associatedMax}}(}
+\DoxyCodeLine{164         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, U \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{165         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, U \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}},}
+\DoxyCodeLine{166         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1483160fae141afea848a5393c286b2b}{z}}, U \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}});}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{170     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U>}
+\DoxyCodeLine{171     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} U \mbox{\hyperlink{group__gtx__associated__min__max_ga7d9c8785230c8db60f72ec8975f1ba45}{associatedMax}}(}
+\DoxyCodeLine{172         T \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, U \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{173         T \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, U \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}},}
+\DoxyCodeLine{174         T \mbox{\hyperlink{glad_8h_a1483160fae141afea848a5393c286b2b}{z}}, U \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}},}
+\DoxyCodeLine{175         T \mbox{\hyperlink{glad_8h_a713abae75276598501f75c68917c5e2d}{w}}, U d);}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{179     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{180     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, U, Q> \mbox{\hyperlink{group__gtx__associated__min__max_ga7d9c8785230c8db60f72ec8975f1ba45}{associatedMax}}(}
+\DoxyCodeLine{181         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{182         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}},}
+\DoxyCodeLine{183         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1483160fae141afea848a5393c286b2b}{z}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}},}
+\DoxyCodeLine{184         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a713abae75276598501f75c68917c5e2d}{w}}, vec<L, U, Q> \textcolor{keyword}{const}\& d);}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{188     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{189     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, U, Q> \mbox{\hyperlink{group__gtx__associated__min__max_ga7d9c8785230c8db60f72ec8975f1ba45}{associatedMax}}(}
+\DoxyCodeLine{190         T \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{191         T \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}},}
+\DoxyCodeLine{192         T \mbox{\hyperlink{glad_8h_a1483160fae141afea848a5393c286b2b}{z}}, vec<L, U, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}},}
+\DoxyCodeLine{193         T \mbox{\hyperlink{glad_8h_a713abae75276598501f75c68917c5e2d}{w}}, vec<L, U, Q> \textcolor{keyword}{const}\& d);}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{197     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{198     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, U, Q> \mbox{\hyperlink{group__gtx__associated__min__max_ga7d9c8785230c8db60f72ec8975f1ba45}{associatedMax}}(}
+\DoxyCodeLine{199         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1af10666aa42292f407f6acc2af11948}{x}}, U \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{200         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_af2e2675ea2e0b9a7ec6a98fcb44a938a}{y}}, U \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}},}
+\DoxyCodeLine{201         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a1483160fae141afea848a5393c286b2b}{z}}, U \mbox{\hyperlink{glad_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}},}
+\DoxyCodeLine{202         vec<L, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a713abae75276598501f75c68917c5e2d}{w}}, U d);}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{205 \} \textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{206 }
+\DoxyCodeLine{207 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{associated__min__max_8inl}{associated\_min\_max.inl}}"{}}}
+
+\end{DoxyCode}

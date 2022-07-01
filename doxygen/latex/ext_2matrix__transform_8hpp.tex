@@ -1,0 +1,33 @@
+\hypertarget{ext_2matrix__transform_8hpp}{}\doxysection{include/glm/ext/matrix\+\_\+transform.hpp File Reference}
+\label{ext_2matrix__transform_8hpp}\index{include/glm/ext/matrix\_transform.hpp@{include/glm/ext/matrix\_transform.hpp}}
+{\ttfamily \#include \char`\"{}../gtc/constants.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../geometric.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../trigonometric.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../matrix.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}matrix\+\_\+transform.\+inl\char`\"{}}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceglm}{glm}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{group__core}{Core features}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\+\_\+\+FUNC\+\_\+\+DECL}} \mbox{\hyperlink{setup_8hpp_a08b807947b47031d3a511f03f89645ad}{GLM\+\_\+\+CONSTEXPR}} gen\+Type \mbox{\hyperlink{group__ext__matrix__transform_ga81696f2b8d1db02ea1aff8da8f269314}{glm\+::identity}} ()
+\begin{DoxyCompactList}\small\item\em Builds an identity matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\+\_\+\+FUNC\+\_\+\+DECL}} mat$<$ 4, 4, T, Q $>$ \mbox{\hyperlink{group__ext__matrix__transform_ga67d8473d6b293d1bb2b4eaf249795cab}{glm\+::translate}} (mat$<$ 4, 4, T, Q $>$ const \&\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}, vec$<$ 3, T, Q $>$ const \&\mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\+\_\+\+FUNC\+\_\+\+DECL}} mat$<$ 4, 4, T, Q $>$ \mbox{\hyperlink{group__ext__matrix__transform_ga42613eb0c7deb5f5188fc159df6c8950}{glm\+::rotate}} (mat$<$ 4, 4, T, Q $>$ const \&\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}, T \mbox{\hyperlink{glad_8h_a9e06c1f76a20fed54ca742cd25cb02c4}{angle}}, vec$<$ 3, T, Q $>$ const \&axis)
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\+\_\+\+FUNC\+\_\+\+DECL}} mat$<$ 4, 4, T, Q $>$ \mbox{\hyperlink{group__ext__matrix__transform_gaae2f8b2080622b24b85e1096748599b6}{glm\+::scale}} (mat$<$ 4, 4, T, Q $>$ const \&\mbox{\hyperlink{glad_8h_a11941354c1d09e70ec63bde35fc79d4f}{m}}, vec$<$ 3, T, Q $>$ const \&\mbox{\hyperlink{glad_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\+\_\+\+FUNC\+\_\+\+DECL}} mat$<$ 4, 4, T, Q $>$ \mbox{\hyperlink{group__ext__matrix__transform_ga55e33da75ea7e0f877059cc6f181cd2b}{glm\+::look\+At\+RH}} (vec$<$ 3, T, Q $>$ const \&eye, vec$<$ 3, T, Q $>$ const \&center, vec$<$ 3, T, Q $>$ const \&up)
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\+\_\+\+FUNC\+\_\+\+DECL}} mat$<$ 4, 4, T, Q $>$ \mbox{\hyperlink{group__ext__matrix__transform_gab2850421652778eeef6830e4fb1ea346}{glm\+::look\+At\+LH}} (vec$<$ 3, T, Q $>$ const \&eye, vec$<$ 3, T, Q $>$ const \&center, vec$<$ 3, T, Q $>$ const \&up)
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\+\_\+\+FUNC\+\_\+\+DECL}} mat$<$ 4, 4, T, Q $>$ \mbox{\hyperlink{group__ext__matrix__transform_ga894735fbf8f3d25628c127712d0285f7}{glm\+::look\+At}} (vec$<$ 3, T, Q $>$ const \&eye, vec$<$ 3, T, Q $>$ const \&center, vec$<$ 3, T, Q $>$ const \&up)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{group__ext__matrix__transform}{GLM\+\_\+\+EXT\+\_\+matrix\+\_\+transform}} 

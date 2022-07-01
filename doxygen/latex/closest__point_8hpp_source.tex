@@ -1,0 +1,39 @@
+\hypertarget{closest__point_8hpp_source}{}\doxysection{closest\+\_\+point.\+hpp}
+\label{closest__point_8hpp_source}\index{include/glm/gtx/closest\_point.hpp@{include/glm/gtx/closest\_point.hpp}}
+\mbox{\hyperlink{closest__point_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{comment}{// Dependency:}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}../glm.hpp"{}}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#ifndef GLM\_ENABLE\_EXPERIMENTAL}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#   error "{}GLM: GLM\_GTX\_closest\_point is an experimental extension and may change in the future. Use \#define GLM\_ENABLE\_EXPERIMENTAL before including it, if you really want to use it."{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_GTX\_closest\_point extension included"{}})}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{33     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{34     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<3, T, Q> \mbox{\hyperlink{group__gtx__closest__point_ga9eb4acb0e39642c8f45e61125767f86b}{closestPointOnLine}}(}
+\DoxyCodeLine{35         vec<3, T, Q> \textcolor{keyword}{const}\& point,}
+\DoxyCodeLine{36         vec<3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{37         vec<3, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{40     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{41     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<2, T, Q> \mbox{\hyperlink{group__gtx__closest__point_ga9eb4acb0e39642c8f45e61125767f86b}{closestPointOnLine}}(}
+\DoxyCodeLine{42         vec<2, T, Q> \textcolor{keyword}{const}\& point,}
+\DoxyCodeLine{43         vec<2, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a3309789fc188587d666cda5ece79cf82}{a}},}
+\DoxyCodeLine{44         vec<2, T, Q> \textcolor{keyword}{const}\& \mbox{\hyperlink{glad_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{47 \}\textcolor{comment}{// namespace glm}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{closest__point_8inl}{closest\_point.inl}}"{}}}
+
+\end{DoxyCode}
