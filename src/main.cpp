@@ -15,7 +15,7 @@ const unsigned int SCREEN_WIDTH = 800;
 // The height of the screen
 const unsigned int SCREEN_HEIGHT = 600;
 
-Game Breakout(SCREEN_WIDTH, SCREEN_HEIGHT);
+Game Headsoccer(SCREEN_WIDTH, SCREEN_HEIGHT);
 
 int main(int argc, char *argv[])
 {
@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 
     // initialize game
     // ---------------
-    Breakout.Init();
+    Headsoccer.Init();
 
     // deltaTime variables
     // -------------------
@@ -68,17 +68,17 @@ int main(int argc, char *argv[])
 
         // manage user input
         // -----------------
-        Breakout.ProcessInput(deltaTime);
+        Headsoccer.ProcessInput(deltaTime);
 
         // update game state
         // -----------------
-        Breakout.Update(deltaTime);
+        Headsoccer.Update(deltaTime);
 
         // render
         // ------
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
-        Breakout.Render();
+        Headsoccer.Render();
 
         glfwSwapBuffers(window);
     }
@@ -99,9 +99,9 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
     if (key >= 0 && key < 1024)
     {
         if (action == GLFW_PRESS)
-            Breakout.Keys[key] = true;
+            Headsoccer.Keys[key] = true;
         else if (action == GLFW_RELEASE)
-            Breakout.Keys[key] = false;
+            Headsoccer.Keys[key] = false;
     }
 }
 
